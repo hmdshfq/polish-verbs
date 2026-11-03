@@ -1,0 +1,3495 @@
+{
+ "chapters": [
+  {
+   "id": "what-is-a-verb",
+   "n": "01",
+   "en": "What a verb is",
+   "pl": "Czasownik",
+   "short": "The dictionary form, the five decisions every verb makes, and how to read the two headwords in a pair.",
+   "sets": [
+    {
+     "id": "definition",
+     "title": "What a verb decides",
+     "ask": "Pick what the question is about",
+     "items": [
+      {
+       "id": "wav-1",
+       "kind": "choice",
+       "q": "Which of these is the dictionary form (bezokolicznik) of the verb meaning \"to write\"?",
+       "opts": [
+        "pisać",
+        "piszę",
+        "pisałem",
+        "pisze"
+       ],
+       "a": "pisać",
+       "why": "<b>pisać</b> is the infinitive — the form you look up and learn. The others are used forms: <i>pisanie</i>-type forms are nouns, <i>piszę</i> is \"I write\", <i>pisałem</i> is \"I wrote\", <i>pisze</i> is \"he writes\"."
+      },
+      {
+       "id": "wav-2",
+       "kind": "choice",
+       "q": "How many tenses does Polish have?",
+       "opts": [
+        "Three",
+        "Two",
+        "Four",
+        "Twelve"
+       ],
+       "a": "Three",
+       "why": "Present, past and future. English has more <i>shapes</i> (I write, I am writing, I have written, I will have been writing), but Polish puts most of that meaning into <b>aspect</b>, not into extra tenses."
+      },
+      {
+       "id": "wav-3",
+       "kind": "choice",
+       "q": "Which of these tells you the <b>aspect</b> of a verb?",
+       "opts": [
+        "Its ending in the dictionary form",
+        "Whether the dictionary marks it impf or pf",
+        "The person who does it",
+        "The tense it is used in"
+       ],
+       "a": "Whether the dictionary marks it impf or pf",
+       "why": "Aspect is a property of the verb itself, not of the sentence: every verb is either imperfective or perfective, and a dictionary says which with <b>impf</b>/<b>pf</b> or <b>ndk.</b>/<b>dk.</b> The infinitive ending hints at the family it belongs to, but it does not decide aspect."
+      },
+      {
+       "id": "wav-4",
+       "kind": "choice",
+       "q": "You look up \"buy\" and find <i>kupić</i>. What should you write down?",
+       "opts": [
+        "kupować / kupić",
+        "kupić",
+        "kupuję",
+        "kupić (impf)"
+       ],
+       "a": "kupować / kupić",
+       "why": "Learn both halves of the pair as one item. <span class=\"pl\">kupować</span> is the process, <span class=\"pl\">kupić</span> is the finished act. Learning one half is the most common way to learn a verb wrong — chapter 2 is entirely about this."
+      },
+      {
+       "id": "wav-5",
+       "kind": "choice",
+       "q": "In a Polish past-tense form like <i>pisałem</i>, what does the ending show that English \"I wrote\" does not?",
+       "opts": [
+        "That the speaker was male",
+        "That the action is finished",
+        "That the sentence is formal",
+        "Nothing — it is the same"
+       ],
+       "a": "That the speaker was male",
+       "why": "<span class=\"pl\">pisałem</span> (male speaker) versus <span class=\"pl\">pisałam</span> (female speaker). Polish past-tense forms carry gender, so the speaker's sex is never hidden."
+      },
+      {
+       "id": "wav-6",
+       "kind": "choice",
+       "q": "Which ending is <b>not</b> a possible Polish infinitive ending?",
+       "opts": [
+        "-ść",
+        "-ć",
+        "-æ",
+        "-c"
+       ],
+       "a": "-æ",
+       "why": "<span class=\"pl\">-ć</span> (pisać), <span class=\"pl\">-c</span> (móc) and <span class=\"pl\">-ść</span> (iść) all occur. <span class=\"pl\">-æ</span> is not a Polish letter or ending at all."
+      }
+     ]
+    },
+    {
+     "id": "infinitive",
+     "title": "Reading the infinitive",
+     "ask": "What family does the ending point to?",
+     "items": [
+      {
+       "id": "wav-7",
+       "kind": "choice",
+       "q": "<span class=\"pl\">czytać</span> ends in -ać. What is its present tense likely to look like?",
+       "opts": [
+        "czytam, czytasz",
+        "czytię, czytisz",
+        "czytę, czyciesz",
+        "czytną, czytniesz"
+       ],
+       "a": "czytam, czytasz",
+       "why": "The <span class=\"pl\">-ać</span> family overwhelmingly goes to <span class=\"pl\">-am, -asz</span>: czytać → czytam, mieszkać → mieszkam, pytać → pytam. It is the largest family in the language."
+      },
+      {
+       "id": "wav-8",
+       "kind": "choice",
+       "q": "<span class=\"pl\">mówić</span> ends in -ić. What is its present tense likely to look like?",
+       "opts": [
+        "mówię, mówisz",
+        "mówam, mówasz",
+        "mówię, mówiesz",
+        "mówię, mówie"
+       ],
+       "a": "mówię, mówisz",
+       "why": "The <span class=\"pl\">-ić</span> family goes to <span class=\"pl\">-ię, -isz</span>: mówić → mówię, mówisz; robić → robię, robisz; dzwonić → dzwonię, dzwonisz."
+      },
+      {
+       "id": "wav-9",
+       "kind": "choice",
+       "q": "Which of these verbs is perfective?",
+       "opts": [
+        "pisać",
+        "napisać",
+        "czytać",
+        "piec"
+       ],
+       "a": "napisać",
+       "why": "<span class=\"pl\">napisać</span> is perfective — the finished act of writing. <span class=\"pl\">pisać</span> and <span class=\"pl\">czytać</span> are imperfective. <span class=\"pl\">piec</span> means \"to bake\" and is imperfective too."
+      },
+      {
+       "id": "wav-10",
+       "kind": "choice",
+       "q": "Which of these is a legitimate way to translate <i>szukać</i>?",
+       "opts": [
+        "to look for",
+        "to find",
+        "to search (a computer)",
+        "to discover"
+       ],
+       "a": "to look for",
+       "why": "<span class=\"pl\">szukać</span> is to look for, an ongoing search, and it takes the <b>genitive</b>. <i>To find</i> is <span class=\"pl\">znaleźć</span>, its perfective partner — a different word, and that difference matters (chapter 2)."
+      },
+      {
+       "id": "wav-11",
+       "kind": "choice",
+       "q": "A verb marked <b>pf</b> in a dictionary has:",
+       "opts": [
+        "no present tense",
+        "no past tense",
+        "no imperative",
+        "no infinitive"
+       ],
+       "a": "no present tense",
+       "why": "A perfective verb describes a completed act, and something already complete cannot be happening now. Its present-looking forms are the <b>future</b>: <span class=\"pl\">napisać</span> → <span class=\"pl\">napiszę</span> = \"I will write\"."
+      },
+      {
+       "id": "wav-12",
+       "kind": "type",
+       "q": "Write the infinitive of \"to be\".",
+       "accept": [
+        "być"
+       ],
+       "why": "<span class=\"pl\">być</span> — the most irregular verb in the language, and the one you cannot avoid (chapter 8)."
+      },
+      {
+       "id": "wav-13",
+       "kind": "type",
+       "q": "Write the infinitive of \"to have\".",
+       "accept": [
+        "mieć"
+       ],
+       "why": "<span class=\"pl\">mieć</span> — a <i>-m, -sz</i> verb: mam, masz, ma, mamy, macie, mają."
+      }
+     ]
+    },
+    {
+     "id": "transitive",
+     "title": "Transitive or not?",
+     "ask": "Does it take a direct object?",
+     "items": [
+      {
+       "id": "wav-14",
+       "kind": "choice",
+       "q": "<span class=\"pl\">Czytam ___</span> — \"I am reading a book\". Which case is <i>book</i> in?",
+       "opts": [
+        "accusative — książkę",
+        "genitive — książki",
+        "instrumental — książką",
+        "dative — książce"
+       ],
+       "a": "accusative — książkę",
+       "why": "<span class=\"pl\">czytać</span> is transitive and takes a plain direct object: the accusative. <span class=\"pl\">Czytam książkę.</span> Note that a negation would turn it genitive: <span class=\"pl\">Nie czytam książki.</span>"
+      },
+      {
+       "id": "wav-15",
+       "kind": "choice",
+       "q": "<span class=\"pl\">Szukam ___</span> — \"I am looking for the keys\". Which case?",
+       "opts": [
+        "genitive — kluczy",
+        "accusative — klucze",
+        "instrumental — kluczami",
+        "locative — kluczach"
+       ],
+       "a": "genitive — kluczy",
+       "why": "<span class=\"pl\">szukać</span> takes the genitive even though English \"look for\" takes a plain object. The case is a property of the verb, not of the English translation — this is <i>rekcja</i>, chapter 9."
+      },
+      {
+       "id": "wav-16",
+       "kind": "choice",
+       "q": "<span class=\"pl\">Pomagam ___</span> — \"I am helping my mum\". Which case?",
+       "opts": [
+        "dative — mamie",
+        "accusative — mamę",
+        "genitive — mamy",
+        "instrumental — mamą"
+       ],
+       "a": "dative — mamie",
+       "why": "<span class=\"pl\">pomagać</span> takes the dative: <span class=\"pl\">Pomagam mamie.</span> The person helped is the receiver of the help, and the receiver is the dative's job."
+      },
+      {
+       "id": "wav-17",
+       "kind": "choice",
+       "q": "Which sentence is correct?",
+       "opts": [
+        "Nie mam biletu.",
+        "Nie mam bilet.",
+        "Nie mam biletem.",
+        "Nie mam bilecie."
+       ],
+       "a": "Nie mam biletu.",
+       "why": "The object of <span class=\"pl\">mieć</span> is accusative (<span class=\"pl\">bilet</span>), but negating a verb turns that object into the <b>genitive</b>: <span class=\"pl\">nie mam biletu</span>. This rule is so reliable that Polish teachers call it the negation genitive."
+      },
+      {
+       "id": "wav-18",
+       "kind": "choice",
+       "q": "Which is the better translation of <span class=\"pl\">Znam Łódź.</span>?",
+       "opts": [
+        "I know Łódź.",
+        "I am learning Łódź.",
+        "I live in Łódź.",
+        "I am from Łódź."
+       ],
+       "a": "I know Łódź.",
+       "why": "<span class=\"pl\">znać</span> = to know a person, a place or a language — familiarity. <span class=\"pl\">wiedzieć</span> = to know a fact. You <i>znasz</i> Łódź but <i>wiesz</i>, where the station is."
+      },
+      {
+       "id": "wav-19",
+       "kind": "choice",
+       "q": "Which of these verbs is intransitive?",
+       "opts": [
+        "iść",
+        "mieć",
+        "kupić",
+        "czytać"
+       ],
+       "a": "iść",
+       "why": "<span class=\"pl\">iść</span> (to go on foot) takes no direct object; it takes a destination with a preposition: <span class=\"pl\">Idę do sklepu</span> (do + genitive), <span class=\"pl\">Idę na koncert</span> (na + accusative)."
+      }
+     ]
+    },
+    {
+     "id": "traps",
+     "title": "The first three traps",
+     "ask": "Which mistake is being made?",
+     "items": [
+      {
+       "id": "wav-20",
+       "kind": "choice",
+       "q": "Someone says <span class=\"pl\">Kupuję chleb</span> when they mean \"I'll buy the bread (now, once)\". What went wrong?",
+       "opts": [
+        "They used the imperfective where the perfective is meant",
+        "They used the wrong case",
+        "They used the wrong person",
+        "Nothing — both are correct"
+       ],
+       "a": "They used the imperfective where the perfective is meant",
+       "why": "For a single, completed purchase you want the perfective <span class=\"pl\">kupię</span>: <span class=\"pl\">Kupię chleb.</span> <span class=\"pl\">Kupuję</span> describes a process or a habit — \"I buy bread (regularly)\" or \"I'm in the middle of buying it\". The case was fine; the aspect was not."
+      },
+      {
+       "id": "wav-21",
+       "kind": "choice",
+       "q": "Why does <span class=\"pl\">Ja to zrobię</span> sound different from <span class=\"pl\">To zrobię</span>?",
+       "opts": [
+        "The pronoun adds emphasis — \"it's me who'll do it\"",
+        "It is ungrammatical",
+        "It is more formal",
+        "It changes the tense"
+       ],
+       "a": "The pronoun adds emphasis — \"it's me who'll do it\"",
+       "why": "Polish endings already say who does it, so an added pronoun is a choice: it stresses the person. <span class=\"pl\">To zrobię</span> is neutral; <span class=\"pl\">ja to zrobię</span> says \"I'll do it, not you\"."
+      },
+      {
+       "id": "wav-22",
+       "kind": "choice",
+       "q": "Someone wants to say \"I am writing\" using <span class=\"pl\">napisać</span>. Why can't they?",
+       "opts": [
+        "napisać is perfective and has no present tense",
+        "napisać is intransitive",
+        "napisać is irregular",
+        "napisać is a noun"
+       ],
+       "a": "napisać is perfective and has no present tense",
+       "why": "A completed act cannot be happening now. <span class=\"pl\">napiszę</span> is the future: \"I will write (and it will be written)\". For \"I am writing\", use the imperfective: <span class=\"pl\">piszę</span>."
+      },
+      {
+       "id": "wav-23",
+       "kind": "choice",
+       "q": "What is the difference between <span class=\"pl\">Piszę list</span> and <span class=\"pl\">Napiszę list</span>?",
+       "opts": [
+        "process now vs. finished later",
+        "formal vs. informal",
+        "singular vs. plural",
+        "past vs. present"
+       ],
+       "a": "process now vs. finished later",
+       "why": "<span class=\"pl\">Piszę</span> — I am writing / I write, the process. <span class=\"pl\">Napiszę</span> — I will write it and it will be done, the result. The same root, the same object, a different claim about completion."
+      }
+     ]
+    }
+   ],
+   "count": 23
+  },
+  {
+   "id": "aspect",
+   "n": "02",
+   "en": "Aspect",
+   "pl": "Aspekt",
+   "short": "Imperfective and perfective: the one distinction that shapes the whole verb. Learn to see both halves of a pair.",
+   "sets": [
+    {
+     "id": "recognise",
+     "title": "Recognise the aspect",
+     "ask": "Perfective or imperfective?",
+     "items": [
+      {
+       "id": "asp-1",
+       "kind": "choice",
+       "q": "<span class=\"pl\">napisać</span> is:",
+       "opts": [
+        "perfective",
+        "imperfective"
+       ],
+       "a": "perfective",
+       "why": "It has a completing prefix <span class=\"pl\">na-</span> and no present tense: <span class=\"pl\">napiszę</span> is the future. Its partner is <span class=\"pl\">pisać</span>."
+      },
+      {
+       "id": "asp-2",
+       "kind": "choice",
+       "q": "<span class=\"pl\">kupować</span> is:",
+       "opts": [
+        "imperfective",
+        "perfective"
+       ],
+       "a": "imperfective",
+       "why": "The longer, <span class=\"pl\">-ować</span> form is the process — \"to buy, to be buying\". Its perfective partner is the shorter <span class=\"pl\">kupić</span>."
+      },
+      {
+       "id": "asp-3",
+       "kind": "choice",
+       "q": "<span class=\"pl\">zrobić</span> is:",
+       "opts": [
+        "perfective",
+        "imperfective"
+       ],
+       "a": "perfective",
+       "why": "<span class=\"pl\">z-</span> is the plainest completing prefix in Polish. <span class=\"pl\">zrobię</span> = I will do it, and it will be done. Partner: <span class=\"pl\">robić</span>."
+      },
+      {
+       "id": "asp-4",
+       "kind": "choice",
+       "q": "<span class=\"pl\">czytać</span> is:",
+       "opts": [
+        "imperfective",
+        "perfective"
+       ],
+       "a": "imperfective",
+       "why": "<span class=\"pl\">czytać</span> is reading as a process, and it takes the accusative object <span class=\"pl\">książkę</span>. Its perfective partner is <span class=\"pl\">przeczytać</span> — to read it through."
+      },
+      {
+       "id": "asp-5",
+       "kind": "choice",
+       "q": "<span class=\"pl\">przeczytać</span> is:",
+       "opts": [
+        "perfective",
+        "imperfective"
+       ],
+       "a": "perfective",
+       "why": "<span class=\"pl\">prze-</span> = through: to read something from start to finish. <span class=\"pl\">Przeczytam tę książkę</span> = I'll read this book (all of it)."
+      },
+      {
+       "id": "asp-6",
+       "kind": "choice",
+       "q": "<span class=\"pl\">wziąć</span> is:",
+       "opts": [
+        "perfective",
+        "imperfective"
+       ],
+       "a": "perfective",
+       "why": "One completed taking. <span class=\"pl\">Wezmę</span> is the future. Its imperfective partner is a completely different word, <span class=\"pl\">brać</span> — a suppletive pair."
+      },
+      {
+       "id": "asp-7",
+       "kind": "choice",
+       "q": "<span class=\"pl\">mówić</span> is:",
+       "opts": [
+        "imperfective",
+        "perfective"
+       ],
+       "a": "imperfective",
+       "why": "Speaking as an ongoing activity. The perfective partner is <span class=\"pl\">powiedzieć</span> — to say something, one completed statement."
+      },
+      {
+       "id": "asp-8",
+       "kind": "choice",
+       "q": "<span class=\"pl\">powiedzieć</span> is:",
+       "opts": [
+        "perfective",
+        "imperfective"
+       ],
+       "a": "perfective",
+       "why": "<span class=\"pl\">Powiem</span> = I will say it. It is one finished statement, not the business of speaking. From the imperfective <span class=\"pl\">mówić</span>."
+      },
+      {
+       "id": "asp-9",
+       "kind": "choice",
+       "q": "<span class=\"pl\">jeść</span> is:",
+       "opts": [
+        "imperfective",
+        "perfective"
+       ],
+       "a": "imperfective",
+       "why": "Eating as a process. <span class=\"pl\">Jem obiad</span> = I'm having dinner. <span class=\"pl\">Zjem obiad</span> (from <span class=\"pl\">zjeść</span>) = I'll eat it up."
+      },
+      {
+       "id": "asp-10",
+       "kind": "choice",
+       "q": "<span class=\"pl\">zjeść</span> is:",
+       "opts": [
+        "perfective",
+        "imperfective"
+       ],
+       "a": "perfective",
+       "why": "To eat it up, all of it, done. Present-looking forms are future: <span class=\"pl\">zjem, zjesz, zje</span>."
+      },
+      {
+       "id": "asp-11",
+       "kind": "choice",
+       "q": "<span class=\"pl\">mieć</span> is:",
+       "opts": [
+        "imperfective, with no perfective partner",
+        "perfective"
+       ],
+       "a": "imperfective, with no perfective partner",
+       "why": "Having is a state, not an act that finishes, so there is no perfective <span class=\"pl\">mieć</span>. \"To get\" (and then have) is a different verb: <span class=\"pl\">dostać</span>."
+      },
+      {
+       "id": "asp-12",
+       "kind": "choice",
+       "q": "<span class=\"pl\">być</span> is:",
+       "opts": [
+        "imperfective, with no perfective partner",
+        "perfective"
+       ],
+       "a": "imperfective, with no perfective partner",
+       "why": "Being is a state. Its future, <span class=\"pl\">będę</span>, is not a perfective form but a separate imperfective future (chapter 5)."
+      }
+     ]
+    },
+    {
+     "id": "pairs",
+     "title": "Find the partner",
+     "ask": "Which is the other half of the pair?",
+     "items": [
+      {
+       "id": "asp-13",
+       "kind": "choice",
+       "q": "The perfective partner of <span class=\"pl\">pisać</span> is:",
+       "opts": [
+        "napisać",
+        "przepisać",
+        "pisywać",
+        "podpisać"
+       ],
+       "a": "napisać",
+       "why": "<span class=\"pl\">napisać</span> adds only completion. <span class=\"pl\">Przepisać</span> is \"to copy out\" and <span class=\"pl\">podpisać</span> is \"to sign\" — prefixes that change the meaning, not just the aspect. <span class=\"pl\">Pisywać</span> is a frequentative, not a partner."
+      },
+      {
+       "id": "asp-14",
+       "kind": "choice",
+       "q": "The perfective partner of <span class=\"pl\">robić</span> is:",
+       "opts": [
+        "zrobić",
+        "przerobić",
+        "wyrabiać",
+        "dorobić"
+       ],
+       "a": "zrobić",
+       "why": "<span class=\"pl\">zrobić</span> is plain completion. <span class=\"pl\">Przerobić</span> = to redo or to work through; <span class=\"pl\">dorobić</span> = to make in addition. Those are new meanings."
+      },
+      {
+       "id": "asp-15",
+       "kind": "choice",
+       "q": "The imperfective partner of <span class=\"pl\">zamknąć</span> is:",
+       "opts": [
+        "zamykać",
+        "zamykać się",
+        "odmykać",
+        "zamykając"
+       ],
+       "a": "zamykać",
+       "why": "<span class=\"pl\">-ykać / -knąć</span>: <span class=\"pl\">zamykać / zamknąć</span>. <span class=\"pl\">Odmykać</span> is to unlock — the opposite action."
+      },
+      {
+       "id": "asp-16",
+       "kind": "choice",
+       "q": "The imperfective partner of <span class=\"pl\">dać</span> is:",
+       "opts": [
+        "dawać",
+        "dodawać",
+        "oddawać",
+        "podawać"
+       ],
+       "a": "dawać",
+       "why": "<span class=\"pl\">dać / dawać</span> is the clean pair. The others are different verbs: <span class=\"pl\">dodawać</span> = to add, <span class=\"pl\">oddawać</span> = to give back, <span class=\"pl\">podawać</span> = to pass or to serve."
+      },
+      {
+       "id": "asp-17",
+       "kind": "choice",
+       "q": "The perfective partner of <span class=\"pl\">brać</span> is:",
+       "opts": [
+        "wziąć",
+        "zabrać",
+        "wybrać",
+        "nabrać"
+       ],
+       "a": "wziąć",
+       "why": "A suppletive pair — no shared root at all. <span class=\"pl\">Zabrać</span> is to take away, <span class=\"pl\">wybrać</span> is to choose, <span class=\"pl\">nabrać</span> is to take on or to gather."
+      },
+      {
+       "id": "asp-18",
+       "kind": "choice",
+       "q": "The perfective partner of <span class=\"pl\">widzieć</span> is:",
+       "opts": [
+        "zobaczyć",
+        "nawidzieć",
+        "powidzieć",
+        "zawidzieć"
+       ],
+       "a": "zobaczyć",
+       "why": "<span class=\"pl\">zobaczyć</span> = to catch sight of, one act of seeing. A suppletive pair: the root <i>-obaczyć</i> is not the root of <i>widzieć</i>."
+      },
+      {
+       "id": "asp-19",
+       "kind": "choice",
+       "q": "The imperfective partner of <span class=\"pl\">kupić</span> is:",
+       "opts": [
+        "kupować",
+        "kupować się",
+        "dokupić",
+        "wykupić"
+       ],
+       "a": "kupować",
+       "why": "The <span class=\"pl\">-ić / -ować</span> suffix pair. <span class=\"pl\">Dokupić</span> = to buy in addition, <span class=\"pl\">wykupić</span> = to buy out — new meanings."
+      },
+      {
+       "id": "asp-20",
+       "kind": "choice",
+       "q": "The perfective partner of <span class=\"pl\">uczyć się</span> is:",
+       "opts": [
+        "nauczyć się",
+        "uczyć",
+        "przuczyć się",
+        "zuczyć się"
+       ],
+       "a": "nauczyć się",
+       "why": "<span class=\"pl\">nauczyć się</span> = to learn and now know it; the <span class=\"pl\">się</span> stays. Without <span class=\"pl\">się</span>, <span class=\"pl\">uczyć</span> means \"to teach\", which is a different verb with its own pair."
+      },
+      {
+       "id": "asp-21",
+       "kind": "type",
+       "q": "Write the perfective partner of <span class=\"pl\">mówić</span>.",
+       "accept": [
+        "powiedzieć"
+       ],
+       "why": "<span class=\"pl\">powiedzieć</span> — a suppletive pair: the roots share nothing. <span class=\"pl\">Powiem</span> = I'll say it."
+      },
+      {
+       "id": "asp-22",
+       "kind": "type",
+       "q": "Write the imperfective partner of <span class=\"pl\">sprzedać</span>.",
+       "accept": [
+        "sprzedawać"
+       ],
+       "why": "<span class=\"pl\">sprzedawać / sprzedać</span> — the same <span class=\"pl\">-awać / -ać</span> shape as <span class=\"pl\">dawać / dać</span>."
+      },
+      {
+       "id": "asp-23",
+       "kind": "type",
+       "q": "Write the perfective partner of <span class=\"pl\">zaczynać</span>.",
+       "accept": [
+        "zacząć"
+       ],
+       "why": "<span class=\"pl\">zaczynać / zacząć</span> — the imperfective is the run-up, the perfective is the single starting point."
+      }
+     ]
+    },
+    {
+     "id": "which-to-use",
+     "title": "Which half fits the sentence?",
+     "ask": "Choose the form the meaning needs",
+     "items": [
+      {
+       "id": "asp-24",
+       "kind": "choice",
+       "q": "\"I write to my mother every week.\" — which verb?",
+       "opts": [
+        "Piszę do mamy co tydzień.",
+        "Napiszę do mamy co tydzień.",
+        "Napisałem do mamy co tydzień.",
+        "Pisałbym do mamy co tydzień."
+       ],
+       "a": "Piszę do mamy co tydzień.",
+       "why": "A habit, repeated — that is the imperfective's job. <span class=\"pl\">Piszę</span> can mean \"I write\" as a habit, not only \"I am writing\". <span class=\"pl\">Napiszę</span> would make it a single future act, and <span class=\"pl\">co tydzień</span> contradicts that."
+      },
+      {
+       "id": "asp-25",
+       "kind": "choice",
+       "q": "\"I'll write the letter tomorrow (and it will be done).\" — which verb?",
+       "opts": [
+        "Napiszę list jutro.",
+        "Piszę list jutro.",
+        "Pisałem list jutro.",
+        "Pisuję list jutro."
+       ],
+       "a": "Napiszę list jutro.",
+       "why": "One letter, one finished act — the perfective. <span class=\"pl\">Piszę list jutro</span> is not impossible in speech (a plan, as a process), but for the plain future claim the perfective is the natural form."
+      },
+      {
+       "id": "asp-26",
+       "kind": "choice",
+       "q": "\"I was reading a book when he came in.\" — which verb?",
+       "opts": [
+        "Czytałem książkę, kiedy wszedł.",
+        "Przeczytałem książkę, kiedy wszedł.",
+        "Przeczytam książkę, kiedy wszedł.",
+        "Czytam książkę, kiedy wszedł."
+       ],
+       "a": "Czytałem książkę, kiedy wszedł.",
+       "why": "A background process interrupted by a single event. The background is imperfective (<span class=\"pl\">czytałem</span>), the interruption is perfective (<span class=\"pl\">wszedł</span>). This contrast is the single most useful thing aspect does."
+      },
+      {
+       "id": "asp-27",
+       "kind": "choice",
+       "q": "\"I read the whole book yesterday.\" — which verb?",
+       "opts": [
+        "Przeczytałem całą książkę wczoraj.",
+        "Czytałem całą książkę wczoraj.",
+        "Czytam całą książkę wczoraj.",
+        "Przeczytam całą książkę wczoraj."
+       ],
+       "a": "Przeczytałem całą książkę wczoraj.",
+       "why": "<span class=\"pl\">Całą</span> (the whole of) makes it a finished quantity: the perfective. The imperfective <span class=\"pl\">czytałem</span> would describe being in the middle of it, without saying you got to the end."
+      },
+      {
+       "id": "asp-28",
+       "kind": "choice",
+       "q": "\"He was eating when I phoned.\" — which verb?",
+       "opts": [
+        "Jadł, kiedy zadzwoniłem.",
+        "Zjadł, kiedy zadzwoniłem.",
+        "Zje, kiedy zadzwoniłem.",
+        "Je, kiedy zadzwoniłem."
+       ],
+       "a": "Jadł, kiedy zadzwoniłem.",
+       "why": "The eating is the ongoing background (<span class=\"pl\">jadł</span>), the phone call is the single completed event (<span class=\"pl\">zadzwoniłem</span>). Note the past stem: <span class=\"pl\">jadł</span>, not <span class=\"pl\">jedł</span>."
+      },
+      {
+       "id": "asp-29",
+       "kind": "choice",
+       "q": "\"I'll drink it up and go.\" — which pair?",
+       "opts": [
+        "Wypiję i pójdę.",
+        "Piję i idę.",
+        "Piłem i szedłem.",
+        "Wypiję i idę."
+       ],
+       "a": "Wypiję i pójdę.",
+       "why": "Both halves are single completed acts in the future: <span class=\"pl\">wypić</span> (drink it up) and <span class=\"pl\">pójść</span> (set off). Mixing a perfective future with an imperfective present (<span class=\"pl\">idę</span>, which would mean \"I'm going now\") breaks the sequence."
+      },
+      {
+       "id": "asp-30",
+       "kind": "choice",
+       "q": "\"I'm learning Polish.\" — which verb?",
+       "opts": [
+        "Uczę się polskiego.",
+        "Nauczę się polskiego.",
+        "Nauczyłem się polskiego.",
+        "Uczę polskiego."
+       ],
+       "a": "Uczę się polskiego.",
+       "why": "An ongoing process: imperfective <span class=\"pl\">uczyć się</span>, and the subject is in the genitive (<span class=\"pl\">polskiego</span>) because <span class=\"pl\">uczyć się</span> takes it. <span class=\"pl\">Nauczę się</span> = I'll learn it (finished); <span class=\"pl\">uczę polskiego</span> without <span class=\"pl\">się</span> means \"I teach Polish\"."
+      },
+      {
+       "id": "asp-31",
+       "kind": "choice",
+       "q": "\"I've learned it at last!\" — which verb?",
+       "opts": [
+        "Nauczyłem się!",
+        "Uczę się!",
+        "Uczyłem się!",
+        "Będę uczyć się!"
+       ],
+       "a": "Nauczyłem się!",
+       "why": "The result exists now, so the perfective: <span class=\"pl\">nauczyłem się</span> (male speaker) / <span class=\"pl\">nauczyłam się</span> (female). The imperfective would say you were studying, not that you got there."
+      }
+     ]
+    },
+    {
+     "id": "aspect-traps",
+     "title": "The traps",
+     "ask": "What is the real rule?",
+     "items": [
+      {
+       "id": "asp-32",
+       "kind": "choice",
+       "q": "Is it true that every prefixed verb is perfective?",
+       "opts": [
+        "No — a prefix can make a secondary imperfective too",
+        "Yes, always",
+        "No, prefixes never change aspect",
+        "Only for verbs of motion"
+       ],
+       "a": "No — a prefix can make a secondary imperfective too",
+       "why": "Prefix a verb and you usually get a perfective (<span class=\"pl\">pisać → napisać</span>), but then a further suffix can make a new imperfective of it: <span class=\"pl\">napisać → napisywać</span> (to write from time to time), <span class=\"pl\">przepisać → przepisywać</span>. So a prefix alone does not decide it; the dictionary does."
+      },
+      {
+       "id": "asp-33",
+       "kind": "choice",
+       "q": "Does aspect replace tense in Polish?",
+       "opts": [
+        "No — they work together: aspect says whether it finished, tense says when",
+        "Yes, Polish has no tenses",
+        "Only in the past",
+        "Only with prefixes"
+       ],
+       "a": "No — they work together: aspect says whether it finished, tense says when",
+       "why": "Aspect and tense answer different questions. <span class=\"pl\">pisałem</span> and <span class=\"pl\">napisałem</span> are both past and both \"I\", but the first was a process and the second is a result. You need both pieces of information."
+      },
+      {
+       "id": "asp-34",
+       "kind": "choice",
+       "q": "Why can <span class=\"pl\">być</span> have a future form <span class=\"pl\">będę</span> if it is imperfective?",
+       "opts": [
+        "Because imperfective verbs form their future with będę + infinitive or past form",
+        "Because być is perfective after all",
+        "Because będę is the present",
+        "Because być has two aspects"
+       ],
+       "a": "Because imperfective verbs form their future with będę + infinitive or past form",
+       "why": "That is the compound future: <span class=\"pl\">będę pisać</span> or <span class=\"pl\">będę pisał</span>. Perfective verbs do not need it — they have a simple future (<span class=\"pl\">napiszę</span>). <span class=\"pl\">Będę</span> happens to be the future of <span class=\"pl\">być</span> itself, which is a special case (chapter 5)."
+      },
+      {
+       "id": "asp-35",
+       "kind": "choice",
+       "q": "A learner says <span class=\"pl\">Wczoraj kupowałem chleb</span> to mean \"Yesterday I bought the bread (and now I have it).\" What is off?",
+       "opts": [
+        "The aspect: kupiłem is the finished purchase",
+        "The case",
+        "The person ending",
+        "Nothing"
+       ],
+       "a": "The aspect: kupiłem is the finished purchase",
+       "why": "<span class=\"pl\">Kupowałem</span> means you were in the middle of buying / you used to buy. The plain report of a completed purchase is <span class=\"pl\">Kupiłem chleb</span>. This is a classic: the past tense is not automatically imperfective."
+      },
+      {
+       "id": "asp-36",
+       "kind": "choice",
+       "q": "Which sentence means \"I'll be writing it (in the process) at eight\"?",
+       "opts": [
+        "O ósmej będę pisać.",
+        "O ósmej napiszę.",
+        "O ósmej piszę.",
+        "O ósmej napisałem."
+       ],
+       "a": "O ósmej będę pisać.",
+       "why": "The compound future with the imperfective infinitive marks a process at a future moment. <span class=\"pl\">Napiszę</span> would mean you will finish it; <span class=\"pl\">piszę</span> is present; <span class=\"pl\">napisałem</span> is past."
+      },
+      {
+       "id": "asp-37",
+       "kind": "choice",
+       "q": "\"I don't have time.\" — which is right?",
+       "opts": [
+        "Nie mam czasu.",
+        "Nie mam czas.",
+        "Nie mam czasem.",
+        "Nie mam czasie."
+       ],
+       "a": "Nie mam czasu.",
+       "why": "<span class=\"pl\">mieć</span> takes the accusative (<span class=\"pl\">czas</span>), and the <i>nie</i> turns that object into the genitive: <span class=\"pl\">nie mam czasu</span>. Same rule as <span class=\"pl\">nie mam biletu</span>."
+      }
+     ]
+    }
+   ],
+   "count": 37
+  },
+  {
+   "id": "present",
+   "n": "03",
+   "en": "The present tense",
+   "pl": "Czas teraźniejszy",
+   "short": "Six endings, four families, and the only present tense that a perfective verb does not have.",
+   "sets": [
+    {
+     "id": "endings",
+     "title": "The six endings",
+     "ask": "Say it right",
+     "items": [
+      {
+       "id": "pre-1",
+       "kind": "type",
+       "q": "<span class=\"pl\">pisać</span> — <i>ja</i>",
+       "accept": [
+        "piszę"
+       ],
+       "why": "<span class=\"pl\">pisać → piszę</span>. The <span class=\"pl\">-ać</span> stem takes <span class=\"pl\">-ę</span> for <i>ja</i>."
+      },
+      {
+       "id": "pre-2",
+       "kind": "type",
+       "q": "<span class=\"pl\">pisać</span> — <i>ty</i>",
+       "accept": [
+        "piszesz"
+       ],
+       "why": "<span class=\"pl\">piszesz</span> — the family ending for <i>ty</i> here is <span class=\"pl\">-esz</span>, because this verb softens to <span class=\"pl\">pisz-</span>."
+      },
+      {
+       "id": "pre-3",
+       "kind": "type",
+       "q": "<span class=\"pl\">pisać</span> — <i>my</i>",
+       "accept": [
+        "piszemy"
+       ],
+       "why": "<span class=\"pl\">piszemy</span> — <i>my</i> always ends in <span class=\"pl\">-my</span>; what comes before it is the stem plus a vowel."
+      },
+      {
+       "id": "pre-4",
+       "kind": "type",
+       "q": "<span class=\"pl\">pisać</span> — <i>oni / one</i>",
+       "accept": [
+        "piszą"
+       ],
+       "why": "<span class=\"pl\">piszą</span> — the third person plural almost always ends in <span class=\"pl\">-ą</span>."
+      },
+      {
+       "id": "pre-5",
+       "kind": "type",
+       "q": "<span class=\"pl\">czytać</span> — <i>ja</i>",
+       "accept": [
+        "czytam"
+       ],
+       "why": "<span class=\"pl\">czytam</span>. The <span class=\"pl\">-ać</span> family in its plainest form: <span class=\"pl\">-am, -asz, -a</span>."
+      },
+      {
+       "id": "pre-6",
+       "kind": "type",
+       "q": "<span class=\"pl\">czytać</span> — <i>oni / one</i>",
+       "accept": [
+        "czytają"
+       ],
+       "why": "<span class=\"pl\">czytają</span> — <span class=\"pl\">-ają</span>. Compare <span class=\"pl\">piszą</span>, where the stem is soft and takes only <span class=\"pl\">-ą</span>."
+      },
+      {
+       "id": "pre-7",
+       "kind": "type",
+       "q": "<span class=\"pl\">mówić</span> — <i>ja</i>",
+       "accept": [
+        "mówię"
+       ],
+       "why": "<span class=\"pl\">mówię</span> — the <span class=\"pl\">-ić</span> family takes <span class=\"pl\">-ię</span>. Mind the <span class=\"pl\">ę</span>: <span class=\"pl\">mówię</span>, not <span class=\"pl\">mówie</span>."
+      },
+      {
+       "id": "pre-8",
+       "kind": "type",
+       "q": "<span class=\"pl\">mówić</span> — <i>ty</i>",
+       "accept": [
+        "mówisz"
+       ],
+       "why": "<span class=\"pl\">mówisz</span> — <span class=\"pl\">-isz</span> after the soft stem. This is the marker of the whole <span class=\"pl\">-ić/-yć</span> family."
+      },
+      {
+       "id": "pre-9",
+       "kind": "type",
+       "q": "<span class=\"pl\">mówić</span> — <i>oni / one</i>",
+       "accept": [
+        "mówią"
+       ],
+       "why": "<span class=\"pl\">mówią</span> — <span class=\"pl\">-ą</span> after the softened stem <span class=\"pl\">mówi-</span>."
+      },
+      {
+       "id": "pre-10",
+       "kind": "type",
+       "q": "<span class=\"pl\">mieć</span> — <i>ja</i>",
+       "accept": [
+        "mam"
+       ],
+       "why": "<span class=\"pl\">mam</span> — the <span class=\"pl\">-m, -sz</span> family has no <span class=\"pl\">ę</span> at all: mam, masz, ma, mamy, macie, mają."
+      },
+      {
+       "id": "pre-11",
+       "kind": "type",
+       "q": "<span class=\"pl\">mieć</span> — <i>oni / one</i>",
+       "accept": [
+        "mają"
+       ],
+       "why": "<span class=\"pl\">mają</span> — from the stem <span class=\"pl\">maj-</span>, not <span class=\"pl\">mam-</span>."
+      },
+      {
+       "id": "pre-12",
+       "kind": "type",
+       "q": "<span class=\"pl\">być</span> — <i>ja</i>",
+       "accept": [
+        "jestem"
+       ],
+       "why": "<span class=\"pl\">jestem</span> — completely separate from the infinitive <span class=\"pl\">być</span>. This is the first irregular verb (chapter 8)."
+      },
+      {
+       "id": "pre-13",
+       "kind": "type",
+       "q": "<span class=\"pl\">być</span> — <i>oni / one</i>",
+       "accept": [
+        "są"
+       ],
+       "why": "<span class=\"pl\">są</span> — a single short word, no <span class=\"pl\">jest-</span> anywhere."
+      },
+      {
+       "id": "pre-14",
+       "kind": "type",
+       "q": "<span class=\"pl\">jeść</span> — <i>ja</i>",
+       "accept": [
+        "jem"
+       ],
+       "why": "<span class=\"pl\">jem</span> — the <span class=\"pl\">-m, -sz</span> family: jem, jesz, je, jemy, jecie, jedzą."
+      },
+      {
+       "id": "pre-15",
+       "kind": "type",
+       "q": "<span class=\"pl\">jeść</span> — <i>oni / one</i>",
+       "accept": [
+        "jedzą"
+       ],
+       "why": "<span class=\"pl\">jedzą</span> — not <span class=\"pl\">jeją</span>. The stem is <span class=\"pl\">jedz-</span>."
+      }
+     ]
+    },
+    {
+     "id": "families",
+     "title": "Which family?",
+     "ask": "Recognise the pattern",
+     "items": [
+      {
+       "id": "pre-16",
+       "kind": "choice",
+       "q": "Which verb belongs to the <span class=\"pl\">-am, -asz</span> family?",
+       "opts": [
+        "mieszkać",
+        "mówić",
+        "mieć",
+        "iść"
+       ],
+       "a": "mieszkać",
+       "why": "<span class=\"pl\">mieszkać → mieszkam, mieszkasz</span>. It is an <span class=\"pl\">-ać</span> verb, and that family almost always goes to <span class=\"pl\">-am, -asz</span>."
+      },
+      {
+       "id": "pre-17",
+       "kind": "choice",
+       "q": "Which verb belongs to the <span class=\"pl\">-ę, -isz</span> family?",
+       "opts": [
+        "dzwonić",
+        "czytać",
+        "mieć",
+        "być"
+       ],
+       "a": "dzwonić",
+       "why": "<span class=\"pl\">dzwonić → dzwonię, dzwonisz</span>. An <span class=\"pl\">-ić</span> verb."
+      },
+      {
+       "id": "pre-18",
+       "kind": "choice",
+       "q": "Which verb belongs to the <span class=\"pl\">-m, -sz</span> family?",
+       "opts": [
+        "mieć",
+        "mówić",
+        "pisać",
+        "iść"
+       ],
+       "a": "mieć",
+       "why": "<span class=\"pl\">mieć → mam, masz, ma, mamy, macie, mają</span>. A closed, very old family: <span class=\"pl\">mieć</span>, <span class=\"pl\">jeść</span>, <span class=\"pl\">wiedzieć</span>, <span class=\"pl\">dać</span> and a few more."
+      },
+      {
+       "id": "pre-19",
+       "kind": "choice",
+       "q": "<span class=\"pl\">pisać</span> looks like an <span class=\"pl\">-ać</span> verb but goes <span class=\"pl\">piszę, piszesz</span>. Why?",
+       "opts": [
+        "Its stem ends in a soft consonant, which shifts it into the -ę, -esz family",
+        "It is irregular",
+        "It is perfective",
+        "It is a borrowing"
+       ],
+       "a": "Its stem ends in a soft consonant, which shifts it into the -ę, -esz family",
+       "why": "<span class=\"pl\">pisać</span> has the stem <span class=\"pl\">pisz-</span> (soft <span class=\"pl\">sz</span>), and soft stems go <span class=\"pl\">-ę, -esz</span>: piszę, piszesz. The same happens in <span class=\"pl\">skakać → skaczesz</span>, <span class=\"pl\">płakać → płaczesz</span>."
+      },
+      {
+       "id": "pre-20",
+       "kind": "choice",
+       "q": "Which pair is <b>not</b> the same verb in two aspects?",
+       "opts": [
+        "pracować / popracować — but popracować means \"to work for a while\"",
+        "robić / zrobić",
+        "kupować / kupić",
+        "czytać / przeczytać"
+       ],
+       "a": "pracować / popracować — but popracować means \"to work for a while\"",
+       "why": "This one is subtler than it looks: <span class=\"pl\">popracować</span> is perfective, but it means \"to spend a while working\", not simply \"to finish working\". <span class=\"pl\">Pracować</span> has no plain completing partner. The other three are clean pairs."
+      },
+      {
+       "id": "pre-21",
+       "kind": "choice",
+       "q": "A perfective verb like <span class=\"pl\">napisać</span> has the forms <span class=\"pl\">napiszę, napiszesz…</span>. What are they?",
+       "opts": [
+        "The future",
+        "The present",
+        "The conditional",
+        "The imperative"
+       ],
+       "a": "The future",
+       "why": "A perfective verb has no present, so these present-shaped forms carry future meaning: <span class=\"pl\">Napiszę list</span> = I'll write the letter."
+      }
+     ]
+    },
+    {
+     "id": "person-forms",
+     "title": "Pick the right person",
+     "ask": "Which form fits the subject?",
+     "items": [
+      {
+       "id": "pre-22",
+       "kind": "choice",
+       "q": "<span class=\"pl\">___ piszemy list.</span> — \"We are writing a letter.\"",
+       "opts": [
+        "My",
+        "Ja",
+        "Ty",
+        "Oni"
+       ],
+       "a": "My",
+       "why": "The ending <span class=\"pl\">-my</span> is <i>my</i>. The pronoun is optional, but if a pronoun is there, it has to agree: <span class=\"pl\">My piszemy</span>."
+      },
+      {
+       "id": "pre-23",
+       "kind": "choice",
+       "q": "<span class=\"pl\">Oni ___ po polsku.</span> — \"They speak Polish.\"",
+       "opts": [
+        "mówią",
+        "mówi",
+        "mówimy",
+        "mówię"
+       ],
+       "a": "mówią",
+       "why": "<span class=\"pl\">Oni</span> is third person plural, so <span class=\"pl\">mówią</span>. <span class=\"pl\">Mówi</span> would be he/she/it; <span class=\"pl\">mówimy</span> is we."
+      },
+      {
+       "id": "pre-24",
+       "kind": "choice",
+       "q": "<span class=\"pl\">Czy ___ kawę?</span> — \"Do you drink coffee?\" (to one person, informally)",
+       "opts": [
+        "pijesz",
+        "pije",
+        "pijecie",
+        "piję"
+       ],
+       "a": "pijesz",
+       "why": "<i>Ty</i> takes <span class=\"pl\">-sz</span>: <span class=\"pl\">pijesz</span>. <span class=\"pl\">Pije</span> is he/she; <span class=\"pl\">pijecie</span> is you plural."
+      },
+      {
+       "id": "pre-25",
+       "kind": "choice",
+       "q": "<span class=\"pl\">Ja ___ z Łodzi.</span> — \"I am from Łódź.\"",
+       "opts": [
+        "jestem",
+        "jest",
+        "jesteśmy",
+        "są"
+       ],
+       "a": "jestem",
+       "why": "<span class=\"pl\">jestem</span> is <i>ja</i>. Note the case: after <span class=\"pl\">z</span> meaning \"from\", the genitive — <span class=\"pl\">z Łodzi</span>."
+      },
+      {
+       "id": "pre-26",
+       "kind": "choice",
+       "q": "<span class=\"pl\">Gdzie ___? </span> — \"Where do you live?\" (to one person)",
+       "opts": [
+        "mieszkasz",
+        "mieszkam",
+        "mieszkacie",
+        "mieszkają"
+       ],
+       "a": "mieszkasz",
+       "why": "<span class=\"pl\">mieszkasz</span> — <i>ty</i> ending <span class=\"pl\">-sz</span> on the stem <span class=\"pl\">mieszka-</span>."
+      },
+      {
+       "id": "pre-27",
+       "kind": "choice",
+       "q": "<span class=\"pl\">Oni nie ___ czasu.</span> — \"They have no time.\"",
+       "opts": [
+        "mają",
+        "ma",
+        "mamy",
+        "mam"
+       ],
+       "a": "mają",
+       "why": "<span class=\"pl\">mają</span> — third person plural of <span class=\"pl\">mieć</span>. And because the verb is negated, the object is genitive: <span class=\"pl\">nie mają czasu</span>."
+      },
+      {
+       "id": "pre-28",
+       "kind": "type",
+       "q": "Write the <i>wy</i> form of <span class=\"pl\">czytać</span>.",
+       "accept": [
+        "czytacie"
+       ],
+       "why": "<span class=\"pl\">czytacie</span> — the <i>wy</i> ending is <span class=\"pl\">-cie</span>."
+      },
+      {
+       "id": "pre-29",
+       "kind": "type",
+       "q": "Write the <i>my</i> form of <span class=\"pl\">iść</span>.",
+       "accept": [
+        "idziemy"
+       ],
+       "why": "<span class=\"pl\">idziemy</span> — from the stem <span class=\"pl\">idzi-</span>. The past of this verb is completely different: <span class=\"pl\">szliśmy</span>."
+      },
+      {
+       "id": "pre-30",
+       "kind": "type",
+       "q": "Write the <i>oni / one</i> form of <span class=\"pl\">iść</span>.",
+       "accept": [
+        "idą"
+       ],
+       "why": "<span class=\"pl\">idą</span> — one short word. Do not confuse it with the past <span class=\"pl\">szli</span>."
+      }
+     ]
+    }
+   ],
+   "count": 30
+  },
+  {
+   "id": "past",
+   "n": "04",
+   "en": "The past tense",
+   "pl": "Czas przeszły",
+   "short": "The -ł- stem, gender that tells you who spoke, and the endings -em, -eś, -śmy, -ście.",
+   "sets": [
+    {
+     "id": "stem",
+     "title": "The -ł- stem",
+     "ask": "Build the past from the infinitive",
+     "items": [
+      {
+       "id": "pas-1",
+       "kind": "choice",
+       "q": "The past tense of <span class=\"pl\">pisać</span> is built on which stem?",
+       "opts": [
+        "pisa- + ł → pisał",
+        "pis- + ł → pisł",
+        "pisz- + ł → pisznął",
+        "pisa- + ł → pisałem only"
+       ],
+       "a": "pisa- + ł → pisał",
+       "why": "Take the infinitive, drop <span class=\"pl\">-ć</span>, add <span class=\"pl\">-ł</span>: <span class=\"pl\">pisać → pisał</span>. That is the whole rule for regular verbs; the endings go on this form."
+      },
+      {
+       "id": "pas-2",
+       "kind": "type",
+       "q": "<span class=\"pl\">pisać</span> — <i>ja</i> (a man)",
+       "accept": [
+        "pisałem"
+       ],
+       "why": "<span class=\"pl\">pisał</span> + <span class=\"pl\">-em</span> → <span class=\"pl\">pisałem</span>. The <span class=\"pl\">-ł</span> stays."
+      },
+      {
+       "id": "pas-3",
+       "kind": "type",
+       "q": "<span class=\"pl\">pisać</span> — <i>ja</i> (a woman)",
+       "accept": [
+        "pisałam"
+       ],
+       "why": "<span class=\"pl\">pisała</span> + <span class=\"pl\">-m</span> → <span class=\"pl\">pisałam</span>. The feminine uses <span class=\"pl\">-a-</span> before the person ending."
+      },
+      {
+       "id": "pas-4",
+       "kind": "type",
+       "q": "<span class=\"pl\">czytać</span> — <i>my</i> (a mixed group)",
+       "accept": [
+        "czytaliśmy",
+        "czytałyśmy"
+       ],
+       "why": "<span class=\"pl\">czytaliśmy</span> if the group includes at least one man; <span class=\"pl\">czytałyśmy</span> if it is all women. Polish past plural makes that distinction, and the same split exists in the third person: <span class=\"pl\">czytali / czytały</span>."
+      },
+      {
+       "id": "pas-5",
+       "kind": "type",
+       "q": "<span class=\"pl\">robić</span> — <i>on</i>",
+       "accept": [
+        "robił"
+       ],
+       "why": "<span class=\"pl\">robił</span> — the bare <span class=\"pl\">-ł</span> form is third person singular masculine."
+      },
+      {
+       "id": "pas-6",
+       "kind": "type",
+       "q": "<span class=\"pl\">robić</span> — <i>ona</i>",
+       "accept": [
+        "robiła"
+       ],
+       "why": "<span class=\"pl\">robiła</span> — the feminine adds <span class=\"pl\">-a</span>."
+      },
+      {
+       "id": "pas-7",
+       "kind": "type",
+       "q": "<span class=\"pl\">robić</span> — <i>oni</i>",
+       "accept": [
+        "robili"
+       ],
+       "why": "<span class=\"pl\">robili</span> — masculine-personal plural. If the group has no men, it is <span class=\"pl\">robiły</span>."
+      },
+      {
+       "id": "pas-8",
+       "kind": "type",
+       "q": "<span class=\"pl\">iść</span> — <i>ja</i> (a man)",
+       "accept": [
+        "szedłem"
+       ],
+       "why": "<span class=\"pl\">szedłem</span> — the past stem of <span class=\"pl\">iść</span> is <span class=\"pl\">szed-</span>, unrelated to the present <span class=\"pl\">idę</span>."
+      },
+      {
+       "id": "pas-9",
+       "kind": "type",
+       "q": "<span class=\"pl\">iść</span> — <i>ona</i>",
+       "accept": [
+        "szła"
+       ],
+       "why": "<span class=\"pl\">szła</span> — no <span class=\"pl\">-e-</span>. The masculine is <span class=\"pl\">szedł</span>, the feminine <span class=\"pl\">szła</span>."
+      },
+      {
+       "id": "pas-10",
+       "kind": "type",
+       "q": "<span class=\"pl\">jeść</span> — <i>on</i>",
+       "accept": [
+        "jadł"
+       ],
+       "why": "<span class=\"pl\">jadł</span> — not <span class=\"pl\">jedł</span>. The past stem of <span class=\"pl\">jeść</span> is <span class=\"pl\">jad-</span>."
+      },
+      {
+       "id": "pas-11",
+       "kind": "type",
+       "q": "<span class=\"pl\">jeść</span> — <i>oni</i>",
+       "accept": [
+        "jedli"
+       ],
+       "why": "<span class=\"pl\">jedli</span> — here the <span class=\"pl\">-e-</span> is back, because the masculine-personal plural softens the stem."
+      },
+      {
+       "id": "pas-12",
+       "kind": "type",
+       "q": "<span class=\"pl\">być</span> — <i>ty</i> (a man)",
+       "accept": [
+        "byłeś"
+       ],
+       "why": "<span class=\"pl\">byłeś</span> — <span class=\"pl\">był</span> + <span class=\"pl\">-eś</span>. A woman would say <span class=\"pl\">byłaś</span>."
+      },
+      {
+       "id": "pas-13",
+       "kind": "type",
+       "q": "<span class=\"pl\">mieć</span> — <i>my</i> (a group with men)",
+       "accept": [
+        "mieliśmy"
+       ],
+       "why": "<span class=\"pl\">mieliśmy</span> — from <span class=\"pl\">mieli</span> + <span class=\"pl\">-śmy</span>."
+      },
+      {
+       "id": "pas-14",
+       "kind": "type",
+       "q": "<span class=\"pl\">wziąć</span> — <i>ona</i>",
+       "accept": [
+        "wzięła"
+       ],
+       "why": "<span class=\"pl\">wzięła</span> — the <span class=\"pl\">ą</span> of the infinitive becomes <span class=\"pl\">ę</span> in the feminine and neuter. The masculine is <span class=\"pl\">wziął</span>."
+      }
+     ]
+    },
+    {
+     "id": "gender",
+     "title": "Gender, and who is speaking",
+     "ask": "Which ending does the speaker need?",
+     "items": [
+      {
+       "id": "pas-15",
+       "kind": "choice",
+       "q": "A man says \"I was writing\". Which?",
+       "opts": [
+        "pisałem",
+        "pisałam"
+       ],
+       "a": "pisałem",
+       "why": "<span class=\"pl\">-łem</span> is the masculine form. A woman says <span class=\"pl\">pisałam</span>. This is not about the object; it is about the speaker."
+      },
+      {
+       "id": "pas-16",
+       "kind": "choice",
+       "q": "A woman says \"We went\". Which, if the group was all women?",
+       "opts": [
+        "poszłyśmy",
+        "poszliśmy"
+       ],
+       "a": "poszłyśmy",
+       "why": "<span class=\"pl\">poszłyśmy</span> — all-female group. With at least one man in the group it is <span class=\"pl\">poszliśmy</span>."
+      },
+      {
+       "id": "pas-17",
+       "kind": "choice",
+       "q": "Which plural form is used for a group of women only?",
+       "opts": [
+        "-ły",
+        "-li"
+       ],
+       "a": "-ły",
+       "why": "Masculine-personal (at least one man) takes <span class=\"pl\">-li</span>; everything else — women, children, animals, things — takes <span class=\"pl\">-ły</span>. Polish calls these <i>męskoosobowy</i> and <i>niemęskoosobowy</i>."
+      },
+      {
+       "id": "pas-18",
+       "kind": "choice",
+       "q": "\"The men were reading.\" Which?",
+       "opts": [
+        "Mężczyźni czytali.",
+        "Mężczyźni czytały."
+       ],
+       "a": "Mężczyźni czytali.",
+       "why": "Men are masculine-personal, so <span class=\"pl\">czytali</span>. For a group of women or things it is <span class=\"pl\">czytały</span>."
+      },
+      {
+       "id": "pas-19",
+       "kind": "choice",
+       "q": "\"The books were lying on the table.\" Which?",
+       "opts": [
+        "Książki leżały na stole.",
+        "Książki leżeli na stole."
+       ],
+       "a": "Książki leżały na stole.",
+       "why": "Books are not people, so they take the non-masculine-personal plural: <span class=\"pl\">leżały</span>. <span class=\"pl\">Leżeli</span> would need people — and men."
+      },
+      {
+       "id": "pas-20",
+       "kind": "choice",
+       "q": "Where does the ending <span class=\"pl\">-śmy</span> attach?",
+       "opts": [
+        "To the past form: byliśmy",
+        "To the infinitive: byćśmy",
+        "To the present: jesteśmyśmy",
+        "To a separate word only"
+       ],
+       "a": "To the past form: byliśmy",
+       "why": "<span class=\"pl\">byliśmy</span> — the ending fuses onto the <span class=\"pl\">-ł-</span> form. The separated spelling <span class=\"pl\">-śmy byli</span> exists but is formal and unusual in speech."
+      },
+      {
+       "id": "pas-21",
+       "kind": "type",
+       "q": "A woman says \"I did it\" — write <i>ja</i> of <span class=\"pl\">zrobić</span>.",
+       "accept": [
+        "zrobiłam"
+       ],
+       "why": "<span class=\"pl\">zrobiłam</span>. The perfective changes nothing about the past endings — only about the meaning."
+      },
+      {
+       "id": "pas-22",
+       "kind": "type",
+       "q": "A man says \"I didn't have time\" — write <i>ja</i> of <span class=\"pl\">mieć</span> in the past.",
+       "accept": [
+        "nie miałem",
+        "miałem"
+       ],
+       "why": "<span class=\"pl\">nie miałem</span> / <span class=\"pl\">miałem</span>. Note that the object after <i>nie</i> is genitive: <span class=\"pl\">nie miałem czasu</span>."
+      }
+     ]
+    },
+    {
+     "id": "past-vs-present",
+     "title": "Past or present?",
+     "ask": "Which tense does the sentence need?",
+     "items": [
+      {
+       "id": "pas-23",
+       "kind": "choice",
+       "q": "\"Yesterday I wrote a letter.\" Which?",
+       "opts": [
+        "Wczoraj napisałem list.",
+        "Wczoraj napiszę list.",
+        "Wczoraj piszę list.",
+        "Wczoraj pisałbym list."
+       ],
+       "a": "Wczoraj napisałem list.",
+       "why": "<span class=\"pl\">napisałem</span> — past, perfective, and the masculine speaker ending <span class=\"pl\">-em</span>. A woman would say <span class=\"pl\">napisałam</span>."
+      },
+      {
+       "id": "pas-24",
+       "kind": "choice",
+       "q": "\"I'm writing now.\" Which?",
+       "opts": [
+        "Teraz piszę.",
+        "Teraz napisałem.",
+        "Teraz napiszę.",
+        "Teraz pisałem."
+       ],
+       "a": "Teraz piszę.",
+       "why": "<span class=\"pl\">piszę</span> — present, imperfective, the process happening now."
+      },
+      {
+       "id": "pas-25",
+       "kind": "choice",
+       "q": "\"Did you eat?\" Which?",
+       "opts": [
+        "Jadłeś? / Jadłaś?",
+        "Jesz?",
+        "Zjesz?",
+        "Jadłbyś?"
+       ],
+       "a": "Jadłeś? / Jadłaś?",
+       "why": "The past of <span class=\"pl\">jeść</span> is <span class=\"pl\">jadł-</span>, so <span class=\"pl\">jadłeś</span> (to a man) or <span class=\"pl\">jadłaś</span> (to a woman). <span class=\"pl\">Zjesz?</span> is \"will you eat?\"; <span class=\"pl\">jesz?</span> is \"are you eating?\"."
+      },
+      {
+       "id": "pas-26",
+       "kind": "choice",
+       "q": "\"Where were you?\" Which?",
+       "opts": [
+        "Gdzie byłeś? / Byłaś?",
+        "Gdzie jesteś?",
+        "Gdzie będziesz?",
+        "Gdzie byś był?"
+       ],
+       "a": "Gdzie byłeś? / Byłaś?",
+       "why": "<span class=\"pl\">byłeś</span> to a man, <span class=\"pl\">byłaś</span> to a woman. <span class=\"pl\">Gdzie jesteś?</span> is \"where are you (now)?\"."
+      },
+      {
+       "id": "pas-27",
+       "kind": "choice",
+       "q": "Which sentence uses the past correctly for a female speaker?",
+       "opts": [
+        "Wczoraj byłam w pracy.",
+        "Wczoraj byłem w pracy.",
+        "Wczoraj byłom w pracy.",
+        "Wczoraj był w pracy."
+       ],
+       "a": "Wczoraj byłam w pracy.",
+       "why": "<span class=\"pl\">byłam</span> — feminine <span class=\"pl\">-a-</span> plus <span class=\"pl\">-m</span>. <span class=\"pl\">Byłem</span> would be a man speaking."
+      }
+     ]
+    }
+   ],
+   "count": 27
+  },
+  {
+   "id": "future",
+   "n": "05",
+   "en": "The future",
+   "pl": "Czas przyszły",
+   "short": "Two futures for imperfective verbs, one for perfective. Why będę pisać and napiszę are not the same promise.",
+   "sets": [
+    {
+     "id": "two-futures",
+     "title": "Which future is it?",
+     "ask": "Compound or simple?",
+     "items": [
+      {
+       "id": "fut-1",
+       "kind": "choice",
+       "q": "\"I will write the letter (and it will be done).\" Which?",
+       "opts": [
+        "Napiszę list.",
+        "Będę pisać list.",
+        "Piszę list.",
+        "Napisałem list."
+       ],
+       "a": "Napiszę list.",
+       "why": "A perfective verb has a <b>simple</b> future made of its own present-shaped forms: <span class=\"pl\">napiszę</span>. No <span class=\"pl\">będę</span> is needed or wanted."
+      },
+      {
+       "id": "fut-2",
+       "kind": "choice",
+       "q": "\"I will be writing (in the process) all evening.\" Which?",
+       "opts": [
+        "Będę pisać cały wieczór.",
+        "Napiszę cały wieczór.",
+        "Piszę cały wieczór.",
+        "Pisałem cały wieczór."
+       ],
+       "a": "Będę pisać cały wieczór.",
+       "why": "An imperfective verb has no simple future, so it uses the <b>compound</b> future: <span class=\"pl\">będę</span> + infinitive. The process is what lasts all evening."
+      },
+      {
+       "id": "fut-3",
+       "kind": "choice",
+       "q": "Which future is grammatically impossible?",
+       "opts": [
+        "będę napisać",
+        "będę pisać",
+        "napiszę",
+        "będę pisał"
+       ],
+       "a": "będę napisać",
+       "why": "<span class=\"pl\">będę</span> takes an <b>imperfective</b> infinitive or past form. <span class=\"pl\">Będę napisać</span> puts a perfective verb where only an imperfective can go — it has no meaning in Polish."
+      },
+      {
+       "id": "fut-4",
+       "kind": "choice",
+       "q": "<span class=\"pl\">Będę pisał</span> versus <span class=\"pl\">będę pisać</span>: what is the difference?",
+       "opts": [
+        "Meaning the same; the past-participle form can show gender and is commoner in speech",
+        "One is past, one is future",
+        "One is formal, one is rude",
+        "Będę pisać is wrong"
+       ],
+       "a": "Meaning the same; the past-participle form can show gender and is commoner in speech",
+       "why": "Both are correct compound futures. <span class=\"pl\">Będę pisał</span> agrees with a male speaker and <span class=\"pl\">będę pisała</span> with a female one; <span class=\"pl\">będę pisać</span> is neutral about gender. The infinitive version is the easy default."
+      },
+      {
+       "id": "fut-5",
+       "kind": "choice",
+       "q": "What is the future of <span class=\"pl\">być</span>?",
+       "opts": [
+        "będę, będziesz, będzie, będziemy, będziecie, będą",
+        "bym, byś, by, byśmy, byście, by",
+        "jestem, jesteś…",
+        "będę być"
+       ],
+       "a": "będę, będziesz, będzie, będziemy, będziecie, będą",
+       "why": "<span class=\"pl\">będę</span> is a complete future tense of its own. <span class=\"pl\">Bym, byś, by</span> is the conditional (chapter 7), not the future."
+      },
+      {
+       "id": "fut-6",
+       "kind": "choice",
+       "q": "\"It will rain tomorrow.\" Which?",
+       "opts": [
+        "Jutro będzie padać. / Jutro będzie padało.",
+        "Jutro pada.",
+        "Jutro padnie deszcz.",
+        "Jutro padało."
+       ],
+       "a": "Jutro będzie padać. / Jutro będzie padało.",
+       "why": "Weather verbs are impersonal and imperfective, so the compound future: <span class=\"pl\">będzie padać</span> or <span class=\"pl\">będzie padało</span>."
+      }
+     ]
+    },
+    {
+     "id": "making-future",
+     "title": "Build it",
+     "ask": "Write the future form",
+     "items": [
+      {
+       "id": "fut-7",
+       "kind": "type",
+       "q": "<span class=\"pl\">czytać</span> — \"I will read (be reading)\", compound, neutral.",
+       "accept": [
+        "będę czytać"
+       ],
+       "why": "<span class=\"pl\">będę czytać</span> — the compound future with the imperfective infinitive."
+      },
+      {
+       "id": "fut-8",
+       "kind": "type",
+       "q": "<span class=\"pl\">przeczytać</span> — \"I will read it (through)\" — <i>ja</i>.",
+       "accept": [
+        "przeczytam"
+       ],
+       "why": "<span class=\"pl\">przeczytam</span> — perfective, simple future. Notice it looks like a present tense; for a perfective verb, that is the future."
+      },
+      {
+       "id": "fut-9",
+       "kind": "type",
+       "q": "<span class=\"pl\">robić</span> — \"she will be doing it\" (compound, feminine).",
+       "accept": [
+        "będzie robić",
+        "będzie robiła"
+       ],
+       "why": "<span class=\"pl\">będzie robić</span> or <span class=\"pl\">będzie robiła</span>. The second shows the feminine subject twice: in <span class=\"pl\">będzie</span>'s third person and in the participle's <span class=\"pl\">-a</span>."
+      },
+      {
+       "id": "fut-10",
+       "kind": "type",
+       "q": "<span class=\"pl\">zrobić</span> — \"we will do it\" — <i>my</i>.",
+       "accept": [
+        "zrobimy"
+       ],
+       "why": "<span class=\"pl\">zrobimy</span> — simple future of the perfective."
+      },
+      {
+       "id": "fut-11",
+       "kind": "type",
+       "q": "<span class=\"pl\">być</span> — \"they will be\" — <i>oni / one</i>.",
+       "accept": [
+        "będą"
+       ],
+       "why": "<span class=\"pl\">będą</span> — third person plural of the future of <span class=\"pl\">być</span>. Do not confuse with <span class=\"pl\">są</span> (present)."
+      },
+      {
+       "id": "fut-12",
+       "kind": "type",
+       "q": "<span class=\"pl\">pójść</span> — \"I will go\" — <i>ja</i>.",
+       "accept": [
+        "pójdę"
+       ],
+       "why": "<span class=\"pl\">pójdę</span> — perfective, so this present-shaped form is the future: I'll set off. For \"I'll be walking about\", the imperfective future is <span class=\"pl\">będę chodzić</span>."
+      },
+      {
+       "id": "fut-13",
+       "kind": "type",
+       "q": "<span class=\"pl\">jeść</span> — \"they will be eating\" — <i>oni</i>, compound.",
+       "accept": [
+        "będą jeść",
+        "będą jedli"
+       ],
+       "why": "<span class=\"pl\">będą jeść</span> or <span class=\"pl\">będą jedli</span>. The compound future keeps the imperfective process."
+      }
+     ]
+    },
+    {
+     "id": "future-traps",
+     "title": "Future traps",
+     "ask": "What is wrong with it?",
+     "items": [
+      {
+       "id": "fut-14",
+       "kind": "choice",
+       "q": "Why is <span class=\"pl\">będę napisać list</span> wrong?",
+       "opts": [
+        "Będę needs an imperfective verb, and napisać is perfective",
+        "List is in the wrong case",
+        "The person ending is wrong",
+        "There should be a się"
+       ],
+       "a": "Będę needs an imperfective verb, and napisać is perfective",
+       "why": "The compound future marks an ongoing process, so it takes an imperfective infinitive: <span class=\"pl\">będę pisać</span>. A perfective verb makes its own future without help: <span class=\"pl\">napiszę</span>."
+      },
+      {
+       "id": "fut-15",
+       "kind": "choice",
+       "q": "A learner says <span class=\"pl\">Jutro napiszę list</span> to mean \"Tomorrow I will be writing a letter (all morning)\". What is off?",
+       "opts": [
+        "The aspect: for a process in the future, use będę pisać",
+        "The tense",
+        "The case",
+        "The person"
+       ],
+       "a": "The aspect: for a process in the future, use będę pisać",
+       "why": "<span class=\"pl\">Napiszę</span> promises a finished letter, not a morning of writing. For the process, <span class=\"pl\">będę pisać list</span>."
+      },
+      {
+       "id": "fut-16",
+       "kind": "choice",
+       "q": "Which sentence is <b>not</b> correct Polish?",
+       "opts": [
+        "Będę mógł przyjść.",
+        "Będę móc przyjść.",
+        "Będę móc przyszedł.",
+        "Mogę przyjść."
+       ],
+       "a": "Będę móc przyszedł.",
+       "why": "<span class=\"pl\">Będę móc przyszedł</span> puts a past form after the infinitive and is wrong. The other three are all correct: <span class=\"pl\">będę mógł przyjść</span> and <span class=\"pl\">będę móc przyjść</span> are the two futures of “I will be able to come” (the first commoner in speech), and <span class=\"pl\">mogę przyjść</span> means “I can come”."
+      },
+      {
+       "id": "fut-17",
+       "kind": "choice",
+       "q": "\"I'm going to Poland next year.\" Which is most natural?",
+       "opts": [
+        "W przyszłym roku pojadę do Polski.",
+        "W przyszłym roku będę jechać do Polski.",
+        "W przyszłym roku jadę do Polski.",
+        "W przyszłym roku jechałem do Polski."
+       ],
+       "a": "W przyszłym roku pojadę do Polski.",
+       "why": "One journey, completed: the perfective <span class=\"pl\">pojadę</span>. <span class=\"pl\">Będę jechać</span> would describe being on the way; <span class=\"pl\">jadę</span> is present or an arranged-now future."
+      },
+      {
+       "id": "fut-18",
+       "kind": "choice",
+       "q": "\"I'll be there at eight.\" Which?",
+       "opts": [
+        "Będę tam o ósmej.",
+        "Jestem tam o ósmej.",
+        "Byłem tam o ósmej.",
+        "Będę tam być o ósmej."
+       ],
+       "a": "Będę tam o ósmej.",
+       "why": "<span class=\"pl\">będę</span> is simply the future of <span class=\"pl\">być</span>. Adding <span class=\"pl\">być</span> after it is a double future and wrong."
+      }
+     ]
+    }
+   ],
+   "count": 18
+  },
+  {
+   "id": "imperative",
+   "n": "06",
+   "en": "The imperative",
+   "pl": "Tryb rozkazujący",
+   "short": "Commands, requests, niech, and why Polish says proszę more often than it gives orders.",
+   "sets": [
+    {
+     "id": "commands",
+     "title": "Giving a command",
+     "ask": "The right imperative",
+     "items": [
+      {
+       "id": "imp-1",
+       "kind": "type",
+       "q": "<span class=\"pl\">pisać</span> — \"Write!\" (to one person, informally)",
+       "accept": [
+        "pisz"
+       ],
+       "why": "<span class=\"pl\">Pisz!</span> — the imperative of an <span class=\"pl\">-ać</span> verb usually ends in a soft consonant with no ending at all, or in <span class=\"pl\">-aj</span>. Here: <span class=\"pl\">pisz</span>."
+      },
+      {
+       "id": "imp-2",
+       "kind": "type",
+       "q": "<span class=\"pl\">czytać</span> — \"Read!\" (to one person)",
+       "accept": [
+        "czytaj"
+       ],
+       "why": "<span class=\"pl\">Czytaj!</span> — the <span class=\"pl\">-am</span> family takes <span class=\"pl\">-aj</span> in the imperative."
+      },
+      {
+       "id": "imp-3",
+       "kind": "type",
+       "q": "<span class=\"pl\">robić</span> — \"Do it!\" (to one person)",
+       "accept": [
+        "rób"
+       ],
+       "why": "<span class=\"pl\">Rób!</span> — a short, irregular imperative. Note the <span class=\"pl\">ó</span>."
+      },
+      {
+       "id": "imp-4",
+       "kind": "type",
+       "q": "<span class=\"pl\">iść</span> — \"Go!\" (to one person)",
+       "accept": [
+        "idź"
+       ],
+       "why": "<span class=\"pl\">Idź!</span> — the softening gives <span class=\"pl\">-dź</span>. Plural: <span class=\"pl\">idźcie!</span>"
+      },
+      {
+       "id": "imp-5",
+       "kind": "type",
+       "q": "<span class=\"pl\">mówić</span> — \"Speak!\" (to one person)",
+       "accept": [
+        "mów"
+       ],
+       "why": "<span class=\"pl\">Mów!</span> — an imperative with no ending, on the bare stem."
+      },
+      {
+       "id": "imp-6",
+       "kind": "type",
+       "q": "<span class=\"pl\">dać</span> / <span class=\"pl\">dawać</span> — \"Give me!\"",
+       "accept": [
+        "daj",
+        "daj mi"
+       ],
+       "why": "<span class=\"pl\">Daj mi!</span> — from the imperfective <span class=\"pl\">dawać</span>. Polish uses the imperfective for a plain request: <span class=\"pl\">Daj mi to</span>. <span class=\"pl\">Dać</span> itself has no ordinary imperative form in use."
+      },
+      {
+       "id": "imp-7",
+       "kind": "type",
+       "q": "<span class=\"pl\">wziąć</span> / <span class=\"pl\">brać</span> — \"Take it!\"",
+       "accept": [
+        "weź",
+        "bierz",
+        "weź to",
+        "bierz to"
+       ],
+       "why": "Both exist: <span class=\"pl\">weź!</span> (from the perfective, one act) and <span class=\"pl\">bierz!</span> (from the imperfective). <span class=\"pl\">Weź</span> is the everyday instruction."
+      },
+      {
+       "id": "imp-8",
+       "kind": "type",
+       "q": "<span class=\"pl\">być</span> — \"Be careful!\" (to one person)",
+       "accept": [
+        "bądź",
+        "bądź ostrożny",
+        "bądź ostrożna"
+       ],
+       "why": "<span class=\"pl\">Bądź!</span> — the imperative of <span class=\"pl\">być</span>. <span class=\"pl\">Bądź ostrożny</span> to a man, <span class=\"pl\">bądź ostrożna</span> to a woman."
+      },
+      {
+       "id": "imp-9",
+       "kind": "type",
+       "q": "<span class=\"pl\">mieć</span> — \"Have a nice day!\"",
+       "accept": [
+        "miej",
+        "miej miły dzień"
+       ],
+       "why": "<span class=\"pl\">Miej!</span> — rare in speech, but the form is <span class=\"pl\">miej</span>. The everyday phrase is <span class=\"pl\">Miłego dnia!</span>, which needs no verb at all."
+      }
+     ]
+    },
+    {
+     "id": "plural-polite",
+     "title": "To several people, and politely",
+     "ask": "Which form for whom?",
+     "items": [
+      {
+       "id": "imp-10",
+       "kind": "type",
+       "q": "<span class=\"pl\">czytać</span> — \"Read!\" (to several people)",
+       "accept": [
+        "czytajcie"
+       ],
+       "why": "<span class=\"pl\">Czytajcie!</span> — the plural imperative adds <span class=\"pl\">-cie</span> to the singular."
+      },
+      {
+       "id": "imp-11",
+       "kind": "type",
+       "q": "<span class=\"pl\">iść</span> — \"Go!\" (to several people)",
+       "accept": [
+        "idźcie"
+       ],
+       "why": "<span class=\"pl\">Idźcie!</span> — singular <span class=\"pl\">idź</span> plus <span class=\"pl\">-cie</span>."
+      },
+      {
+       "id": "imp-12",
+       "kind": "choice",
+       "q": "How do you tell a stranger politely to come in?",
+       "opts": [
+        "Proszę wejść.",
+        "Wejdź!",
+        "Wejdźcie!",
+        "Niech wejdziesz."
+       ],
+       "a": "Proszę wejść.",
+       "why": "Polish politeness is built on <span class=\"pl\">proszę</span> + infinitive, not on a special imperative form. <span class=\"pl\">Wejdź!</span> is fine between friends; to a stranger it is abrupt."
+      },
+      {
+       "id": "imp-13",
+       "kind": "choice",
+       "q": "\"Let him come in.\" Which is the third-person imperative?",
+       "opts": [
+        "Niech wejdzie.",
+        "Niech wejdę.",
+        "Wejdzie.",
+        "Niech wejść."
+       ],
+       "a": "Niech wejdzie.",
+       "why": "<span class=\"pl\">niech</span> + third-person form is how Polish says \"let him / let them\". <span class=\"pl\">Niech wejdzie</span> = let him in; <span class=\"pl\">niech wejdą</span> = let them in."
+      },
+      {
+       "id": "imp-14",
+       "kind": "choice",
+       "q": "\"Let's go!\" Which?",
+       "opts": [
+        "Chodźmy!",
+        "Idziemy!",
+        "Idź!",
+        "Niech idziemy."
+       ],
+       "a": "Chodźmy!",
+       "why": "<span class=\"pl\">Chodźmy!</span> is the first-person plural imperative — \"let's go\". <span class=\"pl\">Idziemy!</span> states a fact (\"we're going\"), which in context can work as an invitation, but it is not an imperative."
+      },
+      {
+       "id": "imp-15",
+       "kind": "choice",
+       "q": "How do you say \"Don't do that!\" to one person?",
+       "opts": [
+        "Nie rób tego!",
+        "Nie zrób tego!",
+        "Nie robisz tego!",
+        "Nie rób to!"
+       ],
+       "a": "Nie rób tego!",
+       "why": "Negative commands take the <b>imperfective</b>: <span class=\"pl\">nie rób</span>, not <span class=\"pl\">nie zrób</span>. And the object after <i>nie</i> goes genitive: <span class=\"pl\">tego</span>, not <span class=\"pl\">to</span>."
+      },
+      {
+       "id": "imp-16",
+       "kind": "choice",
+       "q": "Why is <span class=\"pl\">Nie zrób tego!</span> odd?",
+       "opts": [
+        "Negative imperatives use the imperfective: nie rób",
+        "It should be nie zrobisz",
+        "Tego should be to",
+        "It is perfectly fine"
+       ],
+       "a": "Negative imperatives use the imperfective: nie rób",
+       "why": "A prohibition is about an action to be avoided, not a result to be achieved, so Polish uses the imperfective: <span class=\"pl\">nie rób</span>, <span class=\"pl\">nie pisz</span>, <span class=\"pl\">nie mów</span>. Positive commands can be either."
+      },
+      {
+       "id": "imp-17",
+       "kind": "type",
+       "q": "<span class=\"pl\">pisać</span> — \"Don't write!\" (to one person)",
+       "accept": [
+        "nie pisz"
+       ],
+       "why": "<span class=\"pl\">Nie pisz!</span> — imperfective, as all negative commands are."
+      }
+     ]
+    },
+    {
+     "id": "imperative-traps",
+     "title": "Imperative traps",
+     "ask": "What is the rule?",
+     "items": [
+      {
+       "id": "imp-18",
+       "kind": "choice",
+       "q": "Which verbs have no imperative at all?",
+       "opts": [
+        "Some impersonal and defective verbs, e.g. brakować, padać (of rain)",
+        "All perfective verbs",
+        "All reflexive verbs",
+        "All verbs ending in -ać"
+       ],
+       "a": "Some impersonal and defective verbs, e.g. brakować, padać (of rain)",
+       "why": "You cannot command the rain, or command \"to be lacking\". Most ordinary verbs, perfective or not, do have imperatives — <span class=\"pl\">napisz!</span> is perfectly good."
+      },
+      {
+       "id": "imp-19",
+       "kind": "choice",
+       "q": "Is <span class=\"pl\">napisz!</span> correct?",
+       "opts": [
+        "Yes — positive commands can be perfective",
+        "No — only imperfective verbs have imperatives",
+        "No — napisz is the future",
+        "Yes, but it means \"you will write\""
+       ],
+       "a": "Yes — positive commands can be perfective",
+       "why": "<span class=\"pl\">Napisz do mnie!</span> = write to me (and do it). Perfective commands ask for a completed act; imperfective commands ask for a process or a habit. Only <b>negative</b> commands are restricted to the imperfective."
+      },
+      {
+       "id": "imp-20",
+       "kind": "choice",
+       "q": "What does the ending <span class=\"pl\">-cie</span> mark?",
+       "opts": [
+        "A command to more than one person",
+        "Politeness to one person",
+        "The past tense",
+        "The conditional"
+       ],
+       "a": "A command to more than one person",
+       "why": "<span class=\"pl\">czytaj → czytajcie</span>, <span class=\"pl\">idź → idźcie</span>. Politeness to one person is done with <span class=\"pl\">proszę</span> + infinitive, or with <span class=\"pl\">niech pan/pani</span> + verb."
+      },
+      {
+       "id": "imp-21",
+       "kind": "choice",
+       "q": "\"Please sit down\" to one person, politely. Which?",
+       "opts": [
+        "Proszę usiąść.",
+        "Usiądź!",
+        "Niech usiądziesz.",
+        "Usiądźcie!"
+       ],
+       "a": "Proszę usiąść.",
+       "why": "<span class=\"pl\">Proszę usiąść</span> is the standard polite form. <span class=\"pl\">Niech pan/pani usiądzie</span> also works. <span class=\"pl\">Usiądź!</span> is for friends and children."
+      }
+     ]
+    }
+   ],
+   "count": 21
+  },
+  {
+   "id": "conditional",
+   "n": "07",
+   "en": "The conditional",
+   "pl": "Tryb przypuszczający",
+   "short": "bym, byś, by — politeness, hypotheses, and the conditional that polite Polish runs on.",
+   "sets": [
+    {
+     "id": "would",
+     "title": "Would, could, should",
+     "ask": "The conditional form",
+     "items": [
+      {
+       "id": "con-1",
+       "kind": "type",
+       "q": "\"I would do it\" — <i>ja</i> (a man), from <span class=\"pl\">robić</span>.",
+       "accept": [
+        "zrobiłbym",
+        "robiłbym"
+       ],
+       "why": "Both are conditionals: <span class=\"pl\">zrobiłbym</span> (perfective — I'd do it and it'd be done) and <span class=\"pl\">robiłbym</span> (imperfective — I'd be doing it). For \"I would do it\" the perfective is the natural one."
+      },
+      {
+       "id": "con-2",
+       "kind": "type",
+       "q": "\"I would do it\" — <i>ja</i> (a woman).",
+       "accept": [
+        "zrobiłabym",
+        "robiłabym"
+       ],
+       "why": "<span class=\"pl\">zrobiłabym</span> — the feminine <span class=\"pl\">-a-</span> sits between the past stem and <span class=\"pl\">-bym</span>."
+      },
+      {
+       "id": "con-3",
+       "kind": "type",
+       "q": "\"Would you help me?\" — <i>ty</i> (to a man), from <span class=\"pl\">pomóc</span>.",
+       "accept": [
+        "pomógłbyś"
+       ],
+       "why": "<span class=\"pl\">pomógłbyś</span> — past stem <span class=\"pl\">pomógł</span> plus <span class=\"pl\">-byś</span>. To a woman: <span class=\"pl\">pomogłabyś</span>."
+      },
+      {
+       "id": "con-4",
+       "kind": "type",
+       "q": "\"We would go\" — <i>my</i> (a group with men), from <span class=\"pl\">pójść</span>.",
+       "accept": [
+        "poszlibyśmy"
+       ],
+       "why": "<span class=\"pl\">poszlibyśmy</span> — past <span class=\"pl\">poszli</span> + <span class=\"pl\">-byśmy</span>."
+      },
+      {
+       "id": "con-5",
+       "kind": "type",
+       "q": "\"They would help\" — <i>oni</i>.",
+       "accept": [
+        "pomogliby",
+        "pomogłyby"
+       ],
+       "why": "<span class=\"pl\">pomogliby</span> for a group with men, <span class=\"pl\">pomogłyby</span> for a group without. The conditional keeps the past tense's gender split."
+      },
+      {
+       "id": "con-6",
+       "kind": "choice",
+       "q": "Which part carries the person in <span class=\"pl\">zrobiłbym</span>?",
+       "opts": [
+        "-bym",
+        "zrobił-",
+        "both equally",
+        "the word order"
+       ],
+       "a": "-bym",
+       "why": "<span class=\"pl\">-bym, -byś, -by, -byśmy, -byście, -by</span> carry the person. The <span class=\"pl\">-ł-</span> part carries the gender and the verb."
+      },
+      {
+       "id": "con-7",
+       "kind": "choice",
+       "q": "\"I would like a coffee.\" Which is the standard polite form?",
+       "opts": [
+        "Chciałbym kawę. / Chciałabym kawę.",
+        "Chcę kawę.",
+        "Chciałbym kawy.",
+        "Będę chciał kawę."
+       ],
+       "a": "Chciałbym kawę. / Chciałabym kawę.",
+       "why": "<span class=\"pl\">Chciałbym kawę</span> (a man) / <span class=\"pl\">chciałabym kawę</span> (a woman) is the polite request. <span class=\"pl\">Chcę kawę</span> is perfectly correct but blunt — \"I want a coffee\"."
+      },
+      {
+       "id": "con-8",
+       "kind": "type",
+       "q": "\"I would have done it\" — a man. (The past conditional.)",
+       "accept": [
+        "zrobiłbym był",
+        "byłbym zrobił"
+       ],
+       "why": "<span class=\"pl\">zrobiłbym był</span> — the past conditional, built with <span class=\"pl\">był</span> at the end. It is literary and dated; in speech the plain conditional or the past does the job. Worth recognising, not worth using."
+      }
+     ]
+    },
+    {
+     "id": "by-separate",
+     "title": "The movable <i>by</i>",
+     "ask": "Where does it go?",
+     "items": [
+      {
+       "id": "con-9",
+       "kind": "choice",
+       "q": "Which is the standard written form of \"if I had time, I would read\"?",
+       "opts": [
+        "Gdybym miał czas, czytałbym.",
+        "Gdy bym miał czas, czytał bym.",
+        "Gdybym miał czas, czytał bym.",
+        "Gdybym miał czas, bym czytał."
+       ],
+       "a": "Gdybym miał czas, czytałbym.",
+       "why": "The conditional particle fuses onto the verb: <span class=\"pl\">czytałbym</span>, and onto <span class=\"pl\">gdy</span>: <span class=\"pl\">gdybym</span>. The separated spelling (<span class=\"pl\">czytał bym</span>) is also correct and common in careful writing, especially after a comma."
+      },
+      {
+       "id": "con-10",
+       "kind": "choice",
+       "q": "Where does <span class=\"pl\">bym</span> normally sit in a sentence?",
+       "opts": [
+        "Right after the verb, fused to it, or after a conjunction like gdy",
+        "Always at the start",
+        "Always at the end",
+        "Before the subject"
+       ],
+       "a": "Right after the verb, fused to it, or after a conjunction like gdy",
+       "why": "<span class=\"pl\">zrobiłbym</span>, <span class=\"pl\">gdybym</span>, <span class=\"pl\">żebym</span>. <span class=\"pl\">Bym</span> is a clitic: it leans on the word before it, so it cannot stand alone at the start of a sentence."
+      },
+      {
+       "id": "con-11",
+       "kind": "choice",
+       "q": "\"If I were you, I would go.\" Which?",
+       "opts": [
+        "Gdybym był tobą, poszedłbym.",
+        "Gdybym był ty, poszedłbym.",
+        "Jeśli byłem tobą, poszedłbym.",
+        "Gdybym był tobą, pójdę."
+       ],
+       "a": "Gdybym był tobą, poszedłbym.",
+       "why": "Two things: <span class=\"pl\">być</span> takes the instrumental (<span class=\"pl\">tobą</span>), and both halves stay in the conditional (<span class=\"pl\">poszedłbym</span>)."
+      },
+      {
+       "id": "con-12",
+       "kind": "choice",
+       "q": "What does <span class=\"pl\">żeby</span> mean?",
+       "opts": [
+        "\"so that\" / \"in order to\", and it takes the conditional",
+        "the same as <span class=\"pl\">że</span>",
+        "a past tense marker",
+        "a polite question"
+       ],
+       "a": "\"so that\" / \"in order to\", and it takes the conditional",
+       "why": "<span class=\"pl\">Mówię powoli, żebyś zrozumiał</span> — I speak slowly so that you understand. <span class=\"pl\">Żeby</span> is <span class=\"pl\">że</span> + <span class=\"pl\">by</span>, fused, and the verb after it is conditional."
+      },
+      {
+       "id": "con-13",
+       "kind": "type",
+       "q": "\"I would like you to come\" — write the conditional of <span class=\"pl\">przyjść</span> for <i>ty</i> (a man).",
+       "accept": [
+        "przyszedłbyś"
+       ],
+       "why": "<span class=\"pl\">przyszedłbyś</span> — past <span class=\"pl\">przyszedł</span> + <span class=\"pl\">-byś</span>. To a woman: <span class=\"pl\">przyszłabyś</span>."
+      }
+     ]
+    },
+    {
+     "id": "conditional-traps",
+     "title": "Conditional traps",
+     "ask": "Which is right?",
+     "items": [
+      {
+       "id": "con-14",
+       "kind": "choice",
+       "q": "Is the conditional a tense?",
+       "opts": [
+        "No — it is a mood: it says how real the action is, not when",
+        "Yes, it is a fourth tense",
+        "Yes, it is the future",
+        "No, it is an aspect"
+       ],
+       "a": "No — it is a mood: it says how real the action is, not when",
+       "why": "Polish <i>tryb przypuszczający</i> is a mood. It can refer to the present, the future or the past: <span class=\"pl\">zrobiłbym to teraz / jutro</span>. The tense still comes from context, as in English."
+      },
+      {
+       "id": "con-15",
+       "kind": "choice",
+       "q": "Why does <span class=\"pl\">Chciałbym</span> sound more polite than <span class=\"pl\">Chcę</span>?",
+       "opts": [
+        "The conditional removes the demand — it makes the wish hypothetical",
+        "It is more formal vocabulary",
+        "It changes the person",
+        "It is the past tense"
+       ],
+       "a": "The conditional removes the demand — it makes the wish hypothetical",
+       "why": "The same reason English says \"I would like\" rather than \"I want\". The conditional puts distance between the speaker and the demand, and Polish uses it constantly for requests: <span class=\"pl\">Czy mógłbyś…?</span>, <span class=\"pl\">Chciałbym…</span>."
+      },
+      {
+       "id": "con-16",
+       "kind": "choice",
+       "q": "Which of these is <b>not</b> a correct negative request?",
+       "opts": [
+        "Nie chciałbym nie przyjść.",
+        "Nie chciałbym przychodzić.",
+        "Wolałbym nie przychodzić.",
+        "Czy mógłbym nie przyjść?"
+       ],
+       "a": "Nie chciałbym nie przyjść.",
+       "why": "Double negation in the same clause is clumsy and unnatural here. The idiomatic way is <span class=\"pl\">wolałbym nie przychodzić</span> (I'd rather not come) or <span class=\"pl\">czy mógłbym nie przyjść?</span> (could I not come?)."
+      },
+      {
+       "id": "con-17",
+       "kind": "choice",
+       "q": "\"If it rains, we'll stay home.\" Which?",
+       "opts": [
+        "Jeśli będzie padać, zostaniemy w domu.",
+        "Jeśli by padało, zostaniemy w domu.",
+        "Jeśli padałoby, zostaniemy.",
+        "Jeśli pada, zostaniemy."
+       ],
+       "a": "Jeśli będzie padać, zostaniemy w domu.",
+       "why": "A real, likely condition takes the ordinary future, not the conditional: <span class=\"pl\">jeśli będzie padać</span>. The conditional <span class=\"pl\">gdyby padało</span> would mark an unreal or unlikely condition: \"if it were raining\"."
+      },
+      {
+       "id": "con-18",
+       "kind": "choice",
+       "q": "Which sentence is a proper unreal condition?",
+       "opts": [
+        "Gdybym miał pieniądze, kupiłbym dom.",
+        "Jeśli mam pieniądze, kupię dom.",
+        "Gdybym ma pieniądze, kupię dom.",
+        "Jeśli będę miał pieniądze, kupiłbym dom."
+       ],
+       "a": "Gdybym miał pieniądze, kupiłbym dom.",
+       "why": "An unreal condition uses the conditional in <b>both</b> halves: <span class=\"pl\">gdybym miał… kupiłbym</span>. Mixing a conditional <i>if</i> with a plain future breaks it."
+      }
+     ]
+    }
+   ],
+   "count": 18
+  },
+  {
+   "id": "irregular",
+   "n": "08",
+   "en": "The irregular verbs",
+   "pl": "Czasowniki nieregularne",
+   "short": "The dozen verbs that break the patterns, taught as patterns of their own — including być, iść, jeść and wziąć.",
+   "sets": [
+    {
+     "id": "byc",
+     "title": "być",
+     "ask": "The verb you cannot avoid",
+     "items": [
+      {
+       "id": "irr-1",
+       "kind": "type",
+       "q": "<span class=\"pl\">być</span> — <i>ja</i>",
+       "accept": [
+        "jestem"
+       ],
+       "why": "<span class=\"pl\">jestem</span>."
+      },
+      {
+       "id": "irr-2",
+       "kind": "type",
+       "q": "<span class=\"pl\">być</span> — <i>ty</i>",
+       "accept": [
+        "jesteś"
+       ],
+       "why": "<span class=\"pl\">jesteś</span>."
+      },
+      {
+       "id": "irr-3",
+       "kind": "type",
+       "q": "<span class=\"pl\">być</span> — <i>on / ona / ono</i>",
+       "accept": [
+        "jest"
+       ],
+       "why": "<span class=\"pl\">jest</span> — one short word. Polish does not leave it out the way Russian does: <span class=\"pl\">To jest dom</span>."
+      },
+      {
+       "id": "irr-4",
+       "kind": "type",
+       "q": "<span class=\"pl\">być</span> — <i>my</i>",
+       "accept": [
+        "jesteśmy"
+       ],
+       "why": "<span class=\"pl\">jesteśmy</span>."
+      },
+      {
+       "id": "irr-5",
+       "kind": "type",
+       "q": "<span class=\"pl\">być</span> — <i>oni / one</i>",
+       "accept": [
+        "są"
+       ],
+       "why": "<span class=\"pl\">są</span> — from a different root again."
+      },
+      {
+       "id": "irr-6",
+       "kind": "type",
+       "q": "<span class=\"pl\">być</span> — \"I was\" (<i>ja</i>, a woman)",
+       "accept": [
+        "byłam"
+       ],
+       "why": "<span class=\"pl\">byłam</span> — the past is regular on <span class=\"pl\">był-</span>, unlike the present."
+      },
+      {
+       "id": "irr-7",
+       "kind": "choice",
+       "q": "\"I am a programmer.\" Which case is <i>programmer</i>?",
+       "opts": [
+        "instrumental — programistą",
+        "nominative — programista",
+        "accusative — programistę",
+        "genitive — programisty"
+       ],
+       "a": "instrumental — programistą",
+       "why": "<span class=\"pl\">Jestem programistą.</span> A profession, a role or an identity after <span class=\"pl\">być</span> goes in the instrumental. An adjective does not: <span class=\"pl\">Jestem zmęczony</span> (nominative)."
+      },
+      {
+       "id": "irr-8",
+       "kind": "choice",
+       "q": "\"There is no coffee.\" Which is right?",
+       "opts": [
+        "Nie ma kawy.",
+        "Nie jest kawa.",
+        "Nie ma kawa.",
+        "Nie jest kawy."
+       ],
+       "a": "Nie ma kawy.",
+       "why": "<span class=\"pl\">nie ma</span> + genitive is how Polish says \"there is no / there isn't\". It is a fixed phrase: <span class=\"pl\">nie ma kawy</span>, <span class=\"pl\">nie ma czasu</span>, <span class=\"pl\">nie ma problemu</span>."
+      }
+     ]
+    },
+    {
+     "id": "knowing",
+     "title": "wiedzieć, znać, umieć",
+     "ask": "Which kind of knowing?",
+     "items": [
+      {
+       "id": "irr-9",
+       "kind": "choice",
+       "q": "\"I know where the station is.\" Which verb?",
+       "opts": [
+        "wiedzieć",
+        "znać",
+        "umieć",
+        "być"
+       ],
+       "a": "wiedzieć",
+       "why": "<span class=\"pl\">Wiem, gdzie jest dworzec.</span> — a fact. <span class=\"pl\">wiedzieć</span> takes a clause or <span class=\"pl\">o</span> + locative: <span class=\"pl\">wiem o tym</span>."
+      },
+      {
+       "id": "irr-10",
+       "kind": "choice",
+       "q": "\"I know Łódź well.\" Which verb?",
+       "opts": [
+        "znać",
+        "wiedzieć",
+        "umieć",
+        "mieszkać"
+       ],
+       "a": "znać",
+       "why": "<span class=\"pl\">Znam Łódź dobrze.</span> — familiarity with a place, a person or a language. <span class=\"pl\">Znam</span> takes a plain accusative object."
+      },
+      {
+       "id": "irr-11",
+       "kind": "choice",
+       "q": "\"I can swim.\" Which verb?",
+       "opts": [
+        "umieć",
+        "móc",
+        "wiedzieć",
+        "znać"
+       ],
+       "a": "umieć",
+       "why": "<span class=\"pl\">Umiem pływać.</span> — a learnt skill. <span class=\"pl\">Móc</span> is about possibility or permission: <span class=\"pl\">Czy mogę wejść?</span> — may I come in?"
+      },
+      {
+       "id": "irr-12",
+       "kind": "type",
+       "q": "<span class=\"pl\">wiedzieć</span> — <i>ja</i>",
+       "accept": [
+        "wiem"
+       ],
+       "why": "<span class=\"pl\">wiem</span> — the present stem is <span class=\"pl\">wiem-</span>, not <span class=\"pl\">wiedz-</span>."
+      },
+      {
+       "id": "irr-13",
+       "kind": "type",
+       "q": "<span class=\"pl\">wiedzieć</span> — <i>oni / one</i>",
+       "accept": [
+        "wiedzą"
+       ],
+       "why": "<span class=\"pl\">wiedzą</span> — here the <span class=\"pl\">dz</span> is back, and with <span class=\"pl\">-ą</span>."
+      },
+      {
+       "id": "irr-14",
+       "kind": "choice",
+       "q": "\"Do you know Polish?\" Which?",
+       "opts": [
+        "Znasz polski?",
+        "Wiesz polski?",
+        "Umiesz polskiego?",
+        "Znasz po polsku?"
+       ],
+       "a": "Znasz polski?",
+       "why": "A language is something you <i>znasz</i>, and the object is accusative: <span class=\"pl\">Znasz polski?</span> For a skill you use <span class=\"pl\">umieć</span>: <span class=\"pl\">Umiem mówić po polsku</span>."
+      }
+     ]
+    },
+    {
+     "id": "motion",
+     "title": "iść, chodzić, jechać, jeździć",
+     "ask": "On foot or by vehicle, one way or back and forth?",
+     "items": [
+      {
+       "id": "irr-15",
+       "kind": "choice",
+       "q": "\"I'm going to the shop now (on foot).\" Which?",
+       "opts": [
+        "Idę do sklepu.",
+        "Chodzę do sklepu.",
+        "Jadę do sklepu.",
+        "Jeżdżę do sklepu."
+       ],
+       "a": "Idę do sklepu.",
+       "why": "<span class=\"pl\">iść</span> — one journey, on foot, happening now. <span class=\"pl\">Chodzę do sklepu</span> means \"I go to the shop (regularly)\"."
+      },
+      {
+       "id": "irr-16",
+       "kind": "choice",
+       "q": "\"I go to the shop every day (on foot).\" Which?",
+       "opts": [
+        "Chodzę do sklepu codziennie.",
+        "Idę do sklepu codziennie.",
+        "Jadę do sklepu codziennie.",
+        "Pójdę do sklepu codziennie."
+       ],
+       "a": "Chodzę do sklepu codziennie.",
+       "why": "<span class=\"pl\">chodzić</span> is the repeated, back-and-forth partner of <span class=\"pl\">iść</span>. The perfective <span class=\"pl\">pójść</span> cannot carry <span class=\"pl\">codziennie</span>."
+      },
+      {
+       "id": "irr-17",
+       "kind": "choice",
+       "q": "\"I'm going to Warsaw by train.\" Which?",
+       "opts": [
+        "Jadę do Warszawy pociągiem.",
+        "Idę do Warszawy pociągiem.",
+        "Jeżdżę do Warszawy pociągiem.",
+        "Chodzę do Warszawy pociągiem."
+       ],
+       "a": "Jadę do Warszawy pociągiem.",
+       "why": "<span class=\"pl\">jechać</span> — one journey, by vehicle. The means of transport is instrumental: <span class=\"pl\">pociągiem</span>."
+      },
+      {
+       "id": "irr-18",
+       "kind": "type",
+       "q": "<span class=\"pl\">iść</span> — <i>my</i>",
+       "accept": [
+        "idziemy"
+       ],
+       "why": "<span class=\"pl\">idziemy</span>."
+      },
+      {
+       "id": "irr-19",
+       "kind": "type",
+       "q": "<span class=\"pl\">iść</span> — \"he was going\" (past, <i>on</i>)",
+       "accept": [
+        "szedł"
+       ],
+       "why": "<span class=\"pl\">szedł</span> — completely different stem from the present."
+      },
+      {
+       "id": "irr-20",
+       "kind": "type",
+       "q": "<span class=\"pl\">jechać</span> — <i>ja</i>",
+       "accept": [
+        "jadę"
+       ],
+       "why": "<span class=\"pl\">jadę</span> — present stem <span class=\"pl\">jad-</span>. The past is <span class=\"pl\">jechał-</span>."
+      },
+      {
+       "id": "irr-21",
+       "kind": "choice",
+       "q": "Which verb would you use for a bus that runs on a route every day?",
+       "opts": [
+        "jeździć",
+        "jechać",
+        "iść",
+        "pójść"
+       ],
+       "a": "jeździć",
+       "why": "<span class=\"pl\">jeździć</span> — repeated journeys by vehicle, a route, a habit. <span class=\"pl\">Jechać</span> is one particular trip."
+      }
+     ]
+    },
+    {
+     "id": "irregular-forms",
+     "title": "The irregular forms",
+     "ask": "Write the form",
+     "items": [
+      {
+       "id": "irr-22",
+       "kind": "type",
+       "q": "<span class=\"pl\">mieć</span> — <i>ja</i>",
+       "accept": [
+        "mam"
+       ],
+       "why": "<span class=\"pl\">mam</span>."
+      },
+      {
+       "id": "irr-23",
+       "kind": "type",
+       "q": "<span class=\"pl\">mieć</span> — <i>oni / one</i>",
+       "accept": [
+        "mają"
+       ],
+       "why": "<span class=\"pl\">mają</span>."
+      },
+      {
+       "id": "irr-24",
+       "kind": "type",
+       "q": "<span class=\"pl\">jeść</span> — <i>ty</i>",
+       "accept": [
+        "jesz"
+       ],
+       "why": "<span class=\"pl\">jesz</span>."
+      },
+      {
+       "id": "irr-25",
+       "kind": "type",
+       "q": "<span class=\"pl\">jeść</span> — \"he ate\"",
+       "accept": [
+        "jadł"
+       ],
+       "why": "<span class=\"pl\">jadł</span> — the past stem has <span class=\"pl\">a</span>, not <span class=\"pl\">e</span>."
+      },
+      {
+       "id": "irr-26",
+       "kind": "type",
+       "q": "<span class=\"pl\">wziąć</span> — <i>ja</i>",
+       "accept": [
+        "wezmę"
+       ],
+       "why": "<span class=\"pl\">wezmę</span>."
+      },
+      {
+       "id": "irr-27",
+       "kind": "type",
+       "q": "<span class=\"pl\">wziąć</span> — \"he took\"",
+       "accept": [
+        "wziął"
+       ],
+       "why": "<span class=\"pl\">wziął</span> — the masculine keeps the <span class=\"pl\">ą</span>; the feminine is <span class=\"pl\">wzięła</span>."
+      },
+      {
+       "id": "irr-28",
+       "kind": "type",
+       "q": "<span class=\"pl\">móc</span> — <i>ty</i>",
+       "accept": [
+        "możesz"
+       ],
+       "why": "<span class=\"pl\">możesz</span>."
+      },
+      {
+       "id": "irr-29",
+       "kind": "type",
+       "q": "<span class=\"pl\">móc</span> — \"he could\"",
+       "accept": [
+        "mógł"
+       ],
+       "why": "<span class=\"pl\">mógł</span> — the <span class=\"pl\">ó</span> is only in the masculine singular; the feminine is <span class=\"pl\">mogła</span>."
+      },
+      {
+       "id": "irr-30",
+       "kind": "type",
+       "q": "<span class=\"pl\">chcieć</span> — <i>ja</i>",
+       "accept": [
+        "chcę"
+       ],
+       "why": "<span class=\"pl\">chcę</span>."
+      },
+      {
+       "id": "irr-31",
+       "kind": "type",
+       "q": "<span class=\"pl\">dać</span> — <i>oni / one</i>",
+       "accept": [
+        "dadzą"
+       ],
+       "why": "<span class=\"pl\">dadzą</span> — the <span class=\"pl\">-dzą</span> ending is not predictable from <span class=\"pl\">da</span>."
+      },
+      {
+       "id": "irr-32",
+       "kind": "type",
+       "q": "<span class=\"pl\">spać</span> — <i>ja</i>",
+       "accept": [
+        "śpię"
+       ],
+       "why": "<span class=\"pl\">śpię</span> — soft <span class=\"pl\">ś</span> in the present, hard <span class=\"pl\">sp</span> in the past (<span class=\"pl\">spał</span>)."
+      },
+      {
+       "id": "irr-33",
+       "kind": "type",
+       "q": "<span class=\"pl\">brać</span> — <i>ja</i>",
+       "accept": [
+        "biorę"
+       ],
+       "why": "<span class=\"pl\">biorę</span> — the <span class=\"pl\">-o-</span> appears here and in <span class=\"pl\">biorą</span>; elsewhere it is <span class=\"pl\">-e-</span>: <span class=\"pl\">bierzesz</span>."
+      }
+     ]
+    }
+   ],
+   "count": 33
+  },
+  {
+   "id": "verbs-and-cases",
+   "n": "09",
+   "en": "Verbs and the cases",
+   "pl": "Rekcja",
+   "short": "Which case a verb takes, which preposition comes with it, and the verbs that take a case no English verb would suggest.",
+   "sets": [
+    {
+     "id": "which-case",
+     "title": "Which case does the verb want?",
+     "ask": "Pick the case, not the ending",
+     "items": [
+      {
+       "id": "rek-1",
+       "kind": "choice",
+       "q": "<span class=\"pl\">szukać</span> (to look for) takes:",
+       "opts": [
+        "genitive",
+        "accusative",
+        "instrumental",
+        "dative"
+       ],
+       "a": "genitive",
+       "why": "<span class=\"pl\">Szukam kluczy.</span> The genitive even though English \"look for\" takes a plain object. Learn this one by heart: it is the classic rekcja trap."
+      },
+      {
+       "id": "rek-2",
+       "kind": "choice",
+       "q": "<span class=\"pl\">pomagać</span> (to help) takes:",
+       "opts": [
+        "dative",
+        "accusative",
+        "genitive",
+        "instrumental"
+       ],
+       "a": "dative",
+       "why": "<span class=\"pl\">Pomagam mamie.</span> The person helped is the receiver — the dative's job."
+      },
+      {
+       "id": "rek-3",
+       "kind": "choice",
+       "q": "<span class=\"pl\">słuchać</span> (to listen to) takes:",
+       "opts": [
+        "genitive",
+        "accusative",
+        "dative",
+        "locative"
+       ],
+       "a": "genitive",
+       "why": "<span class=\"pl\">Słucham muzyki.</span> One of the verbs that resists the English pattern and takes the genitive."
+      },
+      {
+       "id": "rek-4",
+       "kind": "choice",
+       "q": "<span class=\"pl\">interesować się</span> (to be interested in) takes:",
+       "opts": [
+        "instrumental",
+        "accusative",
+        "genitive",
+        "dative"
+       ],
+       "a": "instrumental",
+       "why": "<span class=\"pl\">Interesuję się historią.</span> The instrumental of interest — also in <span class=\"pl\">zajmować się</span>."
+      },
+      {
+       "id": "rek-5",
+       "kind": "choice",
+       "q": "<span class=\"pl\">bać się</span> (to be afraid of) takes:",
+       "opts": [
+        "genitive",
+        "accusative",
+        "instrumental",
+        "dative"
+       ],
+       "a": "genitive",
+       "why": "<span class=\"pl\">Boję się psów.</span> Fear, like wanting and lacking, takes the genitive."
+      },
+      {
+       "id": "rek-6",
+       "kind": "choice",
+       "q": "<span class=\"pl\">dziękować</span> (to thank) takes:",
+       "opts": [
+        "dative",
+        "accusative",
+        "genitive",
+        "instrumental"
+       ],
+       "a": "dative",
+       "why": "<span class=\"pl\">Dziękuję ci.</span> The person thanked is the receiver: dative."
+      },
+      {
+       "id": "rek-7",
+       "kind": "choice",
+       "q": "<span class=\"pl\">być</span> with a profession takes:",
+       "opts": [
+        "instrumental",
+        "nominative",
+        "accusative",
+        "genitive"
+       ],
+       "a": "instrumental",
+       "why": "<span class=\"pl\">Jestem programistą.</span> A role, a profession or an identity goes in the instrumental. An adjective does not: <span class=\"pl\">Jestem zmęczony</span>."
+      },
+      {
+       "id": "rek-8",
+       "kind": "choice",
+       "q": "<span class=\"pl\">uczyć się</span> (to learn a subject) takes:",
+       "opts": [
+        "genitive",
+        "accusative",
+        "instrumental",
+        "dative"
+       ],
+       "a": "genitive",
+       "why": "<span class=\"pl\">Uczę się polskiego.</span> The subject being learnt is genitive; the reflexive <span class=\"pl\">się</span> stays."
+      },
+      {
+       "id": "rek-9",
+       "kind": "choice",
+       "q": "<span class=\"pl\">potrzebować</span> (to need) takes:",
+       "opts": [
+        "genitive",
+        "accusative",
+        "dative",
+        "instrumental"
+       ],
+       "a": "genitive",
+       "why": "<span class=\"pl\">Potrzebuję pomocy.</span> Needing is a kind of lacking, and lacking takes the genitive. (Older Polish allowed the accusative; the genitive is the modern standard.)"
+      },
+      {
+       "id": "rek-10",
+       "kind": "choice",
+       "q": "<span class=\"pl\">podobać się</span> — \"I like Łódź\" — is built as:",
+       "opts": [
+        "Łódź appeals to me — the thing is subject, the person dative",
+        "I like Łódź — the person is subject, the thing accusative",
+        "Łódź is in the genitive",
+        "It needs an instrumental"
+       ],
+       "a": "Łódź appeals to me — the thing is subject, the person dative",
+       "why": "<span class=\"pl\">Podoba mi się Łódź.</span> The thing liked is the grammatical subject, and the person is dative. The same shape as <span class=\"pl\">Smakuje mi zupa</span> and <span class=\"pl\">Podoba mi się ten film</span>."
+      }
+     ]
+    },
+    {
+     "id": "negation",
+     "title": "The genitive after <i>nie</i>",
+     "ask": "What happens to the object?",
+     "items": [
+      {
+       "id": "rek-11",
+       "kind": "choice",
+       "q": "\"I don't have a ticket.\" Which?",
+       "opts": [
+        "Nie mam biletu.",
+        "Nie mam bilet.",
+        "Nie mam biletem.",
+        "Nie mam bilecie."
+       ],
+       "a": "Nie mam biletu.",
+       "why": "Negated direct object → genitive: <span class=\"pl\">biletu</span>, not <span class=\"pl\">bilet</span>."
+      },
+      {
+       "id": "rek-12",
+       "kind": "choice",
+       "q": "\"I'm not reading the paper.\" Which?",
+       "opts": [
+        "Nie czytam gazety.",
+        "Nie czytam gazetę.",
+        "Nie czytam gazecie.",
+        "Nie czytam gazetą."
+       ],
+       "a": "Nie czytam gazety.",
+       "why": "<span class=\"pl\">gazeta</span> changes from accusative <span class=\"pl\">gazetę</span> to genitive <span class=\"pl\">gazety</span> because of the <i>nie</i>."
+      },
+      {
+       "id": "rek-13",
+       "kind": "type",
+       "q": "\"I don't see a car.\" — write the object: <i>samochód</i>.",
+       "accept": [
+        "samochodu"
+       ],
+       "why": "<span class=\"pl\">Nie widzę samochodu.</span> Genitive of <span class=\"pl\">samochód</span>."
+      },
+      {
+       "id": "rek-14",
+       "kind": "type",
+       "q": "\"I won't buy bread.\" — write the object: <i>chleb</i>.",
+       "accept": [
+        "chleba"
+       ],
+       "why": "<span class=\"pl\">Nie kupię chleba.</span> Genitive of <span class=\"pl\">chleb</span>."
+      },
+      {
+       "id": "rek-15",
+       "kind": "choice",
+       "q": "Does the genitive-after-negation rule apply to all verbs?",
+       "opts": [
+        "It applies to direct objects: a negated accusative object becomes genitive",
+        "Yes, every noun after nie goes genitive",
+        "No, it is optional everywhere",
+        "Only to być"
+       ],
+       "a": "It applies to direct objects: a negated accusative object becomes genitive",
+       "why": "The rule is about the <b>object</b>: an accusative direct object turns genitive under negation. A dative (<span class=\"pl\">pomagam mamie</span>) or an instrumental (<span class=\"pl\">interesuję się historią</span>) does not change because of <i>nie</i>."
+      },
+      {
+       "id": "rek-16",
+       "kind": "choice",
+       "q": "\"I have little time.\" Which?",
+       "opts": [
+        "Mam mało czasu.",
+        "Mam mało czas.",
+        "Mam mały czas.",
+        "Mam mało czasem."
+       ],
+       "a": "Mam mało czasu.",
+       "why": "A quantity word — <span class=\"pl\">mało</span>, <span class=\"pl\">dużo</span>, <span class=\"pl\">trochę</span>, a number — makes the object genitive, with no <i>nie</i> needed. <span class=\"pl\">Mam mało czasu</span>."
+      }
+     ]
+    },
+    {
+     "id": "prepositions",
+     "title": "Verb plus preposition",
+     "ask": "Which preposition, and which case?",
+     "items": [
+      {
+       "id": "rek-17",
+       "kind": "choice",
+       "q": "\"I'm waiting for the bus.\" Which?",
+       "opts": [
+        "Czekam na autobus.",
+        "Czekam autobusu.",
+        "Czekam za autobus.",
+        "Czekam przy autobus."
+       ],
+       "a": "Czekam na autobus.",
+       "why": "<span class=\"pl\">czekać na</span> + accusative: <span class=\"pl\">Czekam na autobus</span>."
+      },
+      {
+       "id": "rek-18",
+       "kind": "choice",
+       "q": "\"I'm going to the shop.\" Which?",
+       "opts": [
+        "Idę do sklepu.",
+        "Idę na sklep.",
+        "Idę w sklep.",
+        "Idę do sklep."
+       ],
+       "a": "Idę do sklepu.",
+       "why": "<span class=\"pl\">do</span> + genitive. <span class=\"pl\">Sklep</span> in the genitive is <span class=\"pl\">sklepu</span>."
+      },
+      {
+       "id": "rek-19",
+       "kind": "choice",
+       "q": "\"I'm going to a concert.\" Which?",
+       "opts": [
+        "Idę na koncert.",
+        "Idę do koncertu.",
+        "Idę w koncert.",
+        "Idę na koncercie."
+       ],
+       "a": "Idę na koncert.",
+       "why": "Events take <span class=\"pl\">na</span> + accusative: <span class=\"pl\">na koncert</span>, <span class=\"pl\">na spotkanie</span>, <span class=\"pl\">na obiad</span>. Places you go into take <span class=\"pl\">do</span> + genitive."
+      },
+      {
+       "id": "rek-20",
+       "kind": "choice",
+       "q": "\"I'm thinking about you.\" Which?",
+       "opts": [
+        "Myślę o tobie.",
+        "Myślę na ciebie.",
+        "Myślę z tobą.",
+        "Myślę o ciebie."
+       ],
+       "a": "Myślę o tobie.",
+       "why": "<span class=\"pl\">myśleć o</span> + locative. <span class=\"pl\">Ty</span> in the locative is <span class=\"pl\">tobie</span>."
+      },
+      {
+       "id": "rek-21",
+       "kind": "choice",
+       "q": "\"I agree with you.\" Which?",
+       "opts": [
+        "Zgadzam się z tobą.",
+        "Zgadzam się z ciebie.",
+        "Zgadzam się na tobą.",
+        "Zgadzam się z ty."
+       ],
+       "a": "Zgadzam się z tobą.",
+       "why": "<span class=\"pl\">zgadzać się z</span> + instrumental: <span class=\"pl\">z tobą</span>."
+      },
+      {
+       "id": "rek-22",
+       "kind": "choice",
+       "q": "\"It depends on you.\" Which?",
+       "opts": [
+        "To zależy od ciebie.",
+        "To zależy na ciebie.",
+        "To zależy z ciebie.",
+        "To zależy od tobą."
+       ],
+       "a": "To zależy od ciebie.",
+       "why": "<span class=\"pl\">zależeć od</span> + genitive: <span class=\"pl\">od ciebie</span>."
+      },
+      {
+       "id": "rek-23",
+       "kind": "type",
+       "q": "\"Thank you for the help\" — complete <span class=\"pl\">Dziękuję za ___.</span> (<i>pomoc</i>)",
+       "accept": [
+        "pomoc"
+       ],
+       "why": "<span class=\"pl\">Dziękuję za pomoc.</span> <span class=\"pl\">za</span> + accusative here, and <span class=\"pl\">pomoc</span> looks the same in the nominative and the accusative."
+      },
+      {
+       "id": "rek-24",
+       "kind": "type",
+       "q": "\"I'm coming back from work\" — complete <span class=\"pl\">Wracam z ___.</span> (<i>praca</i>)",
+       "accept": [
+        "pracy"
+       ],
+       "why": "<span class=\"pl\">Wracam z pracy.</span> <span class=\"pl\">z</span> meaning \"from\" takes the genitive; <span class=\"pl\">praca → pracy</span>."
+      }
+     ]
+    }
+   ],
+   "count": 24
+  },
+  {
+   "id": "reflexive",
+   "n": "10",
+   "en": "się, and the other pronouns",
+   "pl": "Się",
+   "short": "The reflexive that changes meaning, the impersonal się, and the pronouns that ride along with a verb.",
+   "sets": [
+    {
+     "id": "sie",
+     "title": "What <i>się</i> does",
+     "ask": "Four different jobs",
+     "items": [
+      {
+       "id": "ref-1",
+       "kind": "choice",
+       "q": "<span class=\"pl\">Myję się.</span> means:",
+       "opts": [
+        "I'm washing myself",
+        "I'm washing (something)",
+        "I'm being washed",
+        "I'm washing the children"
+       ],
+       "a": "I'm washing myself",
+       "why": "<span class=\"pl\">się</span> here is the reflexive pronoun: the action goes back to the subject. <span class=\"pl\">Myję ręce</span> without <span class=\"pl\">się</span> means \"I'm washing my hands\"."
+      },
+      {
+       "id": "ref-2",
+       "kind": "choice",
+       "q": "<span class=\"pl\">Jak to się pisze?</span> means:",
+       "opts": [
+        "How do you spell that? — impersonal, no named doer",
+        "How does he write that?",
+        "How am I writing that?",
+        "How is that written by me?"
+       ],
+       "a": "How do you spell that? — impersonal, no named doer",
+       "why": "This is the impersonal <span class=\"pl\">się</span>: the verb goes into the third person singular and no subject is named. English uses \"you\" or a passive for the same effect: <span class=\"pl\">Mówi się…</span> = \"people say…\""
+      },
+      {
+       "id": "ref-3",
+       "kind": "choice",
+       "q": "<span class=\"pl\">Uczę się polskiego.</span> — what does <span class=\"pl\">się</span> add here?",
+       "opts": [
+        "It is part of the verb: uczyć się = to learn oneself (as opposed to uczyć = to teach)",
+        "It means \"each other\"",
+        "It is impersonal",
+        "It is optional style"
+       ],
+       "a": "It is part of the verb: uczyć się = to learn oneself (as opposed to uczyć = to teach)",
+       "why": "<span class=\"pl\">uczyć</span> = to teach; <span class=\"pl\">uczyć się</span> = to learn. Drop the <span class=\"pl\">się</span> and the meaning flips: the site's verb finder lists them as two verbs, because they are."
+      },
+      {
+       "id": "ref-4",
+       "kind": "choice",
+       "q": "<span class=\"pl\">Znamy się.</span> means:",
+       "opts": [
+        "We know each other",
+        "I know myself",
+        "We are known",
+        "We know it"
+       ],
+       "a": "We know each other",
+       "why": "With a plural subject, <span class=\"pl\">się</span> can mean \"each other\": <span class=\"pl\">Kochamy się</span> = we love each other."
+      },
+      {
+       "id": "ref-5",
+       "kind": "choice",
+       "q": "<span class=\"pl\">Zamyka się o ósmej.</span> means:",
+       "opts": [
+        "It closes at eight — impersonal, about the shop",
+        "He closes at eight",
+        "I close at eight",
+        "It is being closed by him"
+       ],
+       "a": "It closes at eight — impersonal, about the shop",
+       "why": "Third person singular + <span class=\"pl\">się</span>, no subject named: the shop closes. A very common way to say what happens without saying who does it."
+      },
+      {
+       "id": "ref-6",
+       "kind": "type",
+       "q": "\"My name is Hammad.\" — complete <span class=\"pl\">Nazywam ___ Hammad.</span>",
+       "accept": [
+        "się"
+       ],
+       "why": "<span class=\"pl\">Nazywam się Hammad.</span> <span class=\"pl\">nazywać się</span> is a verb with <span class=\"pl\">się</span> built in; without it you would be naming someone else."
+      },
+      {
+       "id": "ref-7",
+       "kind": "type",
+       "q": "\"I'm interested in history.\" — complete <span class=\"pl\">Interesuję ___ historią.</span>",
+       "accept": [
+        "się"
+       ],
+       "why": "<span class=\"pl\">Interesuję się historią.</span> Note the instrumental for the subject of interest."
+      },
+      {
+       "id": "ref-8",
+       "kind": "choice",
+       "q": "Where does <span class=\"pl\">się</span> normally go in a sentence?",
+       "opts": [
+        "Right after the verb, before other pronouns",
+        "At the very end",
+        "At the very start",
+        "Before the subject"
+       ],
+       "a": "Right after the verb, before other pronouns",
+       "why": "<span class=\"pl\">Myję się rano</span>, <span class=\"pl\">Uczę się polskiego</span>. <span class=\"pl\">Się</span> is a clitic and leans on the verb; it does not usually begin a sentence."
+      }
+     ]
+    },
+    {
+     "id": "sie-pairs",
+     "title": "With and without",
+     "ask": "What changes when <i>się</i> appears?",
+     "items": [
+      {
+       "id": "ref-9",
+       "kind": "choice",
+       "q": "<span class=\"pl\">uczyć</span> versus <span class=\"pl\">uczyć się</span>:",
+       "opts": [
+        "to teach versus to learn",
+        "both mean to learn",
+        "both mean to teach",
+        "one is formal"
+       ],
+       "a": "to teach versus to learn",
+       "why": "<span class=\"pl\">Uczę studentów</span> — I teach students. <span class=\"pl\">Uczę się polskiego</span> — I learn Polish."
+      },
+      {
+       "id": "ref-10",
+       "kind": "choice",
+       "q": "<span class=\"pl\">myć</span> versus <span class=\"pl\">myć się</span>:",
+       "opts": [
+        "to wash something versus to wash oneself",
+        "both mean to wash oneself",
+        "one is rude",
+        "się adds emphasis"
+       ],
+       "a": "to wash something versus to wash oneself",
+       "why": "<span class=\"pl\">Myję naczynia</span> — I'm washing the dishes. <span class=\"pl\">Myję się</span> — I'm washing myself."
+      },
+      {
+       "id": "ref-11",
+       "kind": "choice",
+       "q": "<span class=\"pl\">bać się</span> — can you say <span class=\"pl\">bać</span> without <span class=\"pl\">się</span>?",
+       "opts": [
+        "No — bać się is the verb; without się it does not mean \"to fear\"",
+        "Yes, się is optional",
+        "Yes, but it is formal",
+        "Only in the past"
+       ],
+       "a": "No — bać się is the verb; without się it does not mean \"to fear\"",
+       "why": "Some verbs simply come with <span class=\"pl\">się</span> as part of the dictionary form: <span class=\"pl\">bać się</span>, <span class=\"pl\">podobać się</span>, <span class=\"pl\">cieszyć się</span>, <span class=\"pl\">śmiać się</span>. Learn the <span class=\"pl\">się</span> with them."
+      },
+      {
+       "id": "ref-12",
+       "kind": "choice",
+       "q": "<span class=\"pl\">podobać</span> versus <span class=\"pl\">podobać się</span>:",
+       "opts": [
+        "podobać się = to appeal to (\"I like it\"); podobać alone is not used this way",
+        "both are the same",
+        "podobać = to be liked by",
+        "się makes it past"
+       ],
+       "a": "podobać się = to appeal to (\"I like it\"); podobać alone is not used this way",
+       "why": "<span class=\"pl\">Podoba mi się Łódź</span> — Łódź appeals to me. The <span class=\"pl\">się</span> is part of the verb, and the person is dative."
+      },
+      {
+       "id": "ref-13",
+       "kind": "choice",
+       "q": "In the past tense, where does <span class=\"pl\">się</span> go?",
+       "opts": [
+        "After the past form: uczyłem się",
+        "Before the past form: się uczyłem",
+        "Stuck inside: uczy się łem",
+        "It disappears in the past"
+       ],
+       "a": "After the past form: uczyłem się",
+       "why": "<span class=\"pl\">Uczyłem się polskiego</span>, <span class=\"pl\">myła się</span>. <span class=\"pl\">Się</span> follows the verb form. <span class=\"pl\">Się uczyłem</span> is possible in speech for emphasis but not the neutral order."
+      }
+     ]
+    }
+   ],
+   "count": 13
+  },
+  {
+   "id": "prefixes",
+   "n": "11",
+   "en": "Prefixes and word families",
+   "pl": "Prefiksy",
+   "short": "How pisac becomes napisać, przepisać, podpisać, wypisać: one root, a family of aspects and meanings.",
+   "sets": [
+    {
+     "id": "prefix-sense",
+     "title": "What the prefix adds",
+     "ask": "Completion, or a new meaning?",
+     "items": [
+      {
+       "id": "prf-1",
+       "kind": "choice",
+       "q": "<span class=\"pl\">pisać → napisać</span>. What did <span class=\"pl\">na-</span> do?",
+       "opts": [
+        "Completed the action — it is now perfective",
+        "Changed it to \"to write down\"",
+        "Made it reflexive",
+        "Made it past tense"
+       ],
+       "a": "Completed the action — it is now perfective",
+       "why": "<span class=\"pl\">na-</span> here adds completion and no new direction: to write, and it is written."
+      },
+      {
+       "id": "prf-2",
+       "kind": "choice",
+       "q": "<span class=\"pl\">pisać → podpisać</span>. What happened?",
+       "opts": [
+        "A new meaning: to sign (not simply to finish writing)",
+        "Only completion",
+        "It became imperfective",
+        "It became reflexive"
+       ],
+       "a": "A new meaning: to sign (not simply to finish writing)",
+       "why": "<span class=\"pl\">Podpisać</span> is not the partner of <span class=\"pl\">pisać</span> — it is a different verb. The partner is <span class=\"pl\">napisać</span>. This is the trap of prefixes: they make words, not just aspects."
+      },
+      {
+       "id": "prf-3",
+       "kind": "choice",
+       "q": "<span class=\"pl\">czytać → przeczytać</span>. What does <span class=\"pl\">prze-</span> add?",
+       "opts": [
+        "Through: to read from start to finish",
+        "Back: to read again",
+        "Out: to read aloud",
+        "Down: to read quickly"
+       ],
+       "a": "Through: to read from start to finish",
+       "why": "<span class=\"pl\">prze-</span> = through, across. The same sense in <span class=\"pl\">przejechać</span> (drive past), <span class=\"pl\">przepisać</span> (copy out)."
+      },
+      {
+       "id": "prf-4",
+       "kind": "choice",
+       "q": "<span class=\"pl\">pić → wypić</span>. What does <span class=\"pl\">wy-</span> add?",
+       "opts": [
+        "Out, to the end: to drink it up",
+        "Up: to drink standing",
+        "Back: to drink again",
+        "In: to drink indoors"
+       ],
+       "a": "Out, to the end: to drink it up",
+       "why": "<span class=\"pl\">wy-</span> = out, to the end, thoroughly. <span class=\"pl\">Wyjeść</span> is to eat out (the middle of something), <span class=\"pl\">wyspać się</span> to sleep it off."
+      },
+      {
+       "id": "prf-5",
+       "kind": "choice",
+       "q": "<span class=\"pl\">iść → wejść</span>. What does <span class=\"pl\">w-</span> add?",
+       "opts": [
+        "In, into",
+        "Out",
+        "Around",
+        "Back"
+       ],
+       "a": "In, into",
+       "why": "<span class=\"pl\">wejść</span> = to go in. <span class=\"pl\">wyjść</span> = to go out, <span class=\"pl\">dojść</span> = to reach, <span class=\"pl\">odejść</span> = to walk away."
+      },
+      {
+       "id": "prf-6",
+       "kind": "choice",
+       "q": "<span class=\"pl\">dzwonić → zadzwonić</span>. What does <span class=\"pl\">za-</span> add?",
+       "opts": [
+        "One completed call that reaches its goal",
+        "A call in the past",
+        "A loud call",
+        "A call back"
+       ],
+       "a": "One completed call that reaches its goal",
+       "why": "<span class=\"pl\">Zadzwonię do ciebie</span> = I'll give you a call. <span class=\"pl\">Dzwonić</span> is ringing as a process or a habit."
+      },
+      {
+       "id": "prf-7",
+       "kind": "type",
+       "q": "Which prefix turns <span class=\"pl\">robić</span> into its plain perfective partner?",
+       "accept": [
+        "z",
+        "z-",
+        "zrobić"
+       ],
+       "why": "<span class=\"pl\">z-</span> → <span class=\"pl\">zrobić</span>. The simplest completing prefix in the language."
+      },
+      {
+       "id": "prf-8",
+       "kind": "type",
+       "q": "Which prefix turns <span class=\"pl\">słyszeć</span> into \"to hear (catch it)\"?",
+       "accept": [
+        "u",
+        "u-",
+        "usłyszeć"
+       ],
+       "why": "<span class=\"pl\">u-</span> → <span class=\"pl\">usłyszeć</span>. <span class=\"pl\">U-</span> marks a single completed act: <span class=\"pl\">usłyszeć</span>, <span class=\"pl\">umyć</span>, <span class=\"pl\">ujść</span>."
+      }
+     ]
+    },
+    {
+     "id": "families",
+     "title": "One root, a family",
+     "ask": "Trace the meaning",
+     "items": [
+      {
+       "id": "prf-9",
+       "kind": "choice",
+       "q": "Which word means \"to write back\"?",
+       "opts": [
+        "odpisać",
+        "napisać",
+        "podpisać",
+        "wypisać"
+       ],
+       "a": "odpisać",
+       "why": "<span class=\"pl\">od-</span> = back, away: <span class=\"pl\">odpisać</span>, <span class=\"pl\">oddać</span> (give back), <span class=\"pl\">odejść</span> (walk away)."
+      },
+      {
+       "id": "prf-10",
+       "kind": "choice",
+       "q": "Which word means \"to copy out\"?",
+       "opts": [
+        "przepisać",
+        "napisać",
+        "zapisać",
+        "dopisać"
+       ],
+       "a": "przepisać",
+       "why": "<span class=\"pl\">prze-</span> = through/across: <span class=\"pl\">przepisać</span>, to write something across into a new place. <span class=\"pl\">Zapisać</span> is to write down or to save."
+      },
+      {
+       "id": "prf-11",
+       "kind": "choice",
+       "q": "Which word means \"to write down, to note\"?",
+       "opts": [
+        "zapisać",
+        "odpisać",
+        "wypisać",
+        "pisać"
+       ],
+       "a": "zapisać",
+       "why": "<span class=\"pl\">zapisać</span> — to write something down, or to save a file. Also <span class=\"pl\">zapisać się</span> = to sign up."
+      },
+      {
+       "id": "prf-12",
+       "kind": "choice",
+       "q": "<span class=\"pl\">wyjść</span> means:",
+       "opts": [
+        "to go out",
+        "to go in",
+        "to arrive",
+        "to walk past"
+       ],
+       "a": "to go out",
+       "why": "<span class=\"pl\">wy-</span> = out: <span class=\"pl\">wyjść</span>, <span class=\"pl\">wyjechać</span> (drive out), <span class=\"pl\">wynieść</span> (carry out)."
+      },
+      {
+       "id": "prf-13",
+       "kind": "choice",
+       "q": "<span class=\"pl\">dojść</span> means:",
+       "opts": [
+        "to reach, to arrive (on foot)",
+        "to go in",
+        "to go out",
+        "to walk past"
+       ],
+       "a": "to reach, to arrive (on foot)",
+       "why": "<span class=\"pl\">do-</span> = up to, as far as: <span class=\"pl\">dojść do domu</span> = to reach home. The preposition <span class=\"pl\">do</span> is inside the prefix."
+      },
+      {
+       "id": "prf-14",
+       "kind": "type",
+       "q": "Complete: <span class=\"pl\">pod-</span> + <span class=\"pl\">pisać</span> = ___ (to sign).",
+       "accept": [
+        "podpisać"
+       ],
+       "why": "<span class=\"pl\">Podpisać</span> — to sign, to write underneath."
+      },
+      {
+       "id": "prf-15",
+       "kind": "type",
+       "q": "Complete: <span class=\"pl\">w-</span> + <span class=\"pl\">pić</span> = ___ (to drink in, to absorb).",
+       "accept": [
+        "wpić",
+        "wpić się"
+       ],
+       "why": "<span class=\"pl\">wpić</span> is \"to drink in, to absorb\" (also <span class=\"pl\">wchłonąć</span>). Less common than <span class=\"pl\">wypić</span>, but built the same way."
+      }
+     ]
+    }
+   ],
+   "count": 15
+  },
+  {
+   "id": "participles",
+   "n": "12",
+   "en": "Participles and word order",
+   "pl": "Imiesłowy",
+   "short": "The forms that turn a verb into an adjective, and where the verb sits in a Polish sentence.",
+   "sets": [
+    {
+     "id": "participles",
+     "title": "Verb turned adjective",
+     "ask": "Which participle?",
+     "items": [
+      {
+       "id": "par-1",
+       "kind": "choice",
+       "q": "<span class=\"pl\">robiący</span> is:",
+       "opts": [
+        "an active adjectival participle — \"one who is doing\"",
+        "a passive participle",
+        "an adverb",
+        "a verbal noun"
+       ],
+       "a": "an active adjectival participle — \"one who is doing\"",
+       "why": "The active adjectival participle takes <span class=\"pl\">-ący</span> from the present stem: <span class=\"pl\">robić → robiący</span>. It behaves like an adjective: <span class=\"pl\">człowiek robiący zdjęcia</span> — a man taking photos."
+      },
+      {
+       "id": "par-2",
+       "kind": "choice",
+       "q": "<span class=\"pl\">robiony</span> is:",
+       "opts": [
+        "a passive participle — \"being done\"",
+        "an active participle",
+        "an adverb",
+        "the imperative"
+       ],
+       "a": "a passive participle — \"being done\"",
+       "why": "The passive adjectival participle takes <span class=\"pl\">-ny/-ony/-ty</span>: <span class=\"pl\">robić → robiony</span>. It is used with <span class=\"pl\">być</span> for the passive: <span class=\"pl\">To jest robione ręcznie</span> — it is made by hand."
+      },
+      {
+       "id": "par-3",
+       "kind": "choice",
+       "q": "<span class=\"pl\">robiąc</span> is:",
+       "opts": [
+        "an adverbial participle — \"while doing\"",
+        "a passive participle",
+        "a noun",
+        "an imperative"
+       ],
+       "a": "an adverbial participle — \"while doing\"",
+       "why": "The contemporary adverbial participle ends in <span class=\"pl\">-ąc</span>: <span class=\"pl\">Czytam, pijąc kawę</span> — I read while drinking coffee. It does not change for gender or number."
+      },
+      {
+       "id": "par-4",
+       "kind": "choice",
+       "q": "<span class=\"pl\">robienie</span> is:",
+       "opts": [
+        "a verbal noun — \"the doing\"",
+        "a participle",
+        "an adverb",
+        "the conditional"
+       ],
+       "a": "a verbal noun — \"the doing\"",
+       "why": "The verbal noun ends in <span class=\"pl\">-nie/-cie</span>: <span class=\"pl\">robić → robienie</span>, <span class=\"pl\">czytać → czytanie</span>. It is a real noun and takes cases: <span class=\"pl\">uczenie się języków</span> — the learning of languages."
+      },
+      {
+       "id": "par-5",
+       "kind": "type",
+       "q": "Write the active adjectival participle of <span class=\"pl\">czytać</span>.",
+       "accept": [
+        "czytający"
+       ],
+       "why": "<span class=\"pl\">czytający</span> — present stem <span class=\"pl\">czytają-</span> plus <span class=\"pl\">-cy</span>."
+      },
+      {
+       "id": "par-6",
+       "kind": "type",
+       "q": "Write the passive participle of <span class=\"pl\">czytać</span>.",
+       "accept": [
+        "czytany"
+       ],
+       "why": "<span class=\"pl\">czytany</span> — \"read, being read\"."
+      },
+      {
+       "id": "par-7",
+       "kind": "type",
+       "q": "Write the adverbial participle of <span class=\"pl\">czytać</span>.",
+       "accept": [
+        "czytając"
+       ],
+       "why": "<span class=\"pl\">czytając</span> — \"while reading\"."
+      },
+      {
+       "id": "par-8",
+       "kind": "type",
+       "q": "Write the verbal noun of <span class=\"pl\">czytać</span>.",
+       "accept": [
+        "czytanie"
+       ],
+       "why": "<span class=\"pl\">czytanie</span> — \"reading\", as a thing."
+      }
+     ]
+    },
+    {
+     "id": "word-order",
+     "title": "Where the verb goes",
+     "ask": "Word order",
+     "items": [
+      {
+       "id": "par-9",
+       "kind": "choice",
+       "q": "What is the neutral Polish word order?",
+       "opts": [
+        "Subject, verb, object — but flexible for emphasis",
+        "Strictly subject, object, verb",
+        "Strictly verb first",
+        "There is no order at all"
+       ],
+       "a": "Subject, verb, object — but flexible for emphasis",
+       "why": "<span class=\"pl\">Marek czyta książkę</span> is neutral. <span class=\"pl\">Książkę czyta Marek</span> is the same facts with \"it's the book that Marek is reading\". Polish uses order for emphasis, not for grammar."
+      },
+      {
+       "id": "par-10",
+       "kind": "choice",
+       "q": "Where do clitics like <span class=\"pl\">się</span>, <span class=\"pl\">mi</span> and <span class=\"pl\">bym</span> go?",
+       "opts": [
+        "After the verb, in a fixed order among themselves",
+        "At the very end of the sentence",
+        "Before the subject",
+        "Anywhere at all"
+       ],
+       "a": "After the verb, in a fixed order among themselves",
+       "why": "<span class=\"pl\">Podoba mi się</span>, <span class=\"pl\">uczyłem się</span>, <span class=\"pl\">zrobiłbym to</span>. The order among clitics is fixed: <span class=\"pl\">bym</span> before <span class=\"pl\">mi</span> before <span class=\"pl\">się</span>."
+      },
+      {
+       "id": "par-11",
+       "kind": "choice",
+       "q": "In a question like <span class=\"pl\">Czy Marek czyta książkę?</span>, what is <span class=\"pl\">czy</span> for?",
+       "opts": [
+        "It marks a yes/no question with neutral order",
+        "It means \"what\"",
+        "It negates",
+        "It is a polite particle"
+       ],
+       "a": "It marks a yes/no question with neutral order",
+       "why": "<span class=\"pl\">Czy</span> at the start turns a statement into a yes/no question without changing the order. Without it, intonation does the job: <span class=\"pl\">Marek czyta książkę?</span>"
+      },
+      {
+       "id": "par-12",
+       "kind": "choice",
+       "q": "\"I like this book.\" Which is the natural Polish?",
+       "opts": [
+        "Podoba mi się ta książka.",
+        "Lubię się ta książka.",
+        "Ta książka lubi mnie.",
+        "Podobam się ta książka."
+       ],
+       "a": "Podoba mi się ta książka.",
+       "why": "<span class=\"pl\">podobać się</span> reverses the English structure: the book is the subject, the person is dative. <span class=\"pl\">Lubię tę książkę</span> is also correct and more direct — <span class=\"pl\">lubić</span> takes the accusative."
+      },
+      {
+       "id": "par-13",
+       "kind": "choice",
+       "q": "Which is the neutral place for <span class=\"pl\">nie</span>?",
+       "opts": [
+        "Directly before the verb",
+        "At the end of the sentence",
+        "After the object",
+        "Before the subject always"
+       ],
+       "a": "Directly before the verb",
+       "why": "<span class=\"pl\">Nie mam czasu</span>, <span class=\"pl\">Nie czytam gazety</span>. In a compound past or future the <span class=\"pl\">nie</span> goes before the whole verb phrase: <span class=\"pl\">Nie będę czytać</span>."
+      }
+     ]
+    }
+   ],
+   "count": 13
+  }
+ ],
+ "total": 272
+}

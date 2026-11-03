@@ -1,0 +1,72 @@
+{
+  "types": [
+    {
+      "id": "prefix",
+      "label": "Prefix",
+      "form": "pisać → napisać",
+      "rule": "The perfective adds a prefix to the imperfective. This is the most common way to make a pair, and the prefix usually keeps a trace of its own meaning (na- = onto, done to completion).",
+      "note": "A prefix can change the meaning as well as the aspect, so not every prefixed verb is a partner: pisać → podpisać is \"to sign\", not \"to write\"."
+    },
+    {
+      "id": "suffix",
+      "label": "Suffix",
+      "form": "kupić → kupować",
+      "rule": "The imperfective is made longer, with -ować, -ywać, -ać or -awać, and the perfective is the shorter word. This is the direction to remember: the longer verb is the one that repeats.",
+      "note": "This is the largest group for the verbs that describe a single act: kupić/kupować, dać/dawać, zamknąć/zamykać."
+    },
+    {
+      "id": "suppletive",
+      "label": "Suppletive",
+      "form": "brać → wziąć",
+      "rule": "Two unrelated roots. There is no rule to apply — the pair has to be learnt whole, like an irregular verb in English.",
+      "note": "Only a handful, but they are among the most used verbs in the language: brać/wziąć, mówić/powiedzieć, widzieć/zobaczyć."
+    },
+    {
+      "id": "same",
+      "label": "One word, both readings",
+      "form": "czytać (impf) — no perfective partner of its own",
+      "rule": "A few imperfective verbs have no perfective partner at all, because their meaning does not allow completion in the ordinary sense: być, mieć, wiedzieć, znać, mieszkać.",
+      "note": "Where you need \"to finish doing it\", Polish uses a prefixed verb with a slightly different meaning (przeczytać = to read through), not a partner of the same verb."
+    }
+  ],
+  "pairs": [
+    { "impf": "pisać", "pf": "napisać", "en": "to write", "type": "prefix", "note": "na- adds completion, not direction." },
+    { "impf": "czytać", "pf": "przeczytać", "en": "to read", "type": "prefix", "note": "prze- = through: to read something through." },
+    { "impf": "robić", "pf": "zrobić", "en": "to do, to make", "type": "prefix", "note": "z- is the plainest completing prefix in the language." },
+    { "impf": "mówić", "pf": "powiedzieć", "en": "to say, to speak", "type": "suppletive", "note": "Also powiadać, a bookish imperfective of powiedzieć." },
+    { "impf": "jeść", "pf": "zjeść", "en": "to eat", "type": "prefix", "note": "zjeść = to eat up; jeść is the process." },
+    { "impf": "pić", "pf": "wypić", "en": "to drink", "type": "prefix", "note": "wy- = out, to the end." },
+    { "impf": "dawać", "pf": "dać", "en": "to give", "type": "suffix", "note": "The short perfective is the older word; dawać is the lengthened imperfective." },
+    { "impf": "brać", "pf": "wziąć", "en": "to take", "type": "suppletive", "note": "No shared root at all." },
+    { "impf": "kupować", "pf": "kupić", "en": "to buy", "type": "suffix", "note": "kupować is the repeated or ongoing act; kupić, one purchase, done." },
+    { "impf": "sprzedawać", "pf": "sprzedać", "en": "to sell", "type": "suffix", "note": "Same -awać / -ać pattern as dawać/dać." },
+    { "impf": "otwierać", "pf": "otworzyć", "en": "to open", "type": "suffix", "note": "-ać / -yć; the perfective has the -yć of a single completed act." },
+    { "impf": "zamykać", "pf": "zamknąć", "en": "to close", "type": "suffix", "note": "A different suffix again: -ykać / -knąć." },
+    { "impf": "zaczynać", "pf": "zacząć", "en": "to begin", "type": "suffix", "note": "The perfective is a single starting point; the imperfective is the run-up." },
+    { "impf": "kończyć", "pf": "skończyć", "en": "to finish", "type": "prefix", "note": "s- here completes without adding direction." },
+    { "impf": "widzieć", "pf": "zobaczyć", "en": "to see", "type": "suppletive", "note": "zobaczyć is \"to catch sight of\", a different root from widzieć." },
+    { "impf": "słyszeć", "pf": "usłyszeć", "en": "to hear", "type": "prefix", "note": "u- marks the single act of hearing something." },
+    { "impf": "dzwonić", "pf": "zadzwonić", "en": "to ring, to phone", "type": "prefix", "note": "za- = the one ring that reaches someone." },
+    { "impf": "prosić", "pf": "poprosić", "en": "to ask for", "type": "prefix", "note": "po- softens and completes the request." },
+    { "impf": "pytać", "pf": "zapytać", "en": "to ask a question", "type": "prefix", "note": "zapytać is one question; pytać is asking in general." },
+    { "impf": "odpowiadać", "pf": "odpowiedzieć", "en": "to answer", "type": "suffix", "note": "The -ać / -eć pattern, like czytać/przeczytać's cousins." },
+    { "impf": "rozumieć", "pf": "zrozumieć", "en": "to understand", "type": "prefix", "note": "zrozumieć = to come to understand, and now you do." },
+    { "impf": "uczyć się", "pf": "nauczyć się", "en": "to learn", "type": "prefix", "note": "Both keep się." },
+    { "impf": "uczyć", "pf": "nauczyć", "en": "to teach", "type": "prefix", "note": "nauczyć kogoś czegoś — the person in the accusative, the thing in the genitive." },
+    { "impf": "cieszyć się", "pf": "ucieszyć się", "en": "to be glad", "type": "prefix", "note": "u- completes the feeling; both keep się." },
+    { "impf": "pamiętać", "pf": "zapamiętać", "en": "to remember", "type": "prefix", "note": "pamiętać is the state; zapamiętać is the act of committing it to memory." },
+    { "impf": "zapominać", "pf": "zapomnieć", "en": "to forget", "type": "suffix", "note": "-ać / -eć again." },
+    { "impf": "iść", "pf": "pójść", "en": "to go on foot", "type": "prefix", "note": "pójść is the one journey, started and completed; iść is the walking." },
+    { "impf": "jechać", "pf": "pojechać", "en": "to go by vehicle", "type": "prefix", "note": "Same po- as pójść, for the same reason." },
+    { "impf": "biec", "pf": "pobiec", "en": "to run", "type": "prefix", "note": "pobiec = to set off running." },
+    { "impf": "spać", "pf": "wyspać się", "en": "to sleep", "type": "prefix", "note": "wyspać się = to get one's sleep, to sleep it off; the się is part of the verb." },
+    { "impf": "myć", "pf": "umyć", "en": "to wash", "type": "prefix", "note": "umyć ręce = to wash one's hands (and have them clean)." },
+    { "impf": "pracować", "pf": "popracować", "en": "to work", "type": "prefix", "note": "po- here means \"for a while\": popracować nad czymś." },
+    { "impf": "mieszkać", "pf": "zamieszkać", "en": "to live, to dwell", "type": "prefix", "note": "zamieszkać = to move in, to take up residence." },
+    { "impf": "jeździć", "pf": "pojeździć", "en": "to drive about", "type": "prefix", "note": "The repeated, back-and-forth partner of jechać." },
+    { "impf": "chodzić", "pf": "pójść", "en": "to go about on foot", "type": "prefix", "note": "The repeated, back-and-forth partner of iść — and its perfective is pójść, not a prefixed chodzić." },
+    { "impf": "stać", "pf": "stanąć", "en": "to stand", "type": "suppletive", "note": "stać = to be standing; stanąć = to take a stand, one act." },
+    { "impf": "leżeć", "pf": "poleżeć", "en": "to lie", "type": "prefix", "note": "poleżeć = to lie for a while. The single act of lying down is położyć się." },
+    { "impf": "siedzieć", "pf": "posiedzieć", "en": "to sit", "type": "prefix", "note": "posiedzieć = to sit for a while; the act of sitting down is usiąść." }
+  ]
+}

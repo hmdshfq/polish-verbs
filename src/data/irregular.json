@@ -1,0 +1,300 @@
+{
+ "verbs": [
+  {
+   "lemma": "być",
+   "en": "to be",
+   "why": "The most irregular verb in the language, and the one you cannot avoid. Its present tense comes from a different root (jest-) than its past (by-), and its future (będę) is a third shape again.",
+   "watch": [
+    "jest is only for the third person singular: ja jestem, ty jesteś, on/ona/ono jest, my jesteśmy, wy jesteście, oni/one są.",
+    "The negative is one word: nie ma — \"there is no\", \"there isn't\". Not nie jest for existence.",
+    "Jestem programistą — the profession is instrumental. Jestem zmęczony — an adjective stays nominative."
+   ]
+  },
+  {
+   "lemma": "mieć",
+   "en": "to have",
+   "why": "A -m, -sz verb: the present tense has no -ę- at all, and the 3rd person plural is mają with an -ają- that follows neither -ę, -esz nor -ę, -isz.",
+   "watch": [
+    "mam, masz, ma, mamy, macie, mają — learn the six as a chant.",
+    "The past is regular onto miał-: miałem, miałam, mieliśmy.",
+    "mieć is imperfective with no perfective partner; \"to get\" is dostać."
+   ]
+  },
+  {
+   "lemma": "iść",
+   "en": "to go on foot",
+   "why": "The present stem is id-, the past stem is sz-. They do not resemble each other, and the infinitive iść resembles neither.",
+   "watch": [
+    "Present: idę, idziesz, idzie, idziemy, idziecie, idą.",
+    "Past: szedł / szła / szło, szliśmy / szłyśmy — the -sz- is inside the word.",
+    "Unidirectional: one journey, right now. For going back and forth, use <span class=\"pl\">chodzić</span>."
+   ]
+  },
+  {
+   "lemma": "jechać",
+   "en": "to go by vehicle",
+   "why": "The present is jad- (jadę, jedziesz), but the past is jecha- (jechał). The pair is jechać / pojechać, and its repeated partner is jeździć.",
+   "watch": [
+    "jadę, jedziesz, jedzie, jedziemy, jedziecie, jadą.",
+    "Past: jechałem / jechałam, jechaliśmy.",
+    "By car, bus, train, bike — any vehicle. On foot is iść, never jechać."
+   ]
+  },
+  {
+   "lemma": "jeść",
+   "en": "to eat",
+   "why": "A <b>-m, -sz</b> verb whose past stem keeps no vowel before the <span class=\"pl\">-ł</span>: <span class=\"pl\">jadł</span>, <span class=\"pl\">jadła</span>, and <span class=\"pl\">jedli</span> in the masculine plural.",
+   "watch": [
+    "jem, jesz, je, jemy, jecie, jedzą — note jedzą, not \"jeją\".",
+    "Past: jadłem / jadłam, jedliśmy — the 3rd plural masculine-personal is jedli, not \"jedli\" with a different stem.",
+    "zjeść is the perfective: to eat it up."
+   ]
+  },
+  {
+   "lemma": "wziąć",
+   "en": "to take",
+   "why": "The infinitive ends in -ąć, which is rare, and the present tense is wezm-, which shares almost nothing with it. Perfective, so those present-looking forms are the future.",
+   "watch": [
+    "wezmę, weźmiesz, weźmie, weźmiemy, weźmiecie, wezmą — note the -ź- in the middle persons.",
+    "Past: wziął / wzięła / wzięło — the ą becomes ę in the feminine and neuter.",
+    "Its imperfective partner is a completely different word: brać."
+   ]
+  },
+  {
+   "lemma": "móc",
+   "en": "to be able to, can",
+   "why": "An -c verb: the infinitive ends in -c, the present has -og-/-oż-, and the past has -óg-/-og-. Every form changes the stem vowel.",
+   "watch": [
+    "mogę, możesz, może, możemy, możecie, mogą.",
+    "Past: mógł / mogła / mogło — the ó appears only in the masculine singular.",
+    "Imperfective; there is no ordinary perfective partner. \"I was able to\" = mogłem, or udało mi się for \"I managed to\"."
+   ]
+  },
+  {
+   "lemma": "chcieć",
+   "en": "to want",
+   "why": "The present is chc- (chcę), the past is chcia- (chciałem). Regular once you know the two stems, but the cluster chc- is hard to say at first.",
+   "watch": [
+    "chcę, chcesz, chce, chcemy, chcecie, chcą.",
+    "Past: chciał / chciała, chcieliśmy.",
+    "Perfective zechcieć exists but is rare; \"to want\" is almost always imperfective."
+   ]
+  },
+  {
+   "lemma": "dać",
+   "en": "to give",
+   "why": "Perfective, and the shortest verb in the language: dam, dasz, da — only three letters in the third person. Its imperfective is the longer dawać.",
+   "watch": [
+    "dam, dasz, da, damy, dacie, dadzą — the 3rd plural adds -dzą.",
+    "Past: dał / dała / dało, daliśmy.",
+    "The imperative is <span class=\"pl\">daj</span> — the same form the imperfective <span class=\"pl\">dawać</span> uses."
+   ]
+  },
+  {
+   "lemma": "wiedzieć",
+   "en": "to know (a fact)",
+   "why": "The present is wiem-, not wiedz-. Confusing it with znać (to know a person or place) is one of the classic learner errors, and the two are not interchangeable.",
+   "watch": [
+    "wiem, wiesz, wie, wiemy, wiecie, wiedzą.",
+    "Past: wiedziałem / wiedziałam, wiedzieliśmy.",
+    "wiedzieć = to know a fact; znać = to know a person, a place, a language. Znam Łódź, but Wiem, gdzie to jest."
+   ]
+  },
+  {
+   "lemma": "musieć",
+   "en": "to have to, must",
+   "why": "The present is musz- (muszę) but the infinitive has -sieć and the past has musia- (musiał). Three stems for one short verb.",
+   "watch": [
+    "muszę, musisz, musi, musimy, musicie, muszą.",
+    "Past: musiałem / musiałam, musieliśmy.",
+    "Imperfective only. Polish has no perfective \"must\"; for the finished obligation, use a different construction."
+   ]
+  },
+  {
+   "lemma": "spać",
+   "en": "to sleep",
+   "why": "The present is śp- (śpię, śpisz) with a soft ś-, and the past is spał- with a hard s-. The softening is regular for this small family.",
+   "watch": [
+    "śpię, śpisz, śpi, śpimy, śpicie, śpią.",
+    "Past: spałem / spałam, spaliśmy.",
+    "wyspać się is its perfective partner: to get one's sleep."
+   ]
+  },
+  {
+   "lemma": "pić",
+   "en": "to drink",
+   "why": "The present is pij- (piję), the past is pił-. Short, common, and irregular in the way its -j- appears and vanishes.",
+   "watch": [
+    "piję, pijesz, pije, pijemy, pijecie, piją.",
+    "Past: piłem / piłam, piliśmy.",
+    "wypić is the perfective: to drink it up."
+   ]
+  },
+  {
+   "lemma": "brać",
+   "en": "to take (imperfective)",
+   "why": "The imperfective half of brać / wziąć, and irregular in its own right: the present is bior- (biorę), the past is bra- (brałem).",
+   "watch": [
+    "biorę, bierzesz, bierze, bierzemy, bierzecie, biorą — the -o- and -e- alternate.",
+    "Past: brałem / brałam, braliśmy.",
+    "Imperative bierz! comes from this verb; weź! comes from wziąć."
+   ]
+  },
+  {
+   "lemma": "stać",
+   "en": "to stand",
+   "why": "Its present is stoj- (stoję) and its past is sta- (stałem): the same split as bać się and the -eć family, but with a j- in the present.",
+   "watch": [
+    "stoję, stoisz, stoi, stoimy, stoicie, stoją.",
+    "Past: stałem / stałam, staliśmy.",
+    "stać = to be standing; stanąć = to take a stand, one completed act."
+   ]
+  }
+ ],
+ "prefixes": [
+  {
+   "prefix": "na-",
+   "core": "pisać",
+   "result": "napisać",
+   "en": "to write (and finish)",
+   "sense": "completion, and often \"a lot of\"",
+   "others": [
+    "nabrać — to get a lot of",
+    "najeść się — to eat one's fill",
+    "napić się — to have a drink"
+   ]
+  },
+  {
+   "prefix": "prze-",
+   "core": "czytać",
+   "result": "przeczytać",
+   "en": "to read through",
+   "sense": "through, across, past",
+   "others": [
+    "przepisać — to copy out, to rewrite",
+    "przejechać — to drive past",
+    "przepraszać — to apologise"
+   ]
+  },
+  {
+   "prefix": "po-",
+   "core": "mówić",
+   "result": "powiedzieć",
+   "en": "to say (and have said)",
+   "sense": "a single act, or a short while",
+   "others": [
+    "popracować — to work a while",
+    "posiedzieć — to sit a while",
+    "pojechać — to set off"
+   ]
+  },
+  {
+   "prefix": "za-",
+   "core": "dzwonić",
+   "result": "zadzwonić",
+   "en": "to phone (one call)",
+   "sense": "the start of an act, or an act that reaches its goal",
+   "others": [
+    "zapytać — to ask a question",
+    "zapłacić — to pay",
+    "zamknąć — to close up"
+   ]
+  },
+  {
+   "prefix": "od-",
+   "core": "pisać",
+   "result": "odpisać",
+   "en": "to write back",
+   "sense": "away, back, off",
+   "others": [
+    "oddać — to give back",
+    "odejść — to walk away",
+    "odpowiedzieć — to answer back"
+   ]
+  },
+  {
+   "prefix": "wy-",
+   "core": "pić",
+   "result": "wypić",
+   "en": "to drink up",
+   "sense": "out, to the end, thoroughly",
+   "others": [
+    "wyjść — to go out",
+    "wyspać się — to sleep it off",
+    "wypisać — to write out"
+   ]
+  },
+  {
+   "prefix": "do-",
+   "core": "pisać",
+   "result": "dopisać",
+   "en": "to add in writing",
+   "sense": "up to, as far as, in addition",
+   "others": [
+    "dojść — to reach, to arrive",
+    "dodać — to add",
+    "dokończyć — to finish off"
+   ]
+  },
+  {
+   "prefix": "pod-",
+   "core": "pisać",
+   "result": "podpisać",
+   "en": "to sign",
+   "sense": "under, or up to",
+   "others": [
+    "podjechać — to drive up to",
+    "podejść — to walk up to",
+    "podnieść — to pick up"
+   ]
+  },
+  {
+   "prefix": "w-",
+   "core": "iść",
+   "result": "wejść",
+   "en": "to go in",
+   "sense": "in, into",
+   "others": [
+    "wnosić — to carry in",
+    "włączyć — to switch on",
+    "<span class=\"pl\">wjechać</span> — to drive in"
+   ]
+  },
+  {
+   "prefix": "z-",
+   "core": "robić",
+   "result": "zrobić",
+   "en": "to do (and finish)",
+   "sense": "completion, or together, or down from",
+   "others": [
+    "zjeść — to eat up",
+    "zjechać — to drive down",
+    "zebrać — to gather together"
+   ]
+  },
+  {
+   "prefix": "u-",
+   "core": "słyszeć",
+   "result": "usłyszeć",
+   "en": "to hear (catch it)",
+   "sense": "a completed act, or away from",
+   "others": [
+    "umyć — to wash",
+    "uczyć się — to learn",
+    "ujść — to get away"
+   ]
+  },
+  {
+   "prefix": "roz-",
+   "core": "mówić",
+   "result": "rozmawiać",
+   "en": "to talk, to converse",
+   "sense": "apart, out, thoroughly; here spreading a conversation out between people",
+   "others": [
+    "rozbić — to break apart",
+    "rozejść się — to disperse",
+    "rozpisać — to write out in full"
+   ]
+  }
+ ]
+}

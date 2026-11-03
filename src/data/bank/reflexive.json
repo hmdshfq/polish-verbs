@@ -1,0 +1,53 @@
+[
+  {
+    "id": "sie",
+    "title": "What <i>się</i> does",
+    "ask": "Four different jobs",
+    "items": [
+      { "id": "ref-1", "kind": "choice", "q": "<span class=\"pl\">Myję się.</span> means:",
+        "opts": ["I'm washing myself", "I'm washing (something)", "I'm being washed", "I'm washing the children"], "a": "I'm washing myself",
+        "why": "<span class=\"pl\">się</span> here is the reflexive pronoun: the action goes back to the subject. <span class=\"pl\">Myję ręce</span> without <span class=\"pl\">się</span> means \"I'm washing my hands\"." },
+      { "id": "ref-2", "kind": "choice", "q": "<span class=\"pl\">Jak to się pisze?</span> means:",
+        "opts": ["How do you spell that? — impersonal, no named doer", "How does he write that?", "How am I writing that?", "How is that written by me?"], "a": "How do you spell that? — impersonal, no named doer",
+        "why": "This is the impersonal <span class=\"pl\">się</span>: the verb goes into the third person singular and no subject is named. English uses \"you\" or a passive for the same effect: <span class=\"pl\">Mówi się…</span> = \"people say…\"" },
+      { "id": "ref-3", "kind": "choice", "q": "<span class=\"pl\">Uczę się polskiego.</span> — what does <span class=\"pl\">się</span> add here?",
+        "opts": ["It is part of the verb: uczyć się = to learn oneself (as opposed to uczyć = to teach)", "It means \"each other\"", "It is impersonal", "It is optional style"], "a": "It is part of the verb: uczyć się = to learn oneself (as opposed to uczyć = to teach)",
+        "why": "<span class=\"pl\">uczyć</span> = to teach; <span class=\"pl\">uczyć się</span> = to learn. Drop the <span class=\"pl\">się</span> and the meaning flips: the site's verb finder lists them as two verbs, because they are." },
+      { "id": "ref-4", "kind": "choice", "q": "<span class=\"pl\">Znamy się.</span> means:",
+        "opts": ["We know each other", "I know myself", "We are known", "We know it"], "a": "We know each other",
+        "why": "With a plural subject, <span class=\"pl\">się</span> can mean \"each other\": <span class=\"pl\">Kochamy się</span> = we love each other." },
+      { "id": "ref-5", "kind": "choice", "q": "<span class=\"pl\">Zamyka się o ósmej.</span> means:",
+        "opts": ["It closes at eight — impersonal, about the shop", "He closes at eight", "I close at eight", "It is being closed by him"], "a": "It closes at eight — impersonal, about the shop",
+        "why": "Third person singular + <span class=\"pl\">się</span>, no subject named: the shop closes. A very common way to say what happens without saying who does it." },
+      { "id": "ref-6", "kind": "type", "q": "\"My name is Hammad.\" — complete <span class=\"pl\">Nazywam ___ Hammad.</span>", "accept": ["się"],
+        "why": "<span class=\"pl\">Nazywam się Hammad.</span> <span class=\"pl\">nazywać się</span> is a verb with <span class=\"pl\">się</span> built in; without it you would be naming someone else." },
+      { "id": "ref-7", "kind": "type", "q": "\"I'm interested in history.\" — complete <span class=\"pl\">Interesuję ___ historią.</span>", "accept": ["się"],
+        "why": "<span class=\"pl\">Interesuję się historią.</span> Note the instrumental for the subject of interest." },
+      { "id": "ref-8", "kind": "choice", "q": "Where does <span class=\"pl\">się</span> normally go in a sentence?",
+        "opts": ["Right after the verb, before other pronouns", "At the very end", "At the very start", "Before the subject"], "a": "Right after the verb, before other pronouns",
+        "why": "<span class=\"pl\">Myję się rano</span>, <span class=\"pl\">Uczę się polskiego</span>. <span class=\"pl\">Się</span> is a clitic and leans on the verb; it does not usually begin a sentence." }
+    ]
+  },
+  {
+    "id": "sie-pairs",
+    "title": "With and without",
+    "ask": "What changes when <i>się</i> appears?",
+    "items": [
+      { "id": "ref-9", "kind": "choice", "q": "<span class=\"pl\">uczyć</span> versus <span class=\"pl\">uczyć się</span>:",
+        "opts": ["to teach versus to learn", "both mean to learn", "both mean to teach", "one is formal"], "a": "to teach versus to learn",
+        "why": "<span class=\"pl\">Uczę studentów</span> — I teach students. <span class=\"pl\">Uczę się polskiego</span> — I learn Polish." },
+      { "id": "ref-10", "kind": "choice", "q": "<span class=\"pl\">myć</span> versus <span class=\"pl\">myć się</span>:",
+        "opts": ["to wash something versus to wash oneself", "both mean to wash oneself", "one is rude", "się adds emphasis"], "a": "to wash something versus to wash oneself",
+        "why": "<span class=\"pl\">Myję naczynia</span> — I'm washing the dishes. <span class=\"pl\">Myję się</span> — I'm washing myself." },
+      { "id": "ref-11", "kind": "choice", "q": "<span class=\"pl\">bać się</span> — can you say <span class=\"pl\">bać</span> without <span class=\"pl\">się</span>?",
+        "opts": ["No — bać się is the verb; without się it does not mean \"to fear\"", "Yes, się is optional", "Yes, but it is formal", "Only in the past"], "a": "No — bać się is the verb; without się it does not mean \"to fear\"",
+        "why": "Some verbs simply come with <span class=\"pl\">się</span> as part of the dictionary form: <span class=\"pl\">bać się</span>, <span class=\"pl\">podobać się</span>, <span class=\"pl\">cieszyć się</span>, <span class=\"pl\">śmiać się</span>. Learn the <span class=\"pl\">się</span> with them." },
+      { "id": "ref-12", "kind": "choice", "q": "<span class=\"pl\">podobać</span> versus <span class=\"pl\">podobać się</span>:",
+        "opts": ["podobać się = to appeal to (\"I like it\"); podobać alone is not used this way", "both are the same", "podobać = to be liked by", "się makes it past"], "a": "podobać się = to appeal to (\"I like it\"); podobać alone is not used this way",
+        "why": "<span class=\"pl\">Podoba mi się Łódź</span> — Łódź appeals to me. The <span class=\"pl\">się</span> is part of the verb, and the person is dative." },
+      { "id": "ref-13", "kind": "choice", "q": "In the past tense, where does <span class=\"pl\">się</span> go?",
+        "opts": ["After the past form: uczyłem się", "Before the past form: się uczyłem", "Stuck inside: uczy się łem", "It disappears in the past"], "a": "After the past form: uczyłem się",
+        "why": "<span class=\"pl\">Uczyłem się polskiego</span>, <span class=\"pl\">myła się</span>. <span class=\"pl\">Się</span> follows the verb form. <span class=\"pl\">Się uczyłem</span> is possible in speech for emphasis but not the neutral order." }
+    ]
+  }
+]

@@ -1,0 +1,94 @@
+[
+  {
+    "id": "byc",
+    "title": "być",
+    "ask": "The verb you cannot avoid",
+    "items": [
+      { "id": "irr-1", "kind": "type", "q": "<span class=\"pl\">być</span> — <i>ja</i>", "accept": ["jestem"],
+        "why": "<span class=\"pl\">jestem</span>." },
+      { "id": "irr-2", "kind": "type", "q": "<span class=\"pl\">być</span> — <i>ty</i>", "accept": ["jesteś"],
+        "why": "<span class=\"pl\">jesteś</span>." },
+      { "id": "irr-3", "kind": "type", "q": "<span class=\"pl\">być</span> — <i>on / ona / ono</i>", "accept": ["jest"],
+        "why": "<span class=\"pl\">jest</span> — one short word. Polish does not leave it out the way Russian does: <span class=\"pl\">To jest dom</span>." },
+      { "id": "irr-4", "kind": "type", "q": "<span class=\"pl\">być</span> — <i>my</i>", "accept": ["jesteśmy"],
+        "why": "<span class=\"pl\">jesteśmy</span>." },
+      { "id": "irr-5", "kind": "type", "q": "<span class=\"pl\">być</span> — <i>oni / one</i>", "accept": ["są"],
+        "why": "<span class=\"pl\">są</span> — from a different root again." },
+      { "id": "irr-6", "kind": "type", "q": "<span class=\"pl\">być</span> — \"I was\" (<i>ja</i>, a woman)", "accept": ["byłam"],
+        "why": "<span class=\"pl\">byłam</span> — the past is regular on <span class=\"pl\">był-</span>, unlike the present." },
+      { "id": "irr-7", "kind": "choice", "q": "\"I am a programmer.\" Which case is <i>programmer</i>?",
+        "opts": ["instrumental — programistą", "nominative — programista", "accusative — programistę", "genitive — programisty"], "a": "instrumental — programistą",
+        "why": "<span class=\"pl\">Jestem programistą.</span> A profession, a role or an identity after <span class=\"pl\">być</span> goes in the instrumental. An adjective does not: <span class=\"pl\">Jestem zmęczony</span> (nominative)." },
+      { "id": "irr-8", "kind": "choice", "q": "\"There is no coffee.\" Which is right?",
+        "opts": ["Nie ma kawy.", "Nie jest kawa.", "Nie ma kawa.", "Nie jest kawy."], "a": "Nie ma kawy.",
+        "why": "<span class=\"pl\">nie ma</span> + genitive is how Polish says \"there is no / there isn't\". It is a fixed phrase: <span class=\"pl\">nie ma kawy</span>, <span class=\"pl\">nie ma czasu</span>, <span class=\"pl\">nie ma problemu</span>." }
+    ]
+  },
+  {
+    "id": "knowing",
+    "title": "wiedzieć, znać, umieć",
+    "ask": "Which kind of knowing?",
+    "items": [
+      { "id": "irr-9", "kind": "choice", "q": "\"I know where the station is.\" Which verb?",
+        "opts": ["wiedzieć", "znać", "umieć", "być"], "a": "wiedzieć",
+        "why": "<span class=\"pl\">Wiem, gdzie jest dworzec.</span> — a fact. <span class=\"pl\">wiedzieć</span> takes a clause or <span class=\"pl\">o</span> + locative: <span class=\"pl\">wiem o tym</span>." },
+      { "id": "irr-10", "kind": "choice", "q": "\"I know Łódź well.\" Which verb?",
+        "opts": ["znać", "wiedzieć", "umieć", "mieszkać"], "a": "znać",
+        "why": "<span class=\"pl\">Znam Łódź dobrze.</span> — familiarity with a place, a person or a language. <span class=\"pl\">Znam</span> takes a plain accusative object." },
+      { "id": "irr-11", "kind": "choice", "q": "\"I can swim.\" Which verb?",
+        "opts": ["umieć", "móc", "wiedzieć", "znać"], "a": "umieć",
+        "why": "<span class=\"pl\">Umiem pływać.</span> — a learnt skill. <span class=\"pl\">Móc</span> is about possibility or permission: <span class=\"pl\">Czy mogę wejść?</span> — may I come in?" },
+      { "id": "irr-12", "kind": "type", "q": "<span class=\"pl\">wiedzieć</span> — <i>ja</i>", "accept": ["wiem"],
+        "why": "<span class=\"pl\">wiem</span> — the present stem is <span class=\"pl\">wiem-</span>, not <span class=\"pl\">wiedz-</span>." },
+      { "id": "irr-13", "kind": "type", "q": "<span class=\"pl\">wiedzieć</span> — <i>oni / one</i>", "accept": ["wiedzą"],
+        "why": "<span class=\"pl\">wiedzą</span> — here the <span class=\"pl\">dz</span> is back, and with <span class=\"pl\">-ą</span>." },
+      { "id": "irr-14", "kind": "choice", "q": "\"Do you know Polish?\" Which?",
+        "opts": ["Znasz polski?", "Wiesz polski?", "Umiesz polskiego?", "Znasz po polsku?"], "a": "Znasz polski?",
+        "why": "A language is something you <i>znasz</i>, and the object is accusative: <span class=\"pl\">Znasz polski?</span> For a skill you use <span class=\"pl\">umieć</span>: <span class=\"pl\">Umiem mówić po polsku</span>." }
+    ]
+  },
+  {
+    "id": "motion",
+    "title": "iść, chodzić, jechać, jeździć",
+    "ask": "On foot or by vehicle, one way or back and forth?",
+    "items": [
+      { "id": "irr-15", "kind": "choice", "q": "\"I'm going to the shop now (on foot).\" Which?",
+        "opts": ["Idę do sklepu.", "Chodzę do sklepu.", "Jadę do sklepu.", "Jeżdżę do sklepu."], "a": "Idę do sklepu.",
+        "why": "<span class=\"pl\">iść</span> — one journey, on foot, happening now. <span class=\"pl\">Chodzę do sklepu</span> means \"I go to the shop (regularly)\"." },
+      { "id": "irr-16", "kind": "choice", "q": "\"I go to the shop every day (on foot).\" Which?",
+        "opts": ["Chodzę do sklepu codziennie.", "Idę do sklepu codziennie.", "Jadę do sklepu codziennie.", "Pójdę do sklepu codziennie."], "a": "Chodzę do sklepu codziennie.",
+        "why": "<span class=\"pl\">chodzić</span> is the repeated, back-and-forth partner of <span class=\"pl\">iść</span>. The perfective <span class=\"pl\">pójść</span> cannot carry <span class=\"pl\">codziennie</span>." },
+      { "id": "irr-17", "kind": "choice", "q": "\"I'm going to Warsaw by train.\" Which?",
+        "opts": ["Jadę do Warszawy pociągiem.", "Idę do Warszawy pociągiem.", "Jeżdżę do Warszawy pociągiem.", "Chodzę do Warszawy pociągiem."], "a": "Jadę do Warszawy pociągiem.",
+        "why": "<span class=\"pl\">jechać</span> — one journey, by vehicle. The means of transport is instrumental: <span class=\"pl\">pociągiem</span>." },
+      { "id": "irr-18", "kind": "type", "q": "<span class=\"pl\">iść</span> — <i>my</i>", "accept": ["idziemy"],
+        "why": "<span class=\"pl\">idziemy</span>." },
+      { "id": "irr-19", "kind": "type", "q": "<span class=\"pl\">iść</span> — \"he was going\" (past, <i>on</i>)", "accept": ["szedł"],
+        "why": "<span class=\"pl\">szedł</span> — completely different stem from the present." },
+      { "id": "irr-20", "kind": "type", "q": "<span class=\"pl\">jechać</span> — <i>ja</i>", "accept": ["jadę"],
+        "why": "<span class=\"pl\">jadę</span> — present stem <span class=\"pl\">jad-</span>. The past is <span class=\"pl\">jechał-</span>." },
+      { "id": "irr-21", "kind": "choice", "q": "Which verb would you use for a bus that runs on a route every day?",
+        "opts": ["jeździć", "jechać", "iść", "pójść"], "a": "jeździć",
+        "why": "<span class=\"pl\">jeździć</span> — repeated journeys by vehicle, a route, a habit. <span class=\"pl\">Jechać</span> is one particular trip." }
+    ]
+  },
+  {
+    "id": "irregular-forms",
+    "title": "The irregular forms",
+    "ask": "Write the form",
+    "items": [
+      { "id": "irr-22", "kind": "type", "q": "<span class=\"pl\">mieć</span> — <i>ja</i>", "accept": ["mam"], "why": "<span class=\"pl\">mam</span>." },
+      { "id": "irr-23", "kind": "type", "q": "<span class=\"pl\">mieć</span> — <i>oni / one</i>", "accept": ["mają"], "why": "<span class=\"pl\">mają</span>." },
+      { "id": "irr-24", "kind": "type", "q": "<span class=\"pl\">jeść</span> — <i>ty</i>", "accept": ["jesz"], "why": "<span class=\"pl\">jesz</span>." },
+      { "id": "irr-25", "kind": "type", "q": "<span class=\"pl\">jeść</span> — \"he ate\"", "accept": ["jadł"], "why": "<span class=\"pl\">jadł</span> — the past stem has <span class=\"pl\">a</span>, not <span class=\"pl\">e</span>." },
+      { "id": "irr-26", "kind": "type", "q": "<span class=\"pl\">wziąć</span> — <i>ja</i>", "accept": ["wezmę"], "why": "<span class=\"pl\">wezmę</span>." },
+      { "id": "irr-27", "kind": "type", "q": "<span class=\"pl\">wziąć</span> — \"he took\"", "accept": ["wziął"], "why": "<span class=\"pl\">wziął</span> — the masculine keeps the <span class=\"pl\">ą</span>; the feminine is <span class=\"pl\">wzięła</span>." },
+      { "id": "irr-28", "kind": "type", "q": "<span class=\"pl\">móc</span> — <i>ty</i>", "accept": ["możesz"], "why": "<span class=\"pl\">możesz</span>." },
+      { "id": "irr-29", "kind": "type", "q": "<span class=\"pl\">móc</span> — \"he could\"", "accept": ["mógł"], "why": "<span class=\"pl\">mógł</span> — the <span class=\"pl\">ó</span> is only in the masculine singular; the feminine is <span class=\"pl\">mogła</span>." },
+      { "id": "irr-30", "kind": "type", "q": "<span class=\"pl\">chcieć</span> — <i>ja</i>", "accept": ["chcę"], "why": "<span class=\"pl\">chcę</span>." },
+      { "id": "irr-31", "kind": "type", "q": "<span class=\"pl\">dać</span> — <i>oni / one</i>", "accept": ["dadzą"], "why": "<span class=\"pl\">dadzą</span> — the <span class=\"pl\">-dzą</span> ending is not predictable from <span class=\"pl\">da</span>." },
+      { "id": "irr-32", "kind": "type", "q": "<span class=\"pl\">spać</span> — <i>ja</i>", "accept": ["śpię"], "why": "<span class=\"pl\">śpię</span> — soft <span class=\"pl\">ś</span> in the present, hard <span class=\"pl\">sp</span> in the past (<span class=\"pl\">spał</span>)." },
+      { "id": "irr-33", "kind": "type", "q": "<span class=\"pl\">brać</span> — <i>ja</i>", "accept": ["biorę"], "why": "<span class=\"pl\">biorę</span> — the <span class=\"pl\">-o-</span> appears here and in <span class=\"pl\">biorą</span>; elsewhere it is <span class=\"pl\">-e-</span>: <span class=\"pl\">bierzesz</span>." }
+    ]
+  }
+]

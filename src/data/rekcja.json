@@ -1,0 +1,117 @@
+{
+  "groups": [
+    {
+      "id": "genitive",
+      "case": "genitive",
+      "pl": "dopełniacz",
+      "rule": "Verbs of wanting, lacking, seeking, needing and being afraid take the genitive. So does the direct object of any negated verb (chapter 9 explains that separately).",
+      "verbs": [
+        { "v": "szukać", "en": "to look for", "ex": "Szukam kluczy.", "tr": "I'm looking for the keys." },
+        { "v": "potrzebować", "en": "to need", "ex": "Potrzebuję pomocy.", "tr": "I need help." },
+        { "v": "bać się", "en": "to be afraid of", "ex": "Boję się psów.", "tr": "I'm afraid of dogs." },
+        { "v": "słuchać", "en": "to listen to", "ex": "Słucham muzyki.", "tr": "I'm listening to music." },
+        { "v": "uczyć się", "en": "to learn (a subject)", "ex": "Uczę się polskiego.", "tr": "I'm learning Polish." },
+        { "v": "uczyć", "en": "to teach (someone something)", "ex": "Uczę go polskiego.", "tr": "I'm teaching him Polish." },
+        { "v": "dowiedzieć się", "en": "to find out", "ex": "Dowiedziałem się prawdy.", "tr": "I found out the truth." },
+        { "v": "zapominać", "en": "to forget", "ex": "Zapominam słów.", "tr": "I forget the words." },
+        { "v": "życzyć", "en": "to wish", "ex": "Życzę ci szczęścia.", "tr": "I wish you happiness. (the person is dative)" },
+        { "v": "spodziewać się", "en": "to expect", "ex": "Spodziewam się gości.", "tr": "I'm expecting guests." },
+        { "v": "wstydzić się", "en": "to be ashamed of", "ex": "Wstydzę się swojego akcentu.", "tr": "I'm ashamed of my accent." },
+        { "v": "pilnować", "en": "to watch over", "ex": "Pilnuję bagażu.", "tr": "I'm keeping an eye on the luggage." }
+      ]
+    },
+    {
+      "id": "dative",
+      "case": "dative",
+      "pl": "celownik",
+      "rule": "Verbs of helping, believing, giving to, answering, thanking and pleasing take the dative for the person affected.",
+      "verbs": [
+        { "v": "pomagać", "en": "to help", "ex": "Pomagam mamie.", "tr": "I'm helping mum." },
+        { "v": "dziękować", "en": "to thank", "ex": "Dziękuję ci.", "tr": "Thank you." },
+        { "v": "wierzyć", "en": "to believe", "ex": "Wierzę ci.", "tr": "I believe you." },
+        { "v": "odpowiadać", "en": "to answer (someone)", "ex": "Odpowiadam nauczycielowi.", "tr": "I answer the teacher." },
+        { "v": "podobać się", "en": "to appeal to", "ex": "Podoba mi się Łódź.", "tr": "I like Łódź. (literally: Łódź appeals to me)" },
+        { "v": "smakować", "en": "to taste good to", "ex": "Smakuje ci zupa?", "tr": "Do you like the soup?" },
+        { "v": "życzyć", "en": "to wish (someone)", "ex": "Życzę ci powodzenia.", "tr": "I wish you good luck." },
+        { "v": "kupować", "en": "to buy (for someone)", "ex": "Kupuję dziecku książkę.", "tr": "I'm buying the child a book. (the thing is accusative)" },
+        { "v": "zazdrościć", "en": "to envy", "ex": "Zazdroszczę ci.", "tr": "I envy you." },
+        { "v": "przeszkadzać", "en": "to bother", "ex": "Czy ci przeszkadzam?", "tr": "Am I bothering you?" },
+        { "v": "ufać", "en": "to trust", "ex": "Ufam mu.", "tr": "I trust him." },
+        { "v": "przyglądać się", "en": "to watch closely", "ex": "Przyglądam się zdjęciu.", "tr": "I'm studying the photo." }
+      ]
+    },
+    {
+      "id": "accusative",
+      "case": "accusative",
+      "pl": "biernik",
+      "rule": "The plain direct object. This is the default, and the case you use when nothing in the meaning pushes toward another one.",
+      "verbs": [
+        { "v": "mieć", "en": "to have", "ex": "Mam bilet.", "tr": "I have a ticket." },
+        { "v": "kupić", "en": "to buy", "ex": "Kupię chleb.", "tr": "I'll buy bread." },
+        { "v": "znać", "en": "to know (a person, a place)", "ex": "Znam tę ulicę.", "tr": "I know this street." },
+        { "v": "widzieć", "en": "to see", "ex": "Widzę samochód.", "tr": "I see a car." },
+        { "v": "czytać", "en": "to read", "ex": "Czytam gazetę.", "tr": "I'm reading the paper." },
+        { "v": "jeść", "en": "to eat", "ex": "Jem śniadanie.", "tr": "I'm eating breakfast." },
+        { "v": "lubić", "en": "to like", "ex": "Lubię kawę.", "tr": "I like coffee." },
+        { "v": "robić", "en": "to do, to make", "ex": "Robiłem obiad.", "tr": "I was making dinner." }
+      ]
+    },
+    {
+      "id": "instrumental",
+      "case": "instrumental",
+      "pl": "narzędnik",
+      "rule": "Verbs of being or becoming something, managing, using, and of movement that goes over or under something.",
+      "verbs": [
+        { "v": "być", "en": "to be (a profession, a state)", "ex": "Jestem programistą.", "tr": "I'm a programmer." },
+        { "v": "zostać", "en": "to become", "ex": "Zostanę lekarzem.", "tr": "I'll become a doctor." },
+        { "v": "interesować się", "en": "to be interested in", "ex": "Interesuję się historią.", "tr": "I'm interested in history." },
+        { "v": "zajmować się", "en": "to deal with", "ex": "Zajmuję się stronami internetowymi.", "tr": "I work on websites." },
+        { "v": "kierować", "en": "to manage, to steer", "ex": "Kieruję zespołem.", "tr": "I manage a team." },
+        { "v": "jechać", "en": "to go (by a means of transport)", "ex": "Jadę autobusem.", "tr": "I'm going by bus." },
+        { "v": "iść", "en": "to walk (along/under/over)", "ex": "Idę ulicą.", "tr": "I'm walking along the street." },
+        { "v": "nazywać się", "en": "to be called", "ex": "Nazywam się Hammad.", "tr": "My name is Hammad." }
+      ]
+    },
+    {
+      "id": "prepositional",
+      "case": "prepositional",
+      "pl": "verb + preposition",
+      "rule": "Most intransitive verbs take a fixed preposition, and the preposition decides the case. Learn the pair — verb plus preposition — never the verb alone.",
+      "verbs": [
+        { "v": "myśleć o", "en": "to think about", "ex": "Myślę o tobie.", "tr": "+ locative", "case": "locative" },
+        { "v": "mówić o", "en": "to talk about", "ex": "Mówimy o pracy.", "tr": "+ locative", "case": "locative" },
+        { "v": "czekać na", "en": "to wait for", "ex": "Czekam na autobus.", "tr": "+ accusative", "case": "accusative" },
+        { "v": "iść do", "en": "to go to (a place)", "ex": "Idę do sklepu.", "tr": "+ genitive", "case": "genitive" },
+        { "v": "iść na", "en": "to go to (an event)", "ex": "Idę na koncert.", "tr": "+ accusative", "case": "accusative" },
+        { "v": "wracać z", "en": "to come back from", "ex": "Wracam z pracy.", "tr": "+ genitive", "case": "genitive" },
+        { "v": "wracać do", "en": "to come back to", "ex": "Wracam do domu.", "tr": "+ genitive", "case": "genitive" },
+        { "v": "dziękować za", "en": "to thank for", "ex": "Dziękuję za pomoc.", "tr": "+ accusative", "case": "accusative" },
+        { "v": "prosić o", "en": "to ask for", "ex": "Proszę o rachunek.", "tr": "+ accusative", "case": "accusative" },
+        { "v": "zależeć od", "en": "to depend on", "ex": "To zależy od ciebie.", "tr": "+ genitive", "case": "genitive" },
+        { "v": "martwić się o", "en": "to worry about", "ex": "Martwię się o ciebie.", "tr": "+ accusative", "case": "accusative" },
+        { "v": "zgadzać się z", "en": "to agree with", "ex": "Zgadzam się z tobą.", "tr": "+ instrumental", "case": "instrumental" },
+        { "v": "rozmawiać z", "en": "to talk with", "ex": "Rozmawiam z szefem.", "tr": "+ instrumental", "case": "instrumental" },
+        { "v": "liczyć na", "en": "to count on", "ex": "Liczę na ciebie.", "tr": "+ accusative", "case": "accusative" },
+        { "v": "śmiać się z", "en": "to laugh at", "ex": "Śmieję się z żartu.", "tr": "+ genitive", "case": "genitive" }
+      ]
+    }
+  ],
+  "negation": {
+    "rule": "A negated verb takes the genitive where it would otherwise take the accusative. This is not a quirk of one verb: it is the rule for every direct object.",
+    "rows": [
+      { "yes": "Mam bilet.", "no": "Nie mam biletu.", "tr": "I have a ticket. / I don't have a ticket." },
+      { "yes": "Czytam gazetę.", "no": "Nie czytam gazety.", "tr": "I'm reading the paper. / I'm not reading the paper." },
+      { "yes": "Widzę samochód.", "no": "Nie widzę samochodu.", "tr": "I see a car. / I don't see a car." },
+      { "yes": "Kupię chleb.", "no": "Nie kupię chleba.", "tr": "I'll buy bread. / I won't buy bread." }
+    ],
+    "note": "The genitive after a negation is one of the most reliable rules in Polish, and one of the most missed by learners: it is not about the verb, it is about the nie."
+  },
+  "quantity": {
+    "rule": "A direct object that is a quantity — some, a lot, little, a number — also takes the genitive, even without a nie.",
+    "rows": [
+      { "v": "Kupuję chleb.", "q": "Kupuję dużo chleba.", "tr": "I buy bread. / I buy a lot of bread." },
+      { "v": "Piję mleko.", "q": "Piję szklankę mleka.", "tr": "I drink milk. / I drink a glass of milk." },
+      { "v": "Mam czas.", "q": "Mam mało czasu.", "tr": "I have time. / I have little time." }
+    ]
+  }
+}

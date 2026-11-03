@@ -1,0 +1,14 @@
+{
+  "name": "polski-czasowniki",
+  "version": "1.0.0",
+  "private": true,
+  "description": "The Polish verb in twelve chapters: reference, verified conjugation tables and drills that explain every answer.",
+  "type": "module",
+  "scripts": {
+    "build": "node tools/build-catalog.mjs && node tools/build.mjs",
+    "check": "node tools/validate-data.mjs && node tools/check-content.mjs && node tools/check-forms.mjs",
+    "serve": "cd dist && python3 -m http.server 4399",
+    "verify": "npm run build && npm run check && node --check src/app.js",
+    "refresh": "node tools/fetch-wiktionary.mjs && node tools/fetch-polish-wiktionary.mjs && node tools/gen-tables.mjs"
+  }
+}

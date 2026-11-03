@@ -1,0 +1,88 @@
+{
+  "chapters": [
+    {
+      "id": "what-is-a-verb",
+      "n": "01",
+      "en": "What a verb is",
+      "pl": "Czasownik",
+      "short": "The dictionary form, the five decisions every verb makes, and how to read the two headwords in a pair."
+    },
+    {
+      "id": "aspect",
+      "n": "02",
+      "en": "Aspect",
+      "pl": "Aspekt",
+      "short": "Imperfective and perfective: the one distinction that shapes the whole verb. Learn to see both halves of a pair."
+    },
+    {
+      "id": "present",
+      "n": "03",
+      "en": "The present tense",
+      "pl": "Czas teraźniejszy",
+      "short": "Six endings, four families, and the only present tense that a perfective verb does not have."
+    },
+    {
+      "id": "past",
+      "n": "04",
+      "en": "The past tense",
+      "pl": "Czas przeszły",
+      "short": "The -ł- stem, gender that tells you who spoke, and the endings -em, -eś, -śmy, -ście."
+    },
+    {
+      "id": "future",
+      "n": "05",
+      "en": "The future",
+      "pl": "Czas przyszły",
+      "short": "Two futures for imperfective verbs, one for perfective. Why będę pisać and napiszę are not the same promise."
+    },
+    {
+      "id": "imperative",
+      "n": "06",
+      "en": "The imperative",
+      "pl": "Tryb rozkazujący",
+      "short": "Commands, requests, niech, and why Polish says proszę more often than it gives orders."
+    },
+    {
+      "id": "conditional",
+      "n": "07",
+      "en": "The conditional",
+      "pl": "Tryb przypuszczający",
+      "short": "bym, byś, by — politeness, hypotheses, and the conditional that polite Polish runs on."
+    },
+    {
+      "id": "irregular",
+      "n": "08",
+      "en": "The irregular verbs",
+      "pl": "Czasowniki nieregularne",
+      "short": "The dozen verbs that break the patterns, taught as patterns of their own — including być, iść, jeść and wziąć."
+    },
+    {
+      "id": "verbs-and-cases",
+      "n": "09",
+      "en": "Verbs and the cases",
+      "pl": "Rekcja",
+      "short": "Which case a verb takes, which preposition comes with it, and the verbs that take a case no English verb would suggest."
+    },
+    {
+      "id": "reflexive",
+      "n": "10",
+      "en": "się, and the other pronouns",
+      "pl": "Się",
+      "short": "The reflexive that changes meaning, the impersonal się, and the pronouns that ride along with a verb."
+    },
+    {
+      "id": "prefixes",
+      "n": "11",
+      "en": "Prefixes and word families",
+      "pl": "Prefiksy",
+      "short": "How pisac becomes napisać, przepisać, podpisać, wypisać: one root, a family of aspects and meanings."
+    },
+    {
+      "id": "participles",
+      "n": "12",
+      "en": "Participles and word order",
+      "pl": "Imiesłowy",
+      "short": "The forms that turn a verb into an adjective, and where the verb sits in a Polish sentence."
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+[
+  {
+    "id": "prefix-sense",
+    "title": "What the prefix adds",
+    "ask": "Completion, or a new meaning?",
+    "items": [
+      { "id": "prf-1", "kind": "choice", "q": "<span class=\"pl\">pisać → napisać</span>. What did <span class=\"pl\">na-</span> do?",
+        "opts": ["Completed the action — it is now perfective", "Changed it to \"to write down\"", "Made it reflexive", "Made it past tense"], "a": "Completed the action — it is now perfective",
+        "why": "<span class=\"pl\">na-</span> here adds completion and no new direction: to write, and it is written." },
+      { "id": "prf-2", "kind": "choice", "q": "<span class=\"pl\">pisać → podpisać</span>. What happened?",
+        "opts": ["A new meaning: to sign (not simply to finish writing)", "Only completion", "It became imperfective", "It became reflexive"], "a": "A new meaning: to sign (not simply to finish writing)",
+        "why": "<span class=\"pl\">Podpisać</span> is not the partner of <span class=\"pl\">pisać</span> — it is a different verb. The partner is <span class=\"pl\">napisać</span>. This is the trap of prefixes: they make words, not just aspects." },
+      { "id": "prf-3", "kind": "choice", "q": "<span class=\"pl\">czytać → przeczytać</span>. What does <span class=\"pl\">prze-</span> add?",
+        "opts": ["Through: to read from start to finish", "Back: to read again", "Out: to read aloud", "Down: to read quickly"], "a": "Through: to read from start to finish",
+        "why": "<span class=\"pl\">prze-</span> = through, across. The same sense in <span class=\"pl\">przejechać</span> (drive past), <span class=\"pl\">przepisać</span> (copy out)." },
+      { "id": "prf-4", "kind": "choice", "q": "<span class=\"pl\">pić → wypić</span>. What does <span class=\"pl\">wy-</span> add?",
+        "opts": ["Out, to the end: to drink it up", "Up: to drink standing", "Back: to drink again", "In: to drink indoors"], "a": "Out, to the end: to drink it up",
+        "why": "<span class=\"pl\">wy-</span> = out, to the end, thoroughly. <span class=\"pl\">Wyjeść</span> is to eat out (the middle of something), <span class=\"pl\">wyspać się</span> to sleep it off." },
+      { "id": "prf-5", "kind": "choice", "q": "<span class=\"pl\">iść → wejść</span>. What does <span class=\"pl\">w-</span> add?",
+        "opts": ["In, into", "Out", "Around", "Back"], "a": "In, into",
+        "why": "<span class=\"pl\">wejść</span> = to go in. <span class=\"pl\">wyjść</span> = to go out, <span class=\"pl\">dojść</span> = to reach, <span class=\"pl\">odejść</span> = to walk away." },
+      { "id": "prf-6", "kind": "choice", "q": "<span class=\"pl\">dzwonić → zadzwonić</span>. What does <span class=\"pl\">za-</span> add?",
+        "opts": ["One completed call that reaches its goal", "A call in the past", "A loud call", "A call back"], "a": "One completed call that reaches its goal",
+        "why": "<span class=\"pl\">Zadzwonię do ciebie</span> = I'll give you a call. <span class=\"pl\">Dzwonić</span> is ringing as a process or a habit." },
+      { "id": "prf-7", "kind": "type", "q": "Which prefix turns <span class=\"pl\">robić</span> into its plain perfective partner?", "accept": ["z", "z-", "zrobić"],
+        "why": "<span class=\"pl\">z-</span> → <span class=\"pl\">zrobić</span>. The simplest completing prefix in the language." },
+      { "id": "prf-8", "kind": "type", "q": "Which prefix turns <span class=\"pl\">słyszeć</span> into \"to hear (catch it)\"?", "accept": ["u", "u-", "usłyszeć"],
+        "why": "<span class=\"pl\">u-</span> → <span class=\"pl\">usłyszeć</span>. <span class=\"pl\">U-</span> marks a single completed act: <span class=\"pl\">usłyszeć</span>, <span class=\"pl\">umyć</span>, <span class=\"pl\">ujść</span>." }
+    ]
+  },
+  {
+    "id": "families",
+    "title": "One root, a family",
+    "ask": "Trace the meaning",
+    "items": [
+      { "id": "prf-9", "kind": "choice", "q": "Which word means \"to write back\"?",
+        "opts": ["odpisać", "napisać", "podpisać", "wypisać"], "a": "odpisać",
+        "why": "<span class=\"pl\">od-</span> = back, away: <span class=\"pl\">odpisać</span>, <span class=\"pl\">oddać</span> (give back), <span class=\"pl\">odejść</span> (walk away)." },
+      { "id": "prf-10", "kind": "choice", "q": "Which word means \"to copy out\"?",
+        "opts": ["przepisać", "napisać", "zapisać", "dopisać"], "a": "przepisać",
+        "why": "<span class=\"pl\">prze-</span> = through/across: <span class=\"pl\">przepisać</span>, to write something across into a new place. <span class=\"pl\">Zapisać</span> is to write down or to save." },
+      { "id": "prf-11", "kind": "choice", "q": "Which word means \"to write down, to note\"?",
+        "opts": ["zapisać", "odpisać", "wypisać", "pisać"], "a": "zapisać",
+        "why": "<span class=\"pl\">zapisać</span> — to write something down, or to save a file. Also <span class=\"pl\">zapisać się</span> = to sign up." },
+      { "id": "prf-12", "kind": "choice", "q": "<span class=\"pl\">wyjść</span> means:",
+        "opts": ["to go out", "to go in", "to arrive", "to walk past"], "a": "to go out",
+        "why": "<span class=\"pl\">wy-</span> = out: <span class=\"pl\">wyjść</span>, <span class=\"pl\">wyjechać</span> (drive out), <span class=\"pl\">wynieść</span> (carry out)." },
+      { "id": "prf-13", "kind": "choice", "q": "<span class=\"pl\">dojść</span> means:",
+        "opts": ["to reach, to arrive (on foot)", "to go in", "to go out", "to walk past"], "a": "to reach, to arrive (on foot)",
+        "why": "<span class=\"pl\">do-</span> = up to, as far as: <span class=\"pl\">dojść do domu</span> = to reach home. The preposition <span class=\"pl\">do</span> is inside the prefix." },
+      { "id": "prf-14", "kind": "type", "q": "Complete: <span class=\"pl\">pod-</span> + <span class=\"pl\">pisać</span> = ___ (to sign).", "accept": ["podpisać"],
+        "why": "<span class=\"pl\">Podpisać</span> — to sign, to write underneath." },
+      { "id": "prf-15", "kind": "type", "q": "Complete: <span class=\"pl\">w-</span> + <span class=\"pl\">pić</span> = ___ (to drink in, to absorb).", "accept": ["wpić", "wpić się"],
+        "why": "<span class=\"pl\">wpić</span> is \"to drink in, to absorb\" (also <span class=\"pl\">wchłonąć</span>). Less common than <span class=\"pl\">wypić</span>, but built the same way." }
+    ]
+  }
+]

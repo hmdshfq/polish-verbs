@@ -1,0 +1,97 @@
+[
+  {
+    "id": "definition",
+    "title": "What a verb decides",
+    "ask": "Pick what the question is about",
+    "items": [
+      { "id": "wav-1", "kind": "choice", "q": "Which of these is the dictionary form (bezokolicznik) of the verb meaning \"to write\"?",
+        "opts": ["pisać", "piszę", "pisałem", "pisze"], "a": "pisać",
+        "why": "<b>pisać</b> is the infinitive — the form you look up and learn. The others are used forms: <i>pisanie</i>-type forms are nouns, <i>piszę</i> is \"I write\", <i>pisałem</i> is \"I wrote\", <i>pisze</i> is \"he writes\"." },
+      { "id": "wav-2", "kind": "choice", "q": "How many tenses does Polish have?",
+        "opts": ["Three", "Two", "Four", "Twelve"], "a": "Three",
+        "why": "Present, past and future. English has more <i>shapes</i> (I write, I am writing, I have written, I will have been writing), but Polish puts most of that meaning into <b>aspect</b>, not into extra tenses." },
+      { "id": "wav-3", "kind": "choice", "q": "Which of these tells you the <b>aspect</b> of a verb?",
+        "opts": ["Its ending in the dictionary form", "Whether the dictionary marks it impf or pf", "The person who does it", "The tense it is used in"], "a": "Whether the dictionary marks it impf or pf",
+        "why": "Aspect is a property of the verb itself, not of the sentence: every verb is either imperfective or perfective, and a dictionary says which with <b>impf</b>/<b>pf</b> or <b>ndk.</b>/<b>dk.</b> The infinitive ending hints at the family it belongs to, but it does not decide aspect." },
+      { "id": "wav-4", "kind": "choice", "q": "You look up \"buy\" and find <i>kupić</i>. What should you write down?",
+        "opts": ["kupować / kupić", "kupić", "kupuję", "kupić (impf)"], "a": "kupować / kupić",
+        "why": "Learn both halves of the pair as one item. <span class=\"pl\">kupować</span> is the process, <span class=\"pl\">kupić</span> is the finished act. Learning one half is the most common way to learn a verb wrong — chapter 2 is entirely about this." },
+      { "id": "wav-5", "kind": "choice", "q": "In a Polish past-tense form like <i>pisałem</i>, what does the ending show that English \"I wrote\" does not?",
+        "opts": ["That the speaker was male", "That the action is finished", "That the sentence is formal", "Nothing — it is the same"], "a": "That the speaker was male",
+        "why": "<span class=\"pl\">pisałem</span> (male speaker) versus <span class=\"pl\">pisałam</span> (female speaker). Polish past-tense forms carry gender, so the speaker's sex is never hidden." },
+      { "id": "wav-6", "kind": "choice", "q": "Which ending is <b>not</b> a possible Polish infinitive ending?",
+        "opts": ["-ść", "-ć", "-æ", "-c"], "a": "-æ",
+        "why": "<span class=\"pl\">-ć</span> (pisać), <span class=\"pl\">-c</span> (móc) and <span class=\"pl\">-ść</span> (iść) all occur. <span class=\"pl\">-æ</span> is not a Polish letter or ending at all." }
+    ]
+  },
+  {
+    "id": "infinitive",
+    "title": "Reading the infinitive",
+    "ask": "What family does the ending point to?",
+    "items": [
+      { "id": "wav-7", "kind": "choice", "q": "<span class=\"pl\">czytać</span> ends in -ać. What is its present tense likely to look like?",
+        "opts": ["czytam, czytasz", "czytię, czytisz", "czytę, czyciesz", "czytną, czytniesz"], "a": "czytam, czytasz",
+        "why": "The <span class=\"pl\">-ać</span> family overwhelmingly goes to <span class=\"pl\">-am, -asz</span>: czytać → czytam, mieszkać → mieszkam, pytać → pytam. It is the largest family in the language." },
+      { "id": "wav-8", "kind": "choice", "q": "<span class=\"pl\">mówić</span> ends in -ić. What is its present tense likely to look like?",
+        "opts": ["mówię, mówisz", "mówam, mówasz", "mówię, mówiesz", "mówię, mówie"], "a": "mówię, mówisz",
+        "why": "The <span class=\"pl\">-ić</span> family goes to <span class=\"pl\">-ię, -isz</span>: mówić → mówię, mówisz; robić → robię, robisz; dzwonić → dzwonię, dzwonisz." },
+      { "id": "wav-9", "kind": "choice", "q": "Which of these verbs is perfective?",
+        "opts": ["pisać", "napisać", "czytać", "piec"], "a": "napisać",
+        "why": "<span class=\"pl\">napisać</span> is perfective — the finished act of writing. <span class=\"pl\">pisać</span> and <span class=\"pl\">czytać</span> are imperfective. <span class=\"pl\">piec</span> means \"to bake\" and is imperfective too." },
+      { "id": "wav-10", "kind": "choice", "q": "Which of these is a legitimate way to translate <i>szukać</i>?",
+        "opts": ["to look for", "to find", "to search (a computer)", "to discover"], "a": "to look for",
+        "why": "<span class=\"pl\">szukać</span> is to look for, an ongoing search, and it takes the <b>genitive</b>. <i>To find</i> is <span class=\"pl\">znaleźć</span>, its perfective partner — a different word, and that difference matters (chapter 2)." },
+      { "id": "wav-11", "kind": "choice", "q": "A verb marked <b>pf</b> in a dictionary has:",
+        "opts": ["no present tense", "no past tense", "no imperative", "no infinitive"], "a": "no present tense",
+        "why": "A perfective verb describes a completed act, and something already complete cannot be happening now. Its present-looking forms are the <b>future</b>: <span class=\"pl\">napisać</span> → <span class=\"pl\">napiszę</span> = \"I will write\"." },
+      { "id": "wav-12", "kind": "type", "q": "Write the infinitive of \"to be\".", "accept": ["być"],
+        "why": "<span class=\"pl\">być</span> — the most irregular verb in the language, and the one you cannot avoid (chapter 8)." },
+      { "id": "wav-13", "kind": "type", "q": "Write the infinitive of \"to have\".", "accept": ["mieć"],
+        "why": "<span class=\"pl\">mieć</span> — a <i>-m, -sz</i> verb: mam, masz, ma, mamy, macie, mają." }
+    ]
+  },
+  {
+    "id": "transitive",
+    "title": "Transitive or not?",
+    "ask": "Does it take a direct object?",
+    "items": [
+      { "id": "wav-14", "kind": "choice", "q": "<span class=\"pl\">Czytam ___</span> — \"I am reading a book\". Which case is <i>book</i> in?",
+        "opts": ["accusative — książkę", "genitive — książki", "instrumental — książką", "dative — książce"], "a": "accusative — książkę",
+        "why": "<span class=\"pl\">czytać</span> is transitive and takes a plain direct object: the accusative. <span class=\"pl\">Czytam książkę.</span> Note that a negation would turn it genitive: <span class=\"pl\">Nie czytam książki.</span>" },
+      { "id": "wav-15", "kind": "choice", "q": "<span class=\"pl\">Szukam ___</span> — \"I am looking for the keys\". Which case?",
+        "opts": ["genitive — kluczy", "accusative — klucze", "instrumental — kluczami", "locative — kluczach"], "a": "genitive — kluczy",
+        "why": "<span class=\"pl\">szukać</span> takes the genitive even though English \"look for\" takes a plain object. The case is a property of the verb, not of the English translation — this is <i>rekcja</i>, chapter 9." },
+      { "id": "wav-16", "kind": "choice", "q": "<span class=\"pl\">Pomagam ___</span> — \"I am helping my mum\". Which case?",
+        "opts": ["dative — mamie", "accusative — mamę", "genitive — mamy", "instrumental — mamą"], "a": "dative — mamie",
+        "why": "<span class=\"pl\">pomagać</span> takes the dative: <span class=\"pl\">Pomagam mamie.</span> The person helped is the receiver of the help, and the receiver is the dative's job." },
+      { "id": "wav-17", "kind": "choice", "q": "Which sentence is correct?",
+        "opts": ["Nie mam biletu.", "Nie mam bilet.", "Nie mam biletem.", "Nie mam bilecie."], "a": "Nie mam biletu.",
+        "why": "The object of <span class=\"pl\">mieć</span> is accusative (<span class=\"pl\">bilet</span>), but negating a verb turns that object into the <b>genitive</b>: <span class=\"pl\">nie mam biletu</span>. This rule is so reliable that Polish teachers call it the negation genitive." },
+      { "id": "wav-18", "kind": "choice", "q": "Which is the better translation of <span class=\"pl\">Znam Łódź.</span>?",
+        "opts": ["I know Łódź.", "I am learning Łódź.", "I live in Łódź.", "I am from Łódź."], "a": "I know Łódź.",
+        "why": "<span class=\"pl\">znać</span> = to know a person, a place or a language — familiarity. <span class=\"pl\">wiedzieć</span> = to know a fact. You <i>znasz</i> Łódź but <i>wiesz</i>, where the station is." },
+      { "id": "wav-19", "kind": "choice", "q": "Which of these verbs is intransitive?",
+        "opts": ["iść", "mieć", "kupić", "czytać"], "a": "iść",
+        "why": "<span class=\"pl\">iść</span> (to go on foot) takes no direct object; it takes a destination with a preposition: <span class=\"pl\">Idę do sklepu</span> (do + genitive), <span class=\"pl\">Idę na koncert</span> (na + accusative)." }
+    ]
+  },
+  {
+    "id": "traps",
+    "title": "The first three traps",
+    "ask": "Which mistake is being made?",
+    "items": [
+      { "id": "wav-20", "kind": "choice", "q": "Someone says <span class=\"pl\">Kupuję chleb</span> when they mean \"I'll buy the bread (now, once)\". What went wrong?",
+        "opts": ["They used the imperfective where the perfective is meant", "They used the wrong case", "They used the wrong person", "Nothing — both are correct"], "a": "They used the imperfective where the perfective is meant",
+        "why": "For a single, completed purchase you want the perfective <span class=\"pl\">kupię</span>: <span class=\"pl\">Kupię chleb.</span> <span class=\"pl\">Kupuję</span> describes a process or a habit — \"I buy bread (regularly)\" or \"I'm in the middle of buying it\". The case was fine; the aspect was not." },
+      { "id": "wav-21", "kind": "choice", "q": "Why does <span class=\"pl\">Ja to zrobię</span> sound different from <span class=\"pl\">To zrobię</span>?",
+        "opts": ["The pronoun adds emphasis — \"it's me who'll do it\"", "It is ungrammatical", "It is more formal", "It changes the tense"], "a": "The pronoun adds emphasis — \"it's me who'll do it\"",
+        "why": "Polish endings already say who does it, so an added pronoun is a choice: it stresses the person. <span class=\"pl\">To zrobię</span> is neutral; <span class=\"pl\">ja to zrobię</span> says \"I'll do it, not you\"." },
+      { "id": "wav-22", "kind": "choice", "q": "Someone wants to say \"I am writing\" using <span class=\"pl\">napisać</span>. Why can't they?",
+        "opts": ["napisać is perfective and has no present tense", "napisać is intransitive", "napisać is irregular", "napisać is a noun"], "a": "napisać is perfective and has no present tense",
+        "why": "A completed act cannot be happening now. <span class=\"pl\">napiszę</span> is the future: \"I will write (and it will be written)\". For \"I am writing\", use the imperfective: <span class=\"pl\">piszę</span>." },
+      { "id": "wav-23", "kind": "choice", "q": "What is the difference between <span class=\"pl\">Piszę list</span> and <span class=\"pl\">Napiszę list</span>?",
+        "opts": ["process now vs. finished later", "formal vs. informal", "singular vs. plural", "past vs. present"], "a": "process now vs. finished later",
+        "why": "<span class=\"pl\">Piszę</span> — I am writing / I write, the process. <span class=\"pl\">Napiszę</span> — I will write it and it will be done, the result. The same root, the same object, a different claim about completion." }
+    ]
+  }
+]

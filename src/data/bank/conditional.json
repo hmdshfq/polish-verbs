@@ -1,0 +1,70 @@
+[
+  {
+    "id": "would",
+    "title": "Would, could, should",
+    "ask": "The conditional form",
+    "items": [
+      { "id": "con-1", "kind": "type", "q": "\"I would do it\" — <i>ja</i> (a man), from <span class=\"pl\">robić</span>.", "accept": ["zrobiłbym", "robiłbym"],
+        "why": "Both are conditionals: <span class=\"pl\">zrobiłbym</span> (perfective — I'd do it and it'd be done) and <span class=\"pl\">robiłbym</span> (imperfective — I'd be doing it). For \"I would do it\" the perfective is the natural one." },
+      { "id": "con-2", "kind": "type", "q": "\"I would do it\" — <i>ja</i> (a woman).", "accept": ["zrobiłabym", "robiłabym"],
+        "why": "<span class=\"pl\">zrobiłabym</span> — the feminine <span class=\"pl\">-a-</span> sits between the past stem and <span class=\"pl\">-bym</span>." },
+      { "id": "con-3", "kind": "type", "q": "\"Would you help me?\" — <i>ty</i> (to a man), from <span class=\"pl\">pomóc</span>.", "accept": ["pomógłbyś"],
+        "why": "<span class=\"pl\">pomógłbyś</span> — past stem <span class=\"pl\">pomógł</span> plus <span class=\"pl\">-byś</span>. To a woman: <span class=\"pl\">pomogłabyś</span>." },
+      { "id": "con-4", "kind": "type", "q": "\"We would go\" — <i>my</i> (a group with men), from <span class=\"pl\">pójść</span>.", "accept": ["poszlibyśmy"],
+        "why": "<span class=\"pl\">poszlibyśmy</span> — past <span class=\"pl\">poszli</span> + <span class=\"pl\">-byśmy</span>." },
+      { "id": "con-5", "kind": "type", "q": "\"They would help\" — <i>oni</i>.", "accept": ["pomogliby", "pomogłyby"],
+        "why": "<span class=\"pl\">pomogliby</span> for a group with men, <span class=\"pl\">pomogłyby</span> for a group without. The conditional keeps the past tense's gender split." },
+      { "id": "con-6", "kind": "choice", "q": "Which part carries the person in <span class=\"pl\">zrobiłbym</span>?",
+        "opts": ["-bym", "zrobił-", "both equally", "the word order"], "a": "-bym",
+        "why": "<span class=\"pl\">-bym, -byś, -by, -byśmy, -byście, -by</span> carry the person. The <span class=\"pl\">-ł-</span> part carries the gender and the verb." },
+      { "id": "con-7", "kind": "choice", "q": "\"I would like a coffee.\" Which is the standard polite form?",
+        "opts": ["Chciałbym kawę. / Chciałabym kawę.", "Chcę kawę.", "Chciałbym kawy.", "Będę chciał kawę."], "a": "Chciałbym kawę. / Chciałabym kawę.",
+        "why": "<span class=\"pl\">Chciałbym kawę</span> (a man) / <span class=\"pl\">chciałabym kawę</span> (a woman) is the polite request. <span class=\"pl\">Chcę kawę</span> is perfectly correct but blunt — \"I want a coffee\"." },
+      { "id": "con-8", "kind": "type", "q": "\"I would have done it\" — a man. (The past conditional.)", "accept": ["zrobiłbym był", "byłbym zrobił"],
+        "why": "<span class=\"pl\">zrobiłbym był</span> — the past conditional, built with <span class=\"pl\">był</span> at the end. It is literary and dated; in speech the plain conditional or the past does the job. Worth recognising, not worth using." }
+    ]
+  },
+  {
+    "id": "by-separate",
+    "title": "The movable <i>by</i>",
+    "ask": "Where does it go?",
+    "items": [
+      { "id": "con-9", "kind": "choice", "q": "Which is the standard written form of \"if I had time, I would read\"?",
+        "opts": ["Gdybym miał czas, czytałbym.", "Gdy bym miał czas, czytał bym.", "Gdybym miał czas, czytał bym.", "Gdybym miał czas, bym czytał."], "a": "Gdybym miał czas, czytałbym.",
+        "why": "The conditional particle fuses onto the verb: <span class=\"pl\">czytałbym</span>, and onto <span class=\"pl\">gdy</span>: <span class=\"pl\">gdybym</span>. The separated spelling (<span class=\"pl\">czytał bym</span>) is also correct and common in careful writing, especially after a comma." },
+      { "id": "con-10", "kind": "choice", "q": "Where does <span class=\"pl\">bym</span> normally sit in a sentence?",
+        "opts": ["Right after the verb, fused to it, or after a conjunction like gdy", "Always at the start", "Always at the end", "Before the subject"], "a": "Right after the verb, fused to it, or after a conjunction like gdy",
+        "why": "<span class=\"pl\">zrobiłbym</span>, <span class=\"pl\">gdybym</span>, <span class=\"pl\">żebym</span>. <span class=\"pl\">Bym</span> is a clitic: it leans on the word before it, so it cannot stand alone at the start of a sentence." },
+      { "id": "con-11", "kind": "choice", "q": "\"If I were you, I would go.\" Which?",
+        "opts": ["Gdybym był tobą, poszedłbym.", "Gdybym był ty, poszedłbym.", "Jeśli byłem tobą, poszedłbym.", "Gdybym był tobą, pójdę."], "a": "Gdybym był tobą, poszedłbym.",
+        "why": "Two things: <span class=\"pl\">być</span> takes the instrumental (<span class=\"pl\">tobą</span>), and both halves stay in the conditional (<span class=\"pl\">poszedłbym</span>)." },
+      { "id": "con-12", "kind": "choice", "q": "What does <span class=\"pl\">żeby</span> mean?",
+        "opts": ["\"so that\" / \"in order to\", and it takes the conditional", "the same as <span class=\"pl\">że</span>", "a past tense marker", "a polite question"], "a": "\"so that\" / \"in order to\", and it takes the conditional",
+        "why": "<span class=\"pl\">Mówię powoli, żebyś zrozumiał</span> — I speak slowly so that you understand. <span class=\"pl\">Żeby</span> is <span class=\"pl\">że</span> + <span class=\"pl\">by</span>, fused, and the verb after it is conditional." },
+      { "id": "con-13", "kind": "type", "q": "\"I would like you to come\" — write the conditional of <span class=\"pl\">przyjść</span> for <i>ty</i> (a man).", "accept": ["przyszedłbyś"],
+        "why": "<span class=\"pl\">przyszedłbyś</span> — past <span class=\"pl\">przyszedł</span> + <span class=\"pl\">-byś</span>. To a woman: <span class=\"pl\">przyszłabyś</span>." }
+    ]
+  },
+  {
+    "id": "conditional-traps",
+    "title": "Conditional traps",
+    "ask": "Which is right?",
+    "items": [
+      { "id": "con-14", "kind": "choice", "q": "Is the conditional a tense?",
+        "opts": ["No — it is a mood: it says how real the action is, not when", "Yes, it is a fourth tense", "Yes, it is the future", "No, it is an aspect"], "a": "No — it is a mood: it says how real the action is, not when",
+        "why": "Polish <i>tryb przypuszczający</i> is a mood. It can refer to the present, the future or the past: <span class=\"pl\">zrobiłbym to teraz / jutro</span>. The tense still comes from context, as in English." },
+      { "id": "con-15", "kind": "choice", "q": "Why does <span class=\"pl\">Chciałbym</span> sound more polite than <span class=\"pl\">Chcę</span>?",
+        "opts": ["The conditional removes the demand — it makes the wish hypothetical", "It is more formal vocabulary", "It changes the person", "It is the past tense"], "a": "The conditional removes the demand — it makes the wish hypothetical",
+        "why": "The same reason English says \"I would like\" rather than \"I want\". The conditional puts distance between the speaker and the demand, and Polish uses it constantly for requests: <span class=\"pl\">Czy mógłbyś…?</span>, <span class=\"pl\">Chciałbym…</span>." },
+      { "id": "con-16", "kind": "choice", "q": "Which of these is <b>not</b> a correct negative request?",
+        "opts": ["Nie chciałbym nie przyjść.", "Nie chciałbym przychodzić.", "Wolałbym nie przychodzić.", "Czy mógłbym nie przyjść?"], "a": "Nie chciałbym nie przyjść.",
+        "why": "Double negation in the same clause is clumsy and unnatural here. The idiomatic way is <span class=\"pl\">wolałbym nie przychodzić</span> (I'd rather not come) or <span class=\"pl\">czy mógłbym nie przyjść?</span> (could I not come?)." },
+      { "id": "con-17", "kind": "choice", "q": "\"If it rains, we'll stay home.\" Which?",
+        "opts": ["Jeśli będzie padać, zostaniemy w domu.", "Jeśli by padało, zostaniemy w domu.", "Jeśli padałoby, zostaniemy.", "Jeśli pada, zostaniemy."], "a": "Jeśli będzie padać, zostaniemy w domu.",
+        "why": "A real, likely condition takes the ordinary future, not the conditional: <span class=\"pl\">jeśli będzie padać</span>. The conditional <span class=\"pl\">gdyby padało</span> would mark an unreal or unlikely condition: \"if it were raining\"." },
+      { "id": "con-18", "kind": "choice", "q": "Which sentence is a proper unreal condition?",
+        "opts": ["Gdybym miał pieniądze, kupiłbym dom.", "Jeśli mam pieniądze, kupię dom.", "Gdybym ma pieniądze, kupię dom.", "Jeśli będę miał pieniądze, kupiłbym dom."], "a": "Gdybym miał pieniądze, kupiłbym dom.",
+        "why": "An unreal condition uses the conditional in <b>both</b> halves: <span class=\"pl\">gdybym miał… kupiłbym</span>. Mixing a conditional <i>if</i> with a plain future breaks it." }
+    ]
+  }
+]

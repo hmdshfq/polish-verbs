@@ -1,0 +1,74 @@
+[
+  {
+    "id": "commands",
+    "title": "Giving a command",
+    "ask": "The right imperative",
+    "items": [
+      { "id": "imp-1", "kind": "type", "q": "<span class=\"pl\">pisać</span> — \"Write!\" (to one person, informally)", "accept": ["pisz"],
+        "why": "<span class=\"pl\">Pisz!</span> — the imperative of an <span class=\"pl\">-ać</span> verb usually ends in a soft consonant with no ending at all, or in <span class=\"pl\">-aj</span>. Here: <span class=\"pl\">pisz</span>." },
+      { "id": "imp-2", "kind": "type", "q": "<span class=\"pl\">czytać</span> — \"Read!\" (to one person)", "accept": ["czytaj"],
+        "why": "<span class=\"pl\">Czytaj!</span> — the <span class=\"pl\">-am</span> family takes <span class=\"pl\">-aj</span> in the imperative." },
+      { "id": "imp-3", "kind": "type", "q": "<span class=\"pl\">robić</span> — \"Do it!\" (to one person)", "accept": ["rób"],
+        "why": "<span class=\"pl\">Rób!</span> — a short, irregular imperative. Note the <span class=\"pl\">ó</span>." },
+      { "id": "imp-4", "kind": "type", "q": "<span class=\"pl\">iść</span> — \"Go!\" (to one person)", "accept": ["idź"],
+        "why": "<span class=\"pl\">Idź!</span> — the softening gives <span class=\"pl\">-dź</span>. Plural: <span class=\"pl\">idźcie!</span>" },
+      { "id": "imp-5", "kind": "type", "q": "<span class=\"pl\">mówić</span> — \"Speak!\" (to one person)", "accept": ["mów"],
+        "why": "<span class=\"pl\">Mów!</span> — an imperative with no ending, on the bare stem." },
+      { "id": "imp-6", "kind": "type", "q": "<span class=\"pl\">dać</span> / <span class=\"pl\">dawać</span> — \"Give me!\"", "accept": ["daj", "daj mi"],
+        "why": "<span class=\"pl\">Daj mi!</span> — from the imperfective <span class=\"pl\">dawać</span>. Polish uses the imperfective for a plain request: <span class=\"pl\">Daj mi to</span>. <span class=\"pl\">Dać</span> itself has no ordinary imperative form in use." },
+      { "id": "imp-7", "kind": "type", "q": "<span class=\"pl\">wziąć</span> / <span class=\"pl\">brać</span> — \"Take it!\"", "accept": ["weź", "bierz", "weź to", "bierz to"],
+        "why": "Both exist: <span class=\"pl\">weź!</span> (from the perfective, one act) and <span class=\"pl\">bierz!</span> (from the imperfective). <span class=\"pl\">Weź</span> is the everyday instruction." },
+      { "id": "imp-8", "kind": "type", "q": "<span class=\"pl\">być</span> — \"Be careful!\" (to one person)", "accept": ["bądź", "bądź ostrożny", "bądź ostrożna"],
+        "why": "<span class=\"pl\">Bądź!</span> — the imperative of <span class=\"pl\">być</span>. <span class=\"pl\">Bądź ostrożny</span> to a man, <span class=\"pl\">bądź ostrożna</span> to a woman." },
+      { "id": "imp-9", "kind": "type", "q": "<span class=\"pl\">mieć</span> — \"Have a nice day!\"", "accept": ["miej", "miej miły dzień"],
+        "why": "<span class=\"pl\">Miej!</span> — rare in speech, but the form is <span class=\"pl\">miej</span>. The everyday phrase is <span class=\"pl\">Miłego dnia!</span>, which needs no verb at all." }
+    ]
+  },
+  {
+    "id": "plural-polite",
+    "title": "To several people, and politely",
+    "ask": "Which form for whom?",
+    "items": [
+      { "id": "imp-10", "kind": "type", "q": "<span class=\"pl\">czytać</span> — \"Read!\" (to several people)", "accept": ["czytajcie"],
+        "why": "<span class=\"pl\">Czytajcie!</span> — the plural imperative adds <span class=\"pl\">-cie</span> to the singular." },
+      { "id": "imp-11", "kind": "type", "q": "<span class=\"pl\">iść</span> — \"Go!\" (to several people)", "accept": ["idźcie"],
+        "why": "<span class=\"pl\">Idźcie!</span> — singular <span class=\"pl\">idź</span> plus <span class=\"pl\">-cie</span>." },
+      { "id": "imp-12", "kind": "choice", "q": "How do you tell a stranger politely to come in?",
+        "opts": ["Proszę wejść.", "Wejdź!", "Wejdźcie!", "Niech wejdziesz."], "a": "Proszę wejść.",
+        "why": "Polish politeness is built on <span class=\"pl\">proszę</span> + infinitive, not on a special imperative form. <span class=\"pl\">Wejdź!</span> is fine between friends; to a stranger it is abrupt." },
+      { "id": "imp-13", "kind": "choice", "q": "\"Let him come in.\" Which is the third-person imperative?",
+        "opts": ["Niech wejdzie.", "Niech wejdę.", "Wejdzie.", "Niech wejść."], "a": "Niech wejdzie.",
+        "why": "<span class=\"pl\">niech</span> + third-person form is how Polish says \"let him / let them\". <span class=\"pl\">Niech wejdzie</span> = let him in; <span class=\"pl\">niech wejdą</span> = let them in." },
+      { "id": "imp-14", "kind": "choice", "q": "\"Let's go!\" Which?",
+        "opts": ["Chodźmy!", "Idziemy!", "Idź!", "Niech idziemy."], "a": "Chodźmy!",
+        "why": "<span class=\"pl\">Chodźmy!</span> is the first-person plural imperative — \"let's go\". <span class=\"pl\">Idziemy!</span> states a fact (\"we're going\"), which in context can work as an invitation, but it is not an imperative." },
+      { "id": "imp-15", "kind": "choice", "q": "How do you say \"Don't do that!\" to one person?",
+        "opts": ["Nie rób tego!", "Nie zrób tego!", "Nie robisz tego!", "Nie rób to!"], "a": "Nie rób tego!",
+        "why": "Negative commands take the <b>imperfective</b>: <span class=\"pl\">nie rób</span>, not <span class=\"pl\">nie zrób</span>. And the object after <i>nie</i> goes genitive: <span class=\"pl\">tego</span>, not <span class=\"pl\">to</span>." },
+      { "id": "imp-16", "kind": "choice", "q": "Why is <span class=\"pl\">Nie zrób tego!</span> odd?",
+        "opts": ["Negative imperatives use the imperfective: nie rób", "It should be nie zrobisz", "Tego should be to", "It is perfectly fine"], "a": "Negative imperatives use the imperfective: nie rób",
+        "why": "A prohibition is about an action to be avoided, not a result to be achieved, so Polish uses the imperfective: <span class=\"pl\">nie rób</span>, <span class=\"pl\">nie pisz</span>, <span class=\"pl\">nie mów</span>. Positive commands can be either." },
+      { "id": "imp-17", "kind": "type", "q": "<span class=\"pl\">pisać</span> — \"Don't write!\" (to one person)", "accept": ["nie pisz"],
+        "why": "<span class=\"pl\">Nie pisz!</span> — imperfective, as all negative commands are." }
+    ]
+  },
+  {
+    "id": "imperative-traps",
+    "title": "Imperative traps",
+    "ask": "What is the rule?",
+    "items": [
+      { "id": "imp-18", "kind": "choice", "q": "Which verbs have no imperative at all?",
+        "opts": ["Some impersonal and defective verbs, e.g. brakować, padać (of rain)", "All perfective verbs", "All reflexive verbs", "All verbs ending in -ać"], "a": "Some impersonal and defective verbs, e.g. brakować, padać (of rain)",
+        "why": "You cannot command the rain, or command \"to be lacking\". Most ordinary verbs, perfective or not, do have imperatives — <span class=\"pl\">napisz!</span> is perfectly good." },
+      { "id": "imp-19", "kind": "choice", "q": "Is <span class=\"pl\">napisz!</span> correct?",
+        "opts": ["Yes — positive commands can be perfective", "No — only imperfective verbs have imperatives", "No — napisz is the future", "Yes, but it means \"you will write\""], "a": "Yes — positive commands can be perfective",
+        "why": "<span class=\"pl\">Napisz do mnie!</span> = write to me (and do it). Perfective commands ask for a completed act; imperfective commands ask for a process or a habit. Only <b>negative</b> commands are restricted to the imperfective." },
+      { "id": "imp-20", "kind": "choice", "q": "What does the ending <span class=\"pl\">-cie</span> mark?",
+        "opts": ["A command to more than one person", "Politeness to one person", "The past tense", "The conditional"], "a": "A command to more than one person",
+        "why": "<span class=\"pl\">czytaj → czytajcie</span>, <span class=\"pl\">idź → idźcie</span>. Politeness to one person is done with <span class=\"pl\">proszę</span> + infinitive, or with <span class=\"pl\">niech pan/pani</span> + verb." },
+      { "id": "imp-21", "kind": "choice", "q": "\"Please sit down\" to one person, politely. Which?",
+        "opts": ["Proszę usiąść.", "Usiądź!", "Niech usiądziesz.", "Usiądźcie!"], "a": "Proszę usiąść.",
+        "why": "<span class=\"pl\">Proszę usiąść</span> is the standard polite form. <span class=\"pl\">Niech pan/pani usiądzie</span> also works. <span class=\"pl\">Usiądź!</span> is for friends and children." }
+    ]
+  }
+]

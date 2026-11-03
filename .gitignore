@@ -1,0 +1,16 @@
+# dependencies
+node_modules/
+
+# build output — regenerate with `npm run build`
+dist/
+
+# the raw Wiktionary pages the scraper caches; regenerate with `npm run refresh`
+.cache/
+
+# macOS
+.DS_Store
+
+# logs and local env
+*.log
+.env
+.env.*

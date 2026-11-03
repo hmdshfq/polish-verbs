@@ -1,0 +1,231 @@
+[
+ {
+  "id": "two-futures",
+  "title": "Which future is it?",
+  "ask": "Compound or simple?",
+  "items": [
+   {
+    "id": "fut-1",
+    "kind": "choice",
+    "q": "\"I will write the letter (and it will be done).\" Which?",
+    "opts": [
+     "Napiszę list.",
+     "Będę pisać list.",
+     "Piszę list.",
+     "Napisałem list."
+    ],
+    "a": "Napiszę list.",
+    "why": "A perfective verb has a <b>simple</b> future made of its own present-shaped forms: <span class=\"pl\">napiszę</span>. No <span class=\"pl\">będę</span> is needed or wanted."
+   },
+   {
+    "id": "fut-2",
+    "kind": "choice",
+    "q": "\"I will be writing (in the process) all evening.\" Which?",
+    "opts": [
+     "Będę pisać cały wieczór.",
+     "Napiszę cały wieczór.",
+     "Piszę cały wieczór.",
+     "Pisałem cały wieczór."
+    ],
+    "a": "Będę pisać cały wieczór.",
+    "why": "An imperfective verb has no simple future, so it uses the <b>compound</b> future: <span class=\"pl\">będę</span> + infinitive. The process is what lasts all evening."
+   },
+   {
+    "id": "fut-3",
+    "kind": "choice",
+    "q": "Which future is grammatically impossible?",
+    "opts": [
+     "będę napisać",
+     "będę pisać",
+     "napiszę",
+     "będę pisał"
+    ],
+    "a": "będę napisać",
+    "why": "<span class=\"pl\">będę</span> takes an <b>imperfective</b> infinitive or past form. <span class=\"pl\">Będę napisać</span> puts a perfective verb where only an imperfective can go — it has no meaning in Polish."
+   },
+   {
+    "id": "fut-4",
+    "kind": "choice",
+    "q": "<span class=\"pl\">Będę pisał</span> versus <span class=\"pl\">będę pisać</span>: what is the difference?",
+    "opts": [
+     "Meaning the same; the past-participle form can show gender and is commoner in speech",
+     "One is past, one is future",
+     "One is formal, one is rude",
+     "Będę pisać is wrong"
+    ],
+    "a": "Meaning the same; the past-participle form can show gender and is commoner in speech",
+    "why": "Both are correct compound futures. <span class=\"pl\">Będę pisał</span> agrees with a male speaker and <span class=\"pl\">będę pisała</span> with a female one; <span class=\"pl\">będę pisać</span> is neutral about gender. The infinitive version is the easy default."
+   },
+   {
+    "id": "fut-5",
+    "kind": "choice",
+    "q": "What is the future of <span class=\"pl\">być</span>?",
+    "opts": [
+     "będę, będziesz, będzie, będziemy, będziecie, będą",
+     "bym, byś, by, byśmy, byście, by",
+     "jestem, jesteś…",
+     "będę być"
+    ],
+    "a": "będę, będziesz, będzie, będziemy, będziecie, będą",
+    "why": "<span class=\"pl\">będę</span> is a complete future tense of its own. <span class=\"pl\">Bym, byś, by</span> is the conditional (chapter 7), not the future."
+   },
+   {
+    "id": "fut-6",
+    "kind": "choice",
+    "q": "\"It will rain tomorrow.\" Which?",
+    "opts": [
+     "Jutro będzie padać. / Jutro będzie padało.",
+     "Jutro pada.",
+     "Jutro padnie deszcz.",
+     "Jutro padało."
+    ],
+    "a": "Jutro będzie padać. / Jutro będzie padało.",
+    "why": "Weather verbs are impersonal and imperfective, so the compound future: <span class=\"pl\">będzie padać</span> or <span class=\"pl\">będzie padało</span>."
+   }
+  ]
+ },
+ {
+  "id": "making-future",
+  "title": "Build it",
+  "ask": "Write the future form",
+  "items": [
+   {
+    "id": "fut-7",
+    "kind": "type",
+    "q": "<span class=\"pl\">czytać</span> — \"I will read (be reading)\", compound, neutral.",
+    "accept": [
+     "będę czytać"
+    ],
+    "why": "<span class=\"pl\">będę czytać</span> — the compound future with the imperfective infinitive."
+   },
+   {
+    "id": "fut-8",
+    "kind": "type",
+    "q": "<span class=\"pl\">przeczytać</span> — \"I will read it (through)\" — <i>ja</i>.",
+    "accept": [
+     "przeczytam"
+    ],
+    "why": "<span class=\"pl\">przeczytam</span> — perfective, simple future. Notice it looks like a present tense; for a perfective verb, that is the future."
+   },
+   {
+    "id": "fut-9",
+    "kind": "type",
+    "q": "<span class=\"pl\">robić</span> — \"she will be doing it\" (compound, feminine).",
+    "accept": [
+     "będzie robić",
+     "będzie robiła"
+    ],
+    "why": "<span class=\"pl\">będzie robić</span> or <span class=\"pl\">będzie robiła</span>. The second shows the feminine subject twice: in <span class=\"pl\">będzie</span>'s third person and in the participle's <span class=\"pl\">-a</span>."
+   },
+   {
+    "id": "fut-10",
+    "kind": "type",
+    "q": "<span class=\"pl\">zrobić</span> — \"we will do it\" — <i>my</i>.",
+    "accept": [
+     "zrobimy"
+    ],
+    "why": "<span class=\"pl\">zrobimy</span> — simple future of the perfective."
+   },
+   {
+    "id": "fut-11",
+    "kind": "type",
+    "q": "<span class=\"pl\">być</span> — \"they will be\" — <i>oni / one</i>.",
+    "accept": [
+     "będą"
+    ],
+    "why": "<span class=\"pl\">będą</span> — third person plural of the future of <span class=\"pl\">być</span>. Do not confuse with <span class=\"pl\">są</span> (present)."
+   },
+   {
+    "id": "fut-12",
+    "kind": "type",
+    "q": "<span class=\"pl\">pójść</span> — \"I will go\" — <i>ja</i>.",
+    "accept": [
+     "pójdę"
+    ],
+    "why": "<span class=\"pl\">pójdę</span> — perfective, so this present-shaped form is the future: I'll set off. For \"I'll be walking about\", the imperfective future is <span class=\"pl\">będę chodzić</span>."
+   },
+   {
+    "id": "fut-13",
+    "kind": "type",
+    "q": "<span class=\"pl\">jeść</span> — \"they will be eating\" — <i>oni</i>, compound.",
+    "accept": [
+     "będą jeść",
+     "będą jedli"
+    ],
+    "why": "<span class=\"pl\">będą jeść</span> or <span class=\"pl\">będą jedli</span>. The compound future keeps the imperfective process."
+   }
+  ]
+ },
+ {
+  "id": "future-traps",
+  "title": "Future traps",
+  "ask": "What is wrong with it?",
+  "items": [
+   {
+    "id": "fut-14",
+    "kind": "choice",
+    "q": "Why is <span class=\"pl\">będę napisać list</span> wrong?",
+    "opts": [
+     "Będę needs an imperfective verb, and napisać is perfective",
+     "List is in the wrong case",
+     "The person ending is wrong",
+     "There should be a się"
+    ],
+    "a": "Będę needs an imperfective verb, and napisać is perfective",
+    "why": "The compound future marks an ongoing process, so it takes an imperfective infinitive: <span class=\"pl\">będę pisać</span>. A perfective verb makes its own future without help: <span class=\"pl\">napiszę</span>."
+   },
+   {
+    "id": "fut-15",
+    "kind": "choice",
+    "q": "A learner says <span class=\"pl\">Jutro napiszę list</span> to mean \"Tomorrow I will be writing a letter (all morning)\". What is off?",
+    "opts": [
+     "The aspect: for a process in the future, use będę pisać",
+     "The tense",
+     "The case",
+     "The person"
+    ],
+    "a": "The aspect: for a process in the future, use będę pisać",
+    "why": "<span class=\"pl\">Napiszę</span> promises a finished letter, not a morning of writing. For the process, <span class=\"pl\">będę pisać list</span>."
+   },
+   {
+    "id": "fut-16",
+    "kind": "choice",
+    "q": "Which sentence is <b>not</b> correct Polish?",
+    "opts": [
+     "Będę mógł przyjść.",
+     "Będę móc przyjść.",
+     "Będę móc przyszedł.",
+     "Mogę przyjść."
+    ],
+    "a": "Będę móc przyszedł.",
+    "why": "<span class=\"pl\">Będę móc przyszedł</span> puts a past form after the infinitive and is wrong. The other three are all correct: <span class=\"pl\">będę mógł przyjść</span> and <span class=\"pl\">będę móc przyjść</span> are the two futures of “I will be able to come” (the first commoner in speech), and <span class=\"pl\">mogę przyjść</span> means “I can come”."
+   },
+   {
+    "id": "fut-17",
+    "kind": "choice",
+    "q": "\"I'm going to Poland next year.\" Which is most natural?",
+    "opts": [
+     "W przyszłym roku pojadę do Polski.",
+     "W przyszłym roku będę jechać do Polski.",
+     "W przyszłym roku jadę do Polski.",
+     "W przyszłym roku jechałem do Polski."
+    ],
+    "a": "W przyszłym roku pojadę do Polski.",
+    "why": "One journey, completed: the perfective <span class=\"pl\">pojadę</span>. <span class=\"pl\">Będę jechać</span> would describe being on the way; <span class=\"pl\">jadę</span> is present or an arranged-now future."
+   },
+   {
+    "id": "fut-18",
+    "kind": "choice",
+    "q": "\"I'll be there at eight.\" Which?",
+    "opts": [
+     "Będę tam o ósmej.",
+     "Jestem tam o ósmej.",
+     "Byłem tam o ósmej.",
+     "Będę tam być o ósmej."
+    ],
+    "a": "Będę tam o ósmej.",
+    "why": "<span class=\"pl\">będę</span> is simply the future of <span class=\"pl\">być</span>. Adding <span class=\"pl\">być</span> after it is a double future and wrong."
+   }
+  ]
+ }
+]

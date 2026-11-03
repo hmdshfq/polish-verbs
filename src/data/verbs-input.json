@@ -1,0 +1,433 @@
+[
+ {
+  "lemma": "być",
+  "gloss": "to be",
+  "aspect": "imperfective",
+  "partner": "—"
+ },
+ {
+  "lemma": "robić",
+  "gloss": "to do, to make",
+  "aspect": "imperfective",
+  "partner": "zrobić"
+ },
+ {
+  "lemma": "zrobić",
+  "gloss": "to do, to make",
+  "aspect": "perfective",
+  "partner": "robić"
+ },
+ {
+  "lemma": "czytać",
+  "gloss": "to read",
+  "aspect": "imperfective",
+  "partner": "przeczytać"
+ },
+ {
+  "lemma": "przeczytać",
+  "gloss": "to read",
+  "aspect": "perfective",
+  "partner": "czytać"
+ },
+ {
+  "lemma": "pisać",
+  "gloss": "to write",
+  "aspect": "imperfective",
+  "partner": "napisać"
+ },
+ {
+  "lemma": "napisać",
+  "gloss": "to write",
+  "aspect": "perfective",
+  "partner": "pisać"
+ },
+ {
+  "lemma": "mówić",
+  "gloss": "to speak, to say",
+  "aspect": "imperfective",
+  "partner": "powiedzieć"
+ },
+ {
+  "lemma": "powiedzieć",
+  "gloss": "to say, to tell",
+  "aspect": "perfective",
+  "partner": "mówić"
+ },
+ {
+  "lemma": "mieć",
+  "gloss": "to have",
+  "aspect": "imperfective",
+  "partner": "—"
+ },
+ {
+  "lemma": "iść",
+  "gloss": "to go, to walk (on foot, one direction)",
+  "aspect": "imperfective",
+  "partner": "pójść"
+ },
+ {
+  "lemma": "pójść",
+  "gloss": "to go, to set off (on foot)",
+  "aspect": "perfective",
+  "partner": "iść"
+ },
+ {
+  "lemma": "jechać",
+  "gloss": "to go, to ride (in a vehicle, one direction)",
+  "aspect": "imperfective",
+  "partner": "pojechać"
+ },
+ {
+  "lemma": "pojechać",
+  "gloss": "to go, to set off (in a vehicle)",
+  "aspect": "perfective",
+  "partner": "jechać"
+ },
+ {
+  "lemma": "jeść",
+  "gloss": "to eat",
+  "aspect": "imperfective",
+  "partner": "zjeść"
+ },
+ {
+  "lemma": "zjeść",
+  "gloss": "to eat up",
+  "aspect": "perfective",
+  "partner": "jeść"
+ },
+ {
+  "lemma": "pić",
+  "gloss": "to drink",
+  "aspect": "imperfective",
+  "partner": "wypić"
+ },
+ {
+  "lemma": "wypić",
+  "gloss": "to drink up",
+  "aspect": "perfective",
+  "partner": "pić"
+ },
+ {
+  "lemma": "dać",
+  "gloss": "to give",
+  "aspect": "perfective",
+  "partner": "dawać"
+ },
+ {
+  "lemma": "dawać",
+  "gloss": "to give",
+  "aspect": "imperfective",
+  "partner": "dać"
+ },
+ {
+  "lemma": "wziąć",
+  "gloss": "to take",
+  "aspect": "perfective",
+  "partner": "brać"
+ },
+ {
+  "lemma": "brać",
+  "gloss": "to take",
+  "aspect": "imperfective",
+  "partner": "wziąć"
+ },
+ {
+  "lemma": "wiedzieć",
+  "gloss": "to know (a fact)",
+  "aspect": "imperfective",
+  "partner": "dowiedzieć się",
+  "partnerNote": "dowiedzieć się means to find out — a different act, not a partner of wiedzieć"
+ },
+ {
+  "lemma": "znać",
+  "gloss": "to know (a person, a place)",
+  "aspect": "imperfective",
+  "partner": "—"
+ },
+ {
+  "lemma": "chcieć",
+  "gloss": "to want",
+  "aspect": "imperfective",
+  "partner": "zechcieć"
+ },
+ {
+  "lemma": "móc",
+  "gloss": "to be able to, can",
+  "aspect": "imperfective",
+  "partner": "—",
+  "partnerNote": "móc has no perfective partner (potrafić and dać radę are separate verbs)"
+ },
+ {
+  "lemma": "musieć",
+  "gloss": "to have to, must",
+  "aspect": "imperfective",
+  "partner": "—"
+ },
+ {
+  "lemma": "spać",
+  "gloss": "to sleep",
+  "aspect": "imperfective",
+  "partner": "wyspać się"
+ },
+ {
+  "lemma": "pracować",
+  "gloss": "to work",
+  "aspect": "imperfective",
+  "partner": "popracować"
+ },
+ {
+  "lemma": "mieszkać",
+  "gloss": "to live, to dwell",
+  "aspect": "imperfective",
+  "partner": "zamieszkać"
+ },
+ {
+  "lemma": "myć",
+  "gloss": "to wash",
+  "aspect": "imperfective",
+  "partner": "umyć"
+ },
+ {
+  "lemma": "myć się",
+  "gloss": "to wash oneself",
+  "aspect": "imperfective",
+  "partner": "umyć się",
+  "reflexive": true
+ },
+ {
+  "lemma": "widzieć",
+  "gloss": "to see",
+  "aspect": "imperfective",
+  "partner": "zobaczyć"
+ },
+ {
+  "lemma": "zobaczyć",
+  "gloss": "to see, to catch sight of",
+  "aspect": "perfective",
+  "partner": "widzieć"
+ },
+ {
+  "lemma": "słyszeć",
+  "gloss": "to hear",
+  "aspect": "imperfective",
+  "partner": "usłyszeć"
+ },
+ {
+  "lemma": "dzwonić",
+  "gloss": "to ring, to phone",
+  "aspect": "imperfective",
+  "partner": "zadzwonić"
+ },
+ {
+  "lemma": "zadzwonić",
+  "gloss": "to ring, to phone (once, done)",
+  "aspect": "perfective",
+  "partner": "dzwonić"
+ },
+ {
+  "lemma": "prosić",
+  "gloss": "to ask for, to request",
+  "aspect": "imperfective",
+  "partner": "poprosić"
+ },
+ {
+  "lemma": "poprosić",
+  "gloss": "to ask for (politely, once)",
+  "aspect": "perfective",
+  "partner": "prosić"
+ },
+ {
+  "lemma": "uczyć się",
+  "gloss": "to learn, to study",
+  "aspect": "imperfective",
+  "partner": "nauczyć się",
+  "reflexive": true
+ },
+ {
+  "lemma": "nauczyć się",
+  "gloss": "to learn (get it learnt)",
+  "aspect": "perfective",
+  "partner": "uczyć się"
+ },
+ {
+  "lemma": "zaczynać",
+  "gloss": "to begin",
+  "aspect": "imperfective",
+  "partner": "zacząć"
+ },
+ {
+  "lemma": "zacząć",
+  "gloss": "to begin, to start (and get started)",
+  "aspect": "perfective",
+  "partner": "zaczynać"
+ },
+ {
+  "lemma": "kończyć",
+  "gloss": "to finish",
+  "aspect": "imperfective",
+  "partner": "skończyć"
+ },
+ {
+  "lemma": "skończyć",
+  "gloss": "to finish (and be done)",
+  "aspect": "perfective",
+  "partner": "kończyć"
+ },
+ {
+  "lemma": "kupować",
+  "gloss": "to buy",
+  "aspect": "imperfective",
+  "partner": "kupić"
+ },
+ {
+  "lemma": "kupić",
+  "gloss": "to buy (and get it)",
+  "aspect": "perfective",
+  "partner": "kupować"
+ },
+ {
+  "lemma": "sprzedawać",
+  "gloss": "to sell",
+  "aspect": "imperfective",
+  "partner": "sprzedać"
+ },
+ {
+  "lemma": "sprzedać",
+  "gloss": "to sell (and have sold)",
+  "aspect": "perfective",
+  "partner": "sprzedawać"
+ },
+ {
+  "lemma": "otwierać",
+  "gloss": "to open",
+  "aspect": "imperfective",
+  "partner": "otworzyć"
+ },
+ {
+  "lemma": "otworzyć",
+  "gloss": "to open (and have open)",
+  "aspect": "perfective",
+  "partner": "otwierać"
+ },
+ {
+  "lemma": "zamykać",
+  "gloss": "to close",
+  "aspect": "imperfective",
+  "partner": "zamknąć"
+ },
+ {
+  "lemma": "zamknąć",
+  "gloss": "to close (and have shut)",
+  "aspect": "perfective",
+  "partner": "zamykać"
+ },
+ {
+  "lemma": "pytać",
+  "gloss": "to ask (a question)",
+  "aspect": "imperfective",
+  "partner": "zapytać"
+ },
+ {
+  "lemma": "zapytać",
+  "gloss": "to ask (once)",
+  "aspect": "perfective",
+  "partner": "pytać"
+ },
+ {
+  "lemma": "odpowiadać",
+  "gloss": "to answer",
+  "aspect": "imperfective",
+  "partner": "odpowiedzieć"
+ },
+ {
+  "lemma": "odpowiedzieć",
+  "gloss": "to answer (and have answered)",
+  "aspect": "perfective",
+  "partner": "odpowiadać"
+ },
+ {
+  "lemma": "rozumieć",
+  "gloss": "to understand",
+  "aspect": "imperfective",
+  "partner": "zrozumieć"
+ },
+ {
+  "lemma": "zrozumieć",
+  "gloss": "to understand (and get it)",
+  "aspect": "perfective",
+  "partner": "rozumieć"
+ },
+ {
+  "lemma": "pamiętać",
+  "gloss": "to remember",
+  "aspect": "imperfective",
+  "partner": "zapamiętać"
+ },
+ {
+  "lemma": "zapominać",
+  "gloss": "to forget",
+  "aspect": "imperfective",
+  "partner": "zapomnieć"
+ },
+ {
+  "lemma": "zapomnieć",
+  "gloss": "to forget (and have forgotten)",
+  "aspect": "perfective",
+  "partner": "zapominać"
+ },
+ {
+  "lemma": "bać się",
+  "gloss": "to be afraid",
+  "aspect": "imperfective",
+  "partner": "przestraszyć się",
+  "reflexive": true
+ },
+ {
+  "lemma": "cieszyć się",
+  "gloss": "to be glad, to rejoice",
+  "aspect": "imperfective",
+  "partner": "ucieszyć się"
+ },
+ {
+  "lemma": "uczyć",
+  "gloss": "to teach",
+  "aspect": "imperfective",
+  "partner": "nauczyć"
+ },
+ {
+  "lemma": "jeździć",
+  "gloss": "to go, to ride (in a vehicle, back and forth)",
+  "aspect": "imperfective",
+  "partner": "pojeździć"
+ },
+ {
+  "lemma": "chodzić",
+  "gloss": "to go, to walk (on foot, back and forth)",
+  "aspect": "imperfective",
+  "partner": "pójść"
+ },
+ {
+  "lemma": "biec",
+  "gloss": "to run",
+  "aspect": "imperfective",
+  "partner": "pobiec"
+ },
+ {
+  "lemma": "stać",
+  "gloss": "to stand (usually standing still for a while; stanąć is a single act of standing up or taking a position)",
+  "aspect": "imperfective",
+  "partner": "stanąć"
+ },
+ {
+  "lemma": "leżeć",
+  "gloss": "to lie, to be lying",
+  "aspect": "imperfective",
+  "partner": "poleżeć"
+ },
+ {
+  "lemma": "siedzieć",
+  "gloss": "to sit",
+  "aspect": "imperfective",
+  "partner": "posiedzieć"
+ }
+]

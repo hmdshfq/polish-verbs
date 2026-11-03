@@ -1,0 +1,495 @@
+{
+  "what-is-a-verb": {
+    "cards": [
+      { "lv": "infinitive", "p": "Być", "m": "to be", "ex": "Chcę być programistą." },
+      { "lv": "infinitive", "p": "Mieć", "m": "to have", "ex": "Mam czas." },
+      { "lv": "infinitive", "p": "Robić", "m": "to do, to make", "ex": "Co robisz?" },
+      { "lv": "infinitive", "p": "Kupić / kupować", "m": "to buy — and the pair", "ex": "Kupiłem chleb." },
+      { "lv": "aspect", "p": "Napisać", "m": "perfective half of pisać", "ex": "Napisałem list." },
+      { "lv": "aspect", "p": "Czytać", "m": "imperfective half of przeczytać", "ex": "Czytam książkę." }
+    ],
+    "plan": [
+      { "t": "Day 1 · the dictionary form", "items": [
+        { "k": "wav-d1-a", "en": "Learn what an infinitive is and find the infinitive of five verbs you already know." },
+        { "k": "wav-d1-b", "en": "Say czytam, czytasz, czyta out loud, pointing at yourself, one person, a third person." }
+      ]},
+      { "t": "Day 2 · the pair", "items": [
+        { "k": "wav-d2-a", "en": "Write pisać / napisać and czytać / przeczytać as four words, not two verbs." },
+        { "k": "wav-d2-b", "en": "Do the drills: definition." }
+      ]},
+      { "t": "Day 3 · pronouns", "items": [
+        { "k": "wav-d3-a", "en": "Say three sentences without ja: Piszę, Czytam, Robię." },
+        { "k": "wav-d3-b", "en": "Then add ja to one of them and hear how emphatic it becomes." }
+      ]},
+      { "t": "Day 4 · transitivity", "items": [
+        { "k": "wav-d4-a", "en": "Learn that szukać, słuchać and pomagać do not take the accusative." },
+        { "k": "wav-d4-b", "en": "Do the drills: transitive." }
+      ]},
+      { "t": "Day 5 · the traps", "items": [
+        { "k": "wav-d5-a", "en": "Re-read the three traps and say each wrong version, then the right one." }
+      ]},
+      { "t": "Day 6 · review", "items": [
+        { "k": "wav-d6-a", "en": "Drill all four sets of this chapter from the set grid." },
+        { "k": "wav-d6-b", "en": "Mark the flashcards you know." }
+      ]},
+      { "t": "Day 7 · beyond", "items": [
+        { "k": "wav-d7-a", "en": "Open chapter 2 and read the first section only — aspect needs a fresh head." }
+      ]}
+    ]
+  },
+  "aspect": {
+    "cards": [
+      { "lv": "pair · prefix", "p": "pisać / napisać", "m": "to write", "ex": "Pisałem list. / Napisałem list." },
+      { "lv": "pair · prefix", "p": "czytać / przeczytać", "m": "to read", "ex": "Czytałem. / Przeczytałem całą książkę." },
+      { "lv": "pair · prefix", "p": "robić / zrobić", "m": "to do, to make", "ex": "Co robisz? / Zrobiłem to." },
+      { "lv": "pair · suffix", "p": "kupić / kupować", "m": "to buy", "ex": "Kupiłem chleb. / Kupuję chleb co dzień." },
+      { "lv": "pair · suffix", "p": "dać / dawać", "m": "to give", "ex": "Dałem mu to. / Daję mu to co dzień." },
+      { "lv": "pair · suffix", "p": "zamknąć / zamykać", "m": "to close", "ex": "Zamknąłem okno. / Zamykam okno codziennie." },
+      { "lv": "pair · suppletive", "p": "brać / wziąć", "m": "to take", "ex": "Biorę. / Wziąłem." },
+      { "lv": "pair · suppletive", "p": "mówić / powiedzieć", "m": "to speak / to say", "ex": "Mówię po polsku. / Powiedziałem to." },
+      { "lv": "no partner", "p": "być", "m": "to be — a state, no perfective", "ex": "Jestem w domu." },
+      { "lv": "no partner", "p": "mieć", "m": "to have — a state, no perfective", "ex": "Mam czas." },
+      { "lv": "no partner", "p": "wiedzieć", "m": "to know a fact — a state", "ex": "Wiem, gdzie to jest." },
+      { "lv": "no partner", "p": "znać", "m": "to know a person or place — a state", "ex": "Znam Łódź." }
+    ],
+    "plan": [
+      { "t": "Day 1 · the idea", "items": [
+        { "k": "asp-d1-a", "en": "Read section 1 twice. Say the question each aspect answers: what were you doing / what did you do?" },
+        { "k": "asp-d1-b", "en": "Say Pisałem list and Napisałem list, and notice which one feels finished." }
+      ]},
+      { "t": "Day 2 · prefix pairs", "items": [
+        { "k": "asp-d2-a", "en": "Learn five prefix pairs out loud: pisać/napisać, czytać/przeczytać, robić/zrobić, jeść/zjeść, pić/wypić." },
+        { "k": "asp-d2-b", "en": "Do the drills: pairs." }
+      ]},
+      { "t": "Day 3 · suffix pairs", "items": [
+        { "k": "asp-d3-a", "en": "Learn that the longer verb repeats: kupować, dawać, zamykać, otwierać, sprzedawać." },
+        { "k": "asp-d3-b", "en": "Say the pair for each, imperfective first." }
+      ]},
+      { "t": "Day 4 · when to use which", "items": [
+        { "k": "asp-d4-a", "en": "Do the drills: which-to-use." },
+        { "k": "asp-d4-b", "en": "Write three sentences about yesterday, two perfective and one imperfective." }
+      ]},
+      { "t": "Day 5 · the traps", "items": [
+        { "k": "asp-d5-a", "en": "Read the six traps. Say będę napisać and hear why it is wrong." },
+        { "k": "asp-d5-b", "en": "Do the drills: aspect-traps." }
+      ]},
+      { "t": "Day 6 · recognition", "items": [
+        { "k": "asp-d6-a", "en": "Do the drills: recognise, all twelve." },
+        { "k": "asp-d6-b", "en": "Mark the flashcards you know." }
+      ]},
+      { "t": "Day 7 · review", "items": [
+        { "k": "asp-d7-a", "en": "Read section 5 again: aspect and tense together. This is the hinge of the whole site." }
+      ]}
+    ]
+  },
+  "present": {
+    "cards": [
+      { "lv": "I · -ę / -esz", "p": "pisać", "m": "piszę, piszesz, pisze, piszemy, piszecie, piszą", "ex": "Piszę list." },
+      { "lv": "II · -ę / -isz", "p": "robić", "m": "robię, robisz, robi, robimy, robicie, robią", "ex": "Co robisz?" },
+      { "lv": "III · -am / -asz", "p": "czytać", "m": "czytam, czytasz, czyta, czytamy, czytacie, czytają", "ex": "Czytam książkę." },
+      { "lv": "IV · -em / -esz", "p": "rozumieć", "m": "rozumiem, rozumiesz, rozumie, rozumiemy, rozumiecie, rozumieją", "ex": "Nie rozumiem." },
+      { "lv": "-ować → -uj-", "p": "kupować", "m": "kupuję, kupujesz, kupuje, kupujemy, kupujecie, kupują", "ex": "Kupuję chleb." },
+      { "lv": "irregular", "p": "być", "m": "jestem, jesteś, jest, jesteśmy, jesteście, są", "ex": "Jestem z Pakistanu." },
+      { "lv": "irregular", "p": "mieć", "m": "mam, masz, ma, mamy, macie, mają", "ex": "Mam czas." },
+      { "lv": "softening", "p": "prosić", "m": "proszę, prosisz — s → sz in ja", "ex": "Proszę o pomoc." },
+      { "lv": "softening", "p": "widzieć", "m": "widzę, widzisz — dź → dz in ja", "ex": "Widzę cię." },
+      { "lv": "softening", "p": "jeździć", "m": "jeżdżę, jeździsz — źdź → żdż in ja", "ex": "Jeżdżę do pracy." }
+    ],
+    "plan": [
+      { "t": "Day 1 · the six endings", "items": [
+        { "k": "pre-d1-a", "en": "Chant the six persons with czytać: czytam, czytasz, czyta, czytamy, czytacie, czytają." },
+        { "k": "pre-d1-b", "en": "Do the drills: endings." }
+      ]},
+      { "t": "Day 2 · the four conjugations", "items": [
+        { "k": "pre-d2-a", "en": "Learn one anchor verb per conjugation: pisać, robić, czytać, rozumieć." },
+        { "k": "pre-d2-b", "en": "Do the drills: families." }
+      ]},
+      { "t": "Day 3 · -ować", "items": [
+        { "k": "pre-d3-a", "en": "Say kupuję, kupujesz, kupuje ten times. Then pracuję, studiuję." },
+        { "k": "pre-d3-b", "en": "Say kupowam out loud once, just to hear how wrong it is." }
+      ]},
+      { "t": "Day 4 · softening", "items": [
+        { "k": "pre-d4-a", "en": "Learn proszę/prosisz, widzę/widzisz, chodzę/chodzisz as pairs." }
+      ]},
+      { "t": "Day 5 · being and having", "items": [
+        { "k": "pre-d5-a", "en": "Learn być and mieć by heart. Say each six forms twice." }
+      ]},
+      { "t": "Day 6 · polite address", "items": [
+        { "k": "pre-d6-a", "en": "Practise Czy pan mówi po polsku? and Czy pani ma chwilę?" },
+        { "k": "pre-d6-b", "en": "Do the drills: person-forms." }
+      ]},
+      { "t": "Day 7 · review", "items": [
+        { "k": "pre-d7-a", "en": "Mark every flashcard you know, then redo only the ones you did not." }
+      ]}
+    ]
+  },
+  "past": {
+    "cards": [
+      { "lv": "ja", "p": "czytać — I (a man)", "m": "czytałem", "ex": "Wczoraj czytałem książkę." },
+      { "lv": "ja", "p": "czytać — I (a woman)", "m": "czytałam", "ex": "Wczoraj czytałam książkę." },
+      { "lv": "ty", "p": "czytać — you (a man)", "m": "czytałeś", "ex": "Czytałeś to?" },
+      { "lv": "ty", "p": "czytać — you (a woman)", "m": "czytałaś", "ex": "Czytałaś to?" },
+      { "lv": "plural", "p": "czytać — we, with a man", "m": "czytaliśmy", "ex": "Czytaliśmy razem." },
+      { "lv": "plural", "p": "czytać — we, women only", "m": "czytałyśmy", "ex": "Czytałyśmy razem." },
+      { "lv": "irregular", "p": "iść — past", "m": "szedłem / szłam / szli", "ex": "Szedłem do pracy." },
+      { "lv": "irregular", "p": "jeść — past", "m": "jadłem / jadłam / jedli", "ex": "Jadłem obiad." },
+      { "lv": "irregular", "p": "mieć — past", "m": "miałem / miałam / mieli", "ex": "Miałem czas." },
+      { "lv": "irregular", "p": "wziąć — past", "m": "wziąłem / wzięłam / wzięli", "ex": "Wziąłem klucze." },
+      { "lv": "irregular", "p": "móc — past", "m": "mogłem / mogłam / mogli", "ex": "Mogłem przyjść." },
+      { "lv": "negation", "p": "nie + past, object", "m": "nie czytałem tej książki — genitive", "ex": "Nie czytałem tej książki." }
+    ],
+    "plan": [
+      { "t": "Day 1 · the stem", "items": [
+        { "k": "pas-d1-a", "en": "Build the past of czytać, robić and mówić out loud, masculine then feminine." },
+        { "k": "pas-d1-b", "en": "Do the drills: stem." }
+      ]},
+      { "t": "Day 2 · gender", "items": [
+        { "k": "pas-d2-a", "en": "Say five sentences about yourself in the gender you actually are. Repeat until it is automatic." },
+        { "k": "pas-d2-b", "en": "Do the drills: gender." }
+      ]},
+      { "t": "Day 3 · the plural rule", "items": [
+        { "k": "pas-d3-a", "en": "Test yourself: ten women and one man — byliśmy or byłyśmy?" }
+      ]},
+      { "t": "Day 4 · irregular stems", "items": [
+        { "k": "pas-d4-a", "en": "Learn szedłem, jadłem, miałem, wziąłem, mogłem and their feminine forms." }
+      ]},
+      { "t": "Day 5 · both aspects", "items": [
+        { "k": "pas-d5-a", "en": "Say pisałem / napisałem, czytałem / przeczytałem, kupowałem / kupiłem." },
+        { "k": "pas-d5-b", "en": "Do the drills: past-vs-present." }
+      ]},
+      { "t": "Day 6 · negation", "items": [
+        { "k": "pas-d6-a", "en": "Make five negative past sentences and check each object is genitive." }
+      ]},
+      { "t": "Day 7 · review", "items": [
+        { "k": "pas-d7-a", "en": "Mark the flashcards, then read chapter 5 to see how the past feeds the conditional." }
+      ]}
+    ]
+  },
+  "future": {
+    "cards": [
+      { "lv": "auxiliary", "p": "być — future", "m": "będę, będziesz, będzie, będziemy, będziecie, będą", "ex": "Będę w domu." },
+      { "lv": "imperfective", "p": "pisać — future", "m": "będę pisać / będę pisał(a)", "ex": "Jutro będę pisać raport." },
+      { "lv": "perfective", "p": "napisać — future", "m": "napiszę, napiszesz, napisze…", "ex": "Napiszę list." },
+      { "lv": "perfective", "p": "zrobić — future", "m": "zrobię, zrobisz, zrobi…", "ex": "Zrobię to jutro." },
+      { "lv": "perfective", "p": "kupić — future", "m": "kupię, kupisz, kupi…", "ex": "Kupię chleb." },
+      { "lv": "modal", "p": "mieć — future", "m": "będę miał / będę miała", "ex": "Będę miał czas." },
+      { "lv": "modal", "p": "musieć — future", "m": "będę musiał / będę musiała", "ex": "Będę musiał iść." },
+      { "lv": "habit", "p": "a repeated future", "m": "będę + imperfective infinitive", "ex": "Będę codziennie czytać." }
+    ],
+    "plan": [
+      { "t": "Day 1 · the two futures", "items": [
+        { "k": "fut-d1-a", "en": "Read section 1 and say both futures for pisać: będę pisać, napiszę." },
+        { "k": "fut-d1-b", "en": "Do the drills: two-futures." }
+      ]},
+      { "t": "Day 2 · będę", "items": [
+        { "k": "fut-d2-a", "en": "Learn the six forms of będę by heart." }
+      ]},
+      { "t": "Day 3 · the impossible sentence", "items": [
+        { "k": "fut-d3-a", "en": "Say będę napisać, będę zrobić, będę kupić, then correct each one." },
+        { "k": "fut-d3-b", "en": "Do the drills: future-traps." }
+      ]},
+      { "t": "Day 4 · perfective future", "items": [
+        { "k": "fut-d4-a", "en": "Write the six persons of napisać and check them against the table." }
+      ]},
+      { "t": "Day 5 · gender after będę", "items": [
+        { "k": "fut-d5-a", "en": "Say będę pisał and będę pisała, then będę pisać." }
+      ]},
+      { "t": "Day 6 · modals", "items": [
+        { "k": "fut-d6-a", "en": "Learn będę miał / będę musiał / będę mógł." },
+        { "k": "fut-d6-b", "en": "Do the drills: making-future." }
+      ]},
+      { "t": "Day 7 · review", "items": [
+        { "k": "fut-d7-a", "en": "Mark the flashcards and redo the ones you missed." }
+      ]}
+    ]
+  },
+  "imperative": {
+    "cards": [
+      { "lv": "ty", "p": "pisać", "m": "pisz!", "ex": "Pisz do mnie." },
+      { "lv": "ty", "p": "czytać", "m": "czytaj!", "ex": "Czytaj głośno." },
+      { "lv": "ty", "p": "robić", "m": "rób!", "ex": "Rób, co chcesz." },
+      { "lv": "ty", "p": "iść", "m": "idź!", "ex": "Idź do domu." },
+      { "lv": "ty", "p": "zrobić", "m": "zrób!", "ex": "Zrób to teraz." },
+      { "lv": "ty", "p": "kupić", "m": "kup!", "ex": "Kup chleb." },
+      { "lv": "ty", "p": "dzwonić / zadzwonić", "m": "dzwoń! / zadzwoń!", "ex": "Zadzwoń do mnie." },
+      { "lv": "my", "p": "iść", "m": "idźmy! / chodźmy!", "ex": "Chodźmy do domu." },
+      { "lv": "wy", "p": "czytać", "m": "czytajcie!", "ex": "Czytajcie uważnie." },
+      { "lv": "niech", "p": "polite command", "m": "Niech pan siada.", "ex": "Niech pan poczeka." },
+      { "lv": "negative", "p": "nie + imperfective", "m": "Nie rób tego!", "ex": "Nie otwieraj okna." },
+      { "lv": "reflexive", "p": "uczyć się", "m": "Ucz się!", "ex": "Ucz się polskiego." }
+    ],
+    "plan": [
+      { "t": "Day 1 · three forms", "items": [
+        { "k": "imp-d1-a", "en": "Build ty, my and wy for czytać: czytaj, czytajmy, czytajcie." },
+        { "k": "imp-d1-b", "en": "Do the drills: commands." }
+      ]},
+      { "t": "Day 2 · from the oni form", "items": [
+        { "k": "imp-d2-a", "en": "Take robią, idą, piszą and build the imperative of each." }
+      ]},
+      { "t": "Day 3 · negative commands", "items": [
+        { "k": "imp-d3-a", "en": "Learn the rule: negative commands take the imperfective and the genitive." },
+        { "k": "imp-d3-b", "en": "Do the drills: imperative-traps." }
+      ]},
+      { "t": "Day 4 · niech", "items": [
+        { "k": "imp-d4-a", "en": "Learn Niech pan siada and Niech pani siada for real use." },
+        { "k": "imp-d4-b", "en": "Do the drills: plural-polite." }
+      ]},
+      { "t": "Day 5 · politeness", "items": [
+        { "k": "imp-d5-a", "en": "Learn Proszę poczekać and Proszę zamknąć drzwi." }
+      ]},
+      { "t": "Day 6 · irregulars", "items": [
+        { "k": "imp-d6-a", "en": "Learn idź, jedz, pij, daj, weź, bądź as whole words." }
+      ]},
+      { "t": "Day 7 · review", "items": [
+        { "k": "imp-d7-a", "en": "Mark the flashcards and redo the ones you missed." }
+      ]}
+    ]
+  },
+  "conditional": {
+    "cards": [
+      { "lv": "ja", "p": "robić — conditional (man)", "m": "robiłbym", "ex": "Zrobiłbym to." },
+      { "lv": "ja", "p": "robić — conditional (woman)", "m": "robiłabym", "ex": "Zrobiłabym to." },
+      { "lv": "ty", "p": "robić — conditional (man)", "m": "robiłbyś", "ex": "Czy zrobiłbyś to?" },
+      { "lv": "ty", "p": "robić — conditional (woman)", "m": "robiłabyś", "ex": "Czy zrobiłabyś to?" },
+      { "lv": "on / ona", "p": "robić — conditional", "m": "robiłby / robiłaby", "ex": "On by to zrobił." },
+      { "lv": "my", "p": "robić — conditional", "m": "robilibyśmy / robiłybyśmy", "ex": "Zrobilibyśmy to." },
+      { "lv": "polite", "p": "chcieć — conditional", "m": "chciałbym / chciałabym", "ex": "Chciałbym kawę." },
+      { "lv": "could", "p": "móc — conditional", "m": "mógłbym / mogłabym", "ex": "Mógłbym pomóc." },
+      { "lv": "should", "p": "powinien", "m": "powinienem / powinnam / powinniśmy", "ex": "Powinieneś odpocząć." },
+      { "lv": "if", "p": "gdyby", "m": "gdybym, gdybyś, gdyby — never + by again", "ex": "Gdybym miał czas, poszedłbym." },
+      { "lv": "separate", "p": "ja bym", "m": "the particle can stand alone", "ex": "Ja bym to zrobił." }
+    ],
+    "plan": [
+      { "t": "Day 1 · the shape", "items": [
+        { "k": "con-d1-a", "en": "Build zrobiłbym, zrobiłabym, zrobiłbyś from the past forms." },
+        { "k": "con-d1-b", "en": "Do the drills: would." }
+      ]},
+      { "t": "Day 2 · stand-alone bym", "items": [
+        { "k": "con-d2-a", "en": "Turn Zrobiłbym to into Ja bym to zrobił and back again." },
+        { "k": "con-d2-b", "en": "Do the drills: by-separate." }
+      ]},
+      { "t": "Day 3 · chciałbym", "items": [
+        { "k": "con-d3-a", "en": "Order something in Polish: Chciałbym kawę / Chciałabym herbatę." }
+      ]},
+      { "t": "Day 4 · gdyby", "items": [
+        { "k": "con-d4-a", "en": "Learn gdybym, gdybyś, gdyby, gdybyśmy, gdybyście and the no-double-by rule." }
+      ]},
+      { "t": "Day 5 · should", "items": [
+        { "k": "con-d5-a", "en": "Learn powinienem, powinieneś, powinnam, powinniśmy." }
+      ]},
+      { "t": "Day 6 · traps", "items": [
+        { "k": "con-d6-a", "en": "Do the drills: conditional-traps." }
+      ]},
+      { "t": "Day 7 · review", "items": [
+        { "k": "con-d7-a", "en": "Mark the flashcards, then write five polite requests you would really use." }
+      ]}
+    ]
+  },
+  "irregular": {
+    "cards": [
+      { "lv": "być", "p": "present", "m": "jestem, jesteś, jest, jesteśmy, jesteście, są", "ex": "Jestem z Polski." },
+      { "lv": "być", "p": "future", "m": "będę, będziesz, będzie…", "ex": "Będę w domu." },
+      { "lv": "być", "p": "there is no", "m": "nie ma + genitive", "ex": "Nie ma mleka." },
+      { "lv": "mieć", "p": "present", "m": "mam, masz, ma, mamy, macie, mają", "ex": "Mam czas." },
+      { "lv": "iść", "p": "present / past", "m": "idę, idziesz… / szedłem, szłam, szli", "ex": "Idę do pracy." },
+      { "lv": "jechać", "p": "present / past", "m": "jadę, jedziesz… / jechałem", "ex": "Jadę do Krakowa." },
+      { "lv": "jeść", "p": "present / past", "m": "jem, jesz… jedzą / jadłem, jedli", "ex": "Jem obiad." },
+      { "lv": "pić", "p": "present / past", "m": "piję, pijesz… / piłem, pili", "ex": "Piję kawę." },
+      { "lv": "wziąć", "p": "future / past", "m": "wezmę, weźmiesz… / wziąłem, wzięłam", "ex": "Wezmę to." },
+      { "lv": "brać", "p": "present", "m": "biorę, bierzesz, bierze…", "ex": "Biorę to." },
+      { "lv": "móc", "p": "present / past", "m": "mogę, możesz… / mogłem, mogłam", "ex": "Mogę pomóc." },
+      { "lv": "chcieć", "p": "present / past", "m": "chcę, chcesz… / chciałem, chciałam", "ex": "Chcę kawę." },
+      { "lv": "wiedzieć", "p": "present", "m": "wiem, wiesz, wie, wiemy, wiecie, wiedzą", "ex": "Wiem, gdzie to jest." },
+      { "lv": "znać", "p": "present", "m": "znam, znasz, zna, znamy, znacie, znają", "ex": "Znam Łódź." }
+    ],
+    "plan": [
+      { "t": "Day 1 · być", "items": [
+        { "k": "irr-d1-a", "en": "Learn the three roots: jest- (present), by- (past), będ- (future)." },
+        { "k": "irr-d1-b", "en": "Do the drills: byc." }
+      ]},
+      { "t": "Day 2 · mieć and dać", "items": [
+        { "k": "irr-d2-a", "en": "Chant mam, masz, ma, mamy, macie, mają then dam, dasz, da…" }
+      ]},
+      { "t": "Day 3 · motion", "items": [
+        { "k": "irr-d3-a", "en": "Learn the four-way split: iść / chodzić / jechać / jeździć." },
+        { "k": "irr-d3-b", "en": "Do the drills: motion." }
+      ]},
+      { "t": "Day 4 · eating and drinking", "items": [
+        { "k": "irr-d4-a", "en": "Learn jem/jadłem and piję/piłem, and the plural jedzą/piją." }
+      ]},
+      { "t": "Day 5 · taking", "items": [
+        { "k": "irr-d5-a", "en": "Learn the ą/ę swap: wziął but wzięła, wzięli." }
+      ]},
+      { "t": "Day 6 · knowing", "items": [
+        { "k": "irr-d6-a", "en": "Learn the wiem/znam split with three sentences each." },
+        { "k": "irr-d6-b", "en": "Do the drills: knowing." }
+      ]},
+      { "t": "Day 7 · review", "items": [
+        { "k": "irr-d7-a", "en": "Do the drills: irregular-forms, all twelve." },
+        { "k": "irr-d7-b", "en": "Open the verb finder and read three tables you have not seen before." }
+      ]}
+    ]
+  },
+  "verbs-and-cases": {
+    "cards": [
+      { "lv": "genitive", "p": "szukać", "m": "szukać + genitive", "ex": "Szukam kluczy." },
+      { "lv": "genitive", "p": "potrzebować", "m": "potrzebować + genitive", "ex": "Potrzebuję pomocy." },
+      { "lv": "genitive", "p": "bać się", "m": "bać się + genitive", "ex": "Boję się ciemności." },
+      { "lv": "genitive", "p": "słuchać", "m": "słuchać + genitive", "ex": "Słucham muzyki." },
+      { "lv": "genitive", "p": "uczyć się", "m": "uczyć się + genitive", "ex": "Uczę się polskiego." },
+      { "lv": "dative", "p": "pomagać", "m": "pomagać + dative", "ex": "Pomagam mamie." },
+      { "lv": "dative", "p": "dziękować", "m": "dziękować + dative", "ex": "Dziękuję panu." },
+      { "lv": "dative", "p": "podobać się", "m": "podobać się + dative", "ex": "Podoba mi się Łódź." },
+      { "lv": "instrumental", "p": "być / zostać", "m": "instrumental for a profession", "ex": "Jestem programistą." },
+      { "lv": "instrumental", "p": "interesować się", "m": "interesować się + instrumental", "ex": "Interesuję się historią." },
+      { "lv": "preposition", "p": "czekać na", "m": "czekać na + accusative", "ex": "Czekam na autobus." },
+      { "lv": "negation", "p": "nie + accusative object", "m": "becomes genitive", "ex": "Nie mam czasu." }
+    ],
+    "plan": [
+      { "t": "Day 1 · the principle", "items": [
+        { "k": "rek-d1-a", "en": "Stop learning verbs alone: write szukać kluczy, pomagać mamie, czekać na autobus." },
+        { "k": "rek-d1-b", "en": "Do the drills: which-case." }
+      ]},
+      { "t": "Day 2 · genitive", "items": [
+        { "k": "rek-d2-a", "en": "Learn the genitive group: wanting, lacking, seeking, fearing, listening, learning." }
+      ]},
+      { "t": "Day 3 · dative", "items": [
+        { "k": "rek-d3-a", "en": "Learn pomagać, dziękować, wierzyć, odpowiadać, podobać się with a dative object." }
+      ]},
+      { "t": "Day 4 · instrumental", "items": [
+        { "k": "rek-d4-a", "en": "Practise Jestem programistą, Interesuję się historią, Kieruję firmą." }
+      ]},
+      { "t": "Day 5 · prepositions", "items": [
+        { "k": "rek-d5-a", "en": "Learn five verb + preposition pairs whole." },
+        { "k": "rek-d5-b", "en": "Do the drills: prepositions." }
+      ]},
+      { "t": "Day 6 · negation", "items": [
+        { "k": "rek-d6-a", "en": "Turn five affirmative sentences negative and check the genitive." },
+        { "k": "rek-d6-b", "en": "Do the drills: negation." }
+      ]},
+      { "t": "Day 7 · review", "items": [
+        { "k": "rek-d7-a", "en": "Mark the flashcards and redo the ones you missed." }
+      ]}
+    ]
+  },
+  "reflexive": {
+    "cards": [
+      { "lv": "reflexive", "p": "myć się", "m": "to wash oneself", "ex": "Myję się rano." },
+      { "lv": "reflexive", "p": "ubierać się", "m": "to get dressed", "ex": "Ubiera się szybko." },
+      { "lv": "word-changing", "p": "uczyć / uczyć się", "m": "to teach / to learn", "ex": "Uczę się polskiego." },
+      { "lv": "word-changing", "p": "cieszyć / cieszyć się", "m": "to please / to be glad", "ex": "Cieszę się z tego." },
+      { "lv": "word-changing", "p": "nazywać / nazywać się", "m": "to name / to be called", "ex": "Nazywam się Anna." },
+      { "lv": "word-changing", "p": "podobać się", "m": "to be liked", "ex": "Podoba mi się Łódź." },
+      { "lv": "only with się", "p": "bać się", "m": "to be afraid", "ex": "Boję się ciemności." },
+      { "lv": "impersonal", "p": "mówi się", "m": "one says / it is said", "ex": "Tu się mówi po polsku." },
+      { "lv": "impersonal", "p": "robi się", "m": "one does / it is done", "ex": "Jak się to robi?" },
+      { "lv": "pronoun", "p": "cię", "m": "you — short accusative", "ex": "Widzę cię." },
+      { "lv": "pronoun", "p": "mi", "m": "me — short dative", "ex": "Daj mi to." }
+    ],
+    "plan": [
+      { "t": "Day 1 · three jobs", "items": [
+        { "k": "ref-d1-a", "en": "Learn the three jobs: reflexive, part of the verb, impersonal." },
+        { "k": "ref-d1-b", "en": "Do the drills: sie." }
+      ]},
+      { "t": "Day 2 · reflexive", "items": [
+        { "k": "ref-d2-a", "en": "Say myję się, myjesz się, myje się — note się never changes." }
+      ]},
+      { "t": "Day 3 · uczyć / uczyć się", "items": [
+        { "k": "ref-d3-a", "en": "Learn the pair that confuses everyone, with a sentence each." },
+        { "k": "ref-d3-b", "en": "Do the drills: sie-pairs." }
+      ]},
+      { "t": "Day 4 · impersonal", "items": [
+        { "k": "ref-d4-a", "en": "Learn Tu się mówi po polsku and Jak się to robi?" }
+      ]},
+      { "t": "Day 5 · position", "items": [
+        { "k": "ref-d5-a", "en": "Practise się after the verb, never first, and Uczyłem się vs Uczyłam się." }
+      ]},
+      { "t": "Day 6 · pronouns", "items": [
+        { "k": "ref-d6-a", "en": "Learn that cię, mi and go cannot start a sentence." }
+      ]},
+      { "t": "Day 7 · review", "items": [
+        { "k": "ref-d7-a", "en": "Mark the flashcards and redo the ones you missed." }
+      ]}
+    ]
+  },
+  "prefixes": {
+    "cards": [
+      { "lv": "prefix", "p": "na-", "m": "completion", "ex": "pisać → napisać" },
+      { "lv": "prefix", "p": "prze-", "m": "through, across", "ex": "czytać → przeczytać" },
+      { "lv": "prefix", "p": "od-", "m": "away, back", "ex": "pisać → odpisać" },
+      { "lv": "prefix", "p": "wy-", "m": "out, to the end", "ex": "pić → wypić" },
+      { "lv": "prefix", "p": "do-", "m": "up to, as far as", "ex": "pisać → dopisać" },
+      { "lv": "prefix", "p": "pod-", "m": "under, up to", "ex": "pisać → podpisać" },
+      { "lv": "prefix", "p": "w-", "m": "in, into", "ex": "iść → wejść" },
+      { "lv": "prefix", "p": "z-", "m": "completion", "ex": "robić → zrobić" },
+      { "lv": "prefix", "p": "roz-", "m": "apart, out", "ex": "mówić → rozmawiać" },
+      { "lv": "two-step", "p": "podpisać / podpisywać", "m": "new verb, then its imperfective", "ex": "Podpisałem umowę." }
+    ],
+    "plan": [
+      { "t": "Day 1 · two jobs", "items": [
+        { "k": "prf-d1-a", "en": "Learn the test: does the prefixed verb mean the same action, or a new one?" },
+        { "k": "prf-d1-b", "en": "Do the drills: prefix-sense." }
+      ]},
+      { "t": "Day 2 · the core prefixes", "items": [
+        { "k": "prf-d2-a", "en": "Learn na-, prze-, od-, wy-, do-, pod-, w-, z- with one example each." }
+      ]},
+      { "t": "Day 3 · one family", "items": [
+        { "k": "prf-d3-a", "en": "Take pisać and write its family: napisać, przepisać, odpisać, wypisać, dopisać, podpisać." },
+        { "k": "prf-d3-b", "en": "Do the drills: families." }
+      ]},
+      { "t": "Day 4 · direction", "items": [
+        { "k": "prf-d4-a", "en": "Learn the rule: prefix makes perfective, suffix makes imperfective." }
+      ]},
+      { "t": "Day 5 · dead prefixes", "items": [
+        { "k": "prf-d5-a", "en": "Learn zrobić and napisać as pure completion, with no spatial meaning." }
+      ]},
+      { "t": "Day 6 · caution", "items": [
+        { "k": "prf-d6-a", "en": "Learn why przepraszać does not mean 'ask through'." }
+      ]},
+      { "t": "Day 7 · review", "items": [
+        { "k": "prf-d7-a", "en": "Mark the flashcards, then check three prefixed verbs in the verb finder." }
+      ]}
+    ]
+  },
+  "participles": {
+    "cards": [
+      { "lv": "-ący", "p": "pisać", "m": "piszący — the writing (man)", "ex": "człowiek piszący list" },
+      { "lv": "-ący", "p": "czytać", "m": "czytający", "ex": "osoba czytająca gazetę" },
+      { "lv": "-ący", "p": "iść", "m": "idący", "ex": "idący mężczyzna" },
+      { "lv": "passive", "p": "napisać", "m": "napisany — written", "ex": "List jest napisany." },
+      { "lv": "passive", "p": "zrobić", "m": "zrobiony — made", "ex": "Kolacja jest zrobiona." },
+      { "lv": "passive", "p": "otworzyć", "m": "otwarty — opened (irregular)", "ex": "Okno jest otwarte." },
+      { "lv": "passive", "p": "zamknąć", "m": "zamknięty — closed", "ex": "Drzwi są zamknięte." },
+      { "lv": "-ąc", "p": "czytać", "m": "czytając — while reading", "ex": "Czytając, piłem kawę." },
+      { "lv": "-ąc", "p": "iść", "m": "idąc — while walking", "ex": "Idąc do pracy, myślałem." },
+      { "lv": "noun", "p": "pisać", "m": "pisanie — writing (the noun)", "ex": "Pisanie listów zajmuje czas." },
+      { "lv": "noun", "p": "jeść", "m": "jedzenie — eating, food", "ex": "Jedzenie jest ważne." }
+    ],
+    "plan": [
+      { "t": "Day 1 · the map", "items": [
+        { "k": "par-d1-a", "en": "Learn the four participles and which of them exist only for imperfectives." }
+      ]},
+      { "t": "Day 2 · -ący", "items": [
+        { "k": "par-d2-a", "en": "Build piszący, czytający, idący and decline one of them." },
+        { "k": "par-d2-b", "en": "Do the drills: participles." }
+      ]},
+      { "t": "Day 3 · passive", "items": [
+        { "k": "par-d3-a", "en": "Learn napisany, zrobiony, otwarty, zamknięty, wzięty." },
+        { "k": "par-d3-b", "en": "Make one passive sentence for each gender: jest napisany / napisana / napisane." }
+      ]},
+      { "t": "Day 4 · -ąc", "items": [
+        { "k": "par-d4-a", "en": "Write three sentences with czytając, idąc, mówiąc." }
+      ]},
+      { "t": "Day 5 · verbal nouns", "items": [
+        { "k": "par-d5-a", "en": "Learn that the noun takes the genitive: czytanie książek." }
+      ]},
+      { "t": "Day 6 · word order", "items": [
+        { "k": "par-d6-a", "en": "Take Anna czyta książkę and rearrange it three ways, saying what each one stresses." },
+        { "k": "par-d6-b", "en": "Do the drills: word-order." }
+      ]},
+      { "t": "Day 7 · the map", "items": [
+        { "k": "par-d7-a", "en": "Read the capstone table: the eleven questions. That is the whole site in one page." }
+      ]}
+    ]
+  }
+}

@@ -1,0 +1,51 @@
+[
+  {
+    "id": "participles",
+    "title": "Verb turned adjective",
+    "ask": "Which participle?",
+    "items": [
+      { "id": "par-1", "kind": "choice", "q": "<span class=\"pl\">robiący</span> is:",
+        "opts": ["an active adjectival participle — \"one who is doing\"", "a passive participle", "an adverb", "a verbal noun"], "a": "an active adjectival participle — \"one who is doing\"",
+        "why": "The active adjectival participle takes <span class=\"pl\">-ący</span> from the present stem: <span class=\"pl\">robić → robiący</span>. It behaves like an adjective: <span class=\"pl\">człowiek robiący zdjęcia</span> — a man taking photos." },
+      { "id": "par-2", "kind": "choice", "q": "<span class=\"pl\">robiony</span> is:",
+        "opts": ["a passive participle — \"being done\"", "an active participle", "an adverb", "the imperative"], "a": "a passive participle — \"being done\"",
+        "why": "The passive adjectival participle takes <span class=\"pl\">-ny/-ony/-ty</span>: <span class=\"pl\">robić → robiony</span>. It is used with <span class=\"pl\">być</span> for the passive: <span class=\"pl\">To jest robione ręcznie</span> — it is made by hand." },
+      { "id": "par-3", "kind": "choice", "q": "<span class=\"pl\">robiąc</span> is:",
+        "opts": ["an adverbial participle — \"while doing\"", "a passive participle", "a noun", "an imperative"], "a": "an adverbial participle — \"while doing\"",
+        "why": "The contemporary adverbial participle ends in <span class=\"pl\">-ąc</span>: <span class=\"pl\">Czytam, pijąc kawę</span> — I read while drinking coffee. It does not change for gender or number." },
+      { "id": "par-4", "kind": "choice", "q": "<span class=\"pl\">robienie</span> is:",
+        "opts": ["a verbal noun — \"the doing\"", "a participle", "an adverb", "the conditional"], "a": "a verbal noun — \"the doing\"",
+        "why": "The verbal noun ends in <span class=\"pl\">-nie/-cie</span>: <span class=\"pl\">robić → robienie</span>, <span class=\"pl\">czytać → czytanie</span>. It is a real noun and takes cases: <span class=\"pl\">uczenie się języków</span> — the learning of languages." },
+      { "id": "par-5", "kind": "type", "q": "Write the active adjectival participle of <span class=\"pl\">czytać</span>.", "accept": ["czytający"],
+        "why": "<span class=\"pl\">czytający</span> — present stem <span class=\"pl\">czytają-</span> plus <span class=\"pl\">-cy</span>." },
+      { "id": "par-6", "kind": "type", "q": "Write the passive participle of <span class=\"pl\">czytać</span>.", "accept": ["czytany"],
+        "why": "<span class=\"pl\">czytany</span> — \"read, being read\"." },
+      { "id": "par-7", "kind": "type", "q": "Write the adverbial participle of <span class=\"pl\">czytać</span>.", "accept": ["czytając"],
+        "why": "<span class=\"pl\">czytając</span> — \"while reading\"." },
+      { "id": "par-8", "kind": "type", "q": "Write the verbal noun of <span class=\"pl\">czytać</span>.", "accept": ["czytanie"],
+        "why": "<span class=\"pl\">czytanie</span> — \"reading\", as a thing." }
+    ]
+  },
+  {
+    "id": "word-order",
+    "title": "Where the verb goes",
+    "ask": "Word order",
+    "items": [
+      { "id": "par-9", "kind": "choice", "q": "What is the neutral Polish word order?",
+        "opts": ["Subject, verb, object — but flexible for emphasis", "Strictly subject, object, verb", "Strictly verb first", "There is no order at all"], "a": "Subject, verb, object — but flexible for emphasis",
+        "why": "<span class=\"pl\">Marek czyta książkę</span> is neutral. <span class=\"pl\">Książkę czyta Marek</span> is the same facts with \"it's the book that Marek is reading\". Polish uses order for emphasis, not for grammar." },
+      { "id": "par-10", "kind": "choice", "q": "Where do clitics like <span class=\"pl\">się</span>, <span class=\"pl\">mi</span> and <span class=\"pl\">bym</span> go?",
+        "opts": ["After the verb, in a fixed order among themselves", "At the very end of the sentence", "Before the subject", "Anywhere at all"], "a": "After the verb, in a fixed order among themselves",
+        "why": "<span class=\"pl\">Podoba mi się</span>, <span class=\"pl\">uczyłem się</span>, <span class=\"pl\">zrobiłbym to</span>. The order among clitics is fixed: <span class=\"pl\">bym</span> before <span class=\"pl\">mi</span> before <span class=\"pl\">się</span>." },
+      { "id": "par-11", "kind": "choice", "q": "In a question like <span class=\"pl\">Czy Marek czyta książkę?</span>, what is <span class=\"pl\">czy</span> for?",
+        "opts": ["It marks a yes/no question with neutral order", "It means \"what\"", "It negates", "It is a polite particle"], "a": "It marks a yes/no question with neutral order",
+        "why": "<span class=\"pl\">Czy</span> at the start turns a statement into a yes/no question without changing the order. Without it, intonation does the job: <span class=\"pl\">Marek czyta książkę?</span>" },
+      { "id": "par-12", "kind": "choice", "q": "\"I like this book.\" Which is the natural Polish?",
+        "opts": ["Podoba mi się ta książka.", "Lubię się ta książka.", "Ta książka lubi mnie.", "Podobam się ta książka."], "a": "Podoba mi się ta książka.",
+        "why": "<span class=\"pl\">podobać się</span> reverses the English structure: the book is the subject, the person is dative. <span class=\"pl\">Lubię tę książkę</span> is also correct and more direct — <span class=\"pl\">lubić</span> takes the accusative." },
+      { "id": "par-13", "kind": "choice", "q": "Which is the neutral place for <span class=\"pl\">nie</span>?",
+        "opts": ["Directly before the verb", "At the end of the sentence", "After the object", "Before the subject always"], "a": "Directly before the verb",
+        "why": "<span class=\"pl\">Nie mam czasu</span>, <span class=\"pl\">Nie czytam gazety</span>. In a compound past or future the <span class=\"pl\">nie</span> goes before the whole verb phrase: <span class=\"pl\">Nie będę czytać</span>." }
+    ]
+  }
+]
