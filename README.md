@@ -121,12 +121,12 @@ npm run db:migrate    # apply migrations/ to the remote D1 database
 
 | what | where |
 | --- | --- |
-| Worker name, assets directory (`dist/`, binding `ASSETS`), D1 binding | `wrangler.toml` |
+| Worker name, assets directory (`dist/`, binding `ASSETS`), D1 binding | `wrangler.jsonc` |
 | the Worker: one endpoint, plus a fall-through to assets | `worker/index.js` |
 | the table | `migrations/0001_progress.sql` |
 | deploy and migrate commands | `package.json` |
 
-`wrangler.toml` holds the D1 `database_id`, so a deploy goes to that one database. Applying a
+`wrangler.jsonc` holds the D1 `database_id`, so a deploy goes to that one database. Applying a
 migration is manual and deliberate: `npm run db:migrate` for the deployed site,
 `wrangler d1 migrations apply DB --local` for `npm run dev`.
 
