@@ -11,7 +11,8 @@ inflection table on Wiktionary, and the prose was cross-checked against those ta
 ```sh
 npm run build     # data -> dist/
 npm run check     # data, structure and prose checks
-npm run serve     # http://localhost:4399
+npm run dev       # build, then the Worker at http://localhost:8787 (API included)
+npm run serve     # dist/ only, no API: http://localhost:4399
 npm run verify    # build + check + syntax, the gate before a commit
 ```
 
@@ -102,33 +103,44 @@ imperative chapter does not teach them.
 - The drill engine escapes HTML, so drill question text may only use `<span class="pl">`, `<i>` and
   `<b>`; `renderInline()` in `src/app.js` re-enables exactly those three.
 - Progress lives in `localStorage` under `polski.verbs.progress.v1`, with a JSON export/import on
-  the progress page for carrying it between devices.
+  the progress page, and — when a sync code exists — a merged copy in D1 that follows the learner
+  between devices.
 
-## Storage: no database, and why
+## Deploying
 
-The site is static. `dist/` is plain files, there is no `functions/` directory and no `wrangler.toml`,
-and nothing on any page talks to a server. That is a deliberate decision, not an omission.
+The site runs as a Cloudflare Worker with static assets. `dist/` is uploaded as assets; a request
+that matches an asset is served without running any code, and only a path that matches nothing
+reaches `worker/index.js`. That is how `/api/progress` is served, and why a page view costs no
+invocation.
 
-A learner's progress is a small object — per drill item how often it was seen, when it is next due,
-and which box it is in — and it belongs to one person on one device. `localStorage` holds it, and the
-progress page exports it to a file (`polski.verbs.progress`, version 1) and loads such a file back,
-which is how it moves to a phone. Nothing is uploaded, so there is nothing to secure and no personal
-data to keep.
+```sh
+git clone … && npm install
+npm run deploy        # build dist/, then wrangler deploy
+npm run db:migrate    # apply migrations/ to the remote D1 database
+```
 
-**Cloudflare D1 is therefore not needed.** It would not cost much — Workers Free includes D1 with
-5M rows read and 100K rows written a day and 5 GB of storage, which this workload would not trouble —
-so the argument against it is not price. It is that a database buys you a *shared* progress record,
-and a shared record needs a way to know whose it is:
+| what | where |
+| --- | --- |
+| Worker name, assets directory (`dist/`, binding `ASSETS`), D1 binding | `wrangler.toml` |
+| the Worker: one endpoint, plus a fall-through to assets | `worker/index.js` |
+| the table | `migrations/0001_progress.sql` |
+| deploy and migrate commands | `package.json` |
 
-| | With D1 | What it costs you |
-| --- | --- | --- |
-| identity | sync code, or an account | a 32-character code is a bearer secret: anyone who sees it reads and overwrites that progress. An account means auth, a reset flow and a privacy note. |
-| ops | a Worker, a D1 binding, a migration | another moving part to keep working, and migrations to apply by hand on every change |
-| data | the learner's own drilling history | a stored copy now needs a deletion path and a backup story |
+`wrangler.toml` holds the D1 `database_id`, so a deploy goes to that one database. Applying a
+migration is manual and deliberate: `npm run db:migrate` for the deployed site,
+`wrangler d1 migrations apply DB --local` for `npm run dev`.
 
-The cases site does run D1, because it was built to sync across devices by code. That is a product
-decision, not a requirement of the content: it could have shipped the same file export. If sync ever
-is wanted here, the honest minimum is an account or a signed per-person link, not a shared code.
+### Storage, and what it costs
 
-What would change this: more than one person using the same device, real cross-device progress
-without files, or a teacher seeing a class's results. None of those is true today.
+Progress is local-first: `localStorage` holds it, and a sync code adds a D1 row that two devices
+merge item by item. The copy on the device is always kept, so a database that cannot be reached
+never costs an answer, and the file export still moves progress with no code and no network.
+
+One row per code, `{ rev, data, items, updated_at }`. The document in `data` belongs to the client:
+the Worker stores and returns it and never reads inside it, so a change to the progress shape needs
+no migration. `rev` is stamped by the Worker, not the device, so a phone with a wrong clock cannot
+make an old save win.
+
+A 32-character code is a bearer secret, not an account: whoever sees it reads and overwrites that
+progress, there is no reset flow, and a lost code means a new code and a lost server copy — the
+device keeps working either way.

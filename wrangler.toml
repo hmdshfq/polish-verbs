@@ -1,9 +1,15 @@
-# Cloudflare Pages: the static site in dist/, one Function in functions/, and
-# D1 for the progress that follows a learner between devices.
-# `npm run deploy` builds dist/ and uploads both.
-name = "polski-verbs"
-pages_build_output_dir = "dist"
+# Cloudflare Workers: the site in dist/ as static assets, one Worker script in
+# worker/, and D1 for the progress that follows a learner between devices.
+# `npm run deploy` builds dist/ and uploads the lot.
+name = "polish-verbs"
+main = "worker/index.js"
 compatibility_date = "2026-11-01"
+
+# A matching asset is served before the Worker runs, so pages stay free and only
+# /api/progress and unknown paths reach worker/index.js.
+[assets]
+directory = "./dist"
+binding = "ASSETS"
 
 [[d1_databases]]
 binding = "DB"
