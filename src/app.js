@@ -1219,24 +1219,34 @@
 
   // Read, merge, then write: the server stamps the revision, so a device with
   // a wrong clock cannot make an old save win, and neither device's answers
-  // are thrown away when both answered while apart.
+  // are thrown away when both answered while apart. The write names the
+  // revision it read; if the other device saved in between the server answers
+  // 409 and this merges again, once, against whatever landed.
   function pushProgress(quiet) {
     if (!sync.code) return Promise.resolve(false);
     if (pushing) return pushing;
 
-    pushing = fetch(syncUrl(sync.code), { headers: { accept: 'application/json' } })
-      .then(apiJson)
-      .then(function (r) {
-        var remote = r.ok && r.body && typeof r.body.data === 'object' ? r.body.data : null;
-        var doc = remote ? mergeProgress(store, remote) : store;
-        if (remote && !sameProgress(doc, store)) adopt(doc);
-        return fetch(syncUrl(sync.code), {
-          method: 'PUT',
-          headers: { 'content-type': 'application/json' },
-          body: JSON.stringify({ data: doc, rev: (r.body && r.body.rev) || sync.rev || 0 })
+    function attempt(retries) {
+      return fetch(syncUrl(sync.code), { headers: { accept: 'application/json' } })
+        .then(apiJson)
+        .then(function (r) {
+          var remote = r.ok && r.body && typeof r.body.data === 'object' ? r.body.data : null;
+          var doc = remote ? mergeProgress(store, remote) : store;
+          if (remote && !sameProgress(doc, store)) adopt(doc);
+          return fetch(syncUrl(sync.code), {
+            method: 'PUT',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify({ data: doc, baseRev: (r.body && r.body.rev) || 0 })
+          })
+            .then(apiJson)
+            .then(function (w) {
+              if (w.status === 409 && retries > 0) return attempt(retries - 1);
+              return w;
+            });
         });
-      })
-      .then(apiJson)
+    }
+
+    pushing = attempt(1)
       .then(function (r) {
         if (!r.ok || !r.body) throw new Error((r.body && r.body.error) || 'the server did not save it');
         sync.rev = r.body.rev;

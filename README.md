@@ -141,6 +141,12 @@ the Worker stores and returns it and never reads inside it, so a change to the p
 no migration. `rev` is stamped by the Worker, not the device, so a phone with a wrong clock cannot
 make an old save win.
 
+A save carries the revision it was based on (`PUT { data, baseRev }`). If someone else saved first,
+the statement matches no row and the answer is a 409; the client merges again and retries once, so
+the two devices' answers both survive instead of the later one overwriting the earlier. The check and
+the bump happen inside the one upsert, never as a read followed by a write. A body over 512 KB is
+refused with a 413 before it is read.
+
 A 12-character code — shown as `XXXX XXXX XXXX` — is a bearer secret, not an account: whoever sees it reads and overwrites that
 progress, there is no reset flow, and a lost code means a new code and a lost server copy — the
 device keeps working either way.
