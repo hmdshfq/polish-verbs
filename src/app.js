@@ -1055,7 +1055,17 @@
 
   var sync = loadSync();
 
-  function syncUrl(code) { return '/api/progress' + (code ? '/' + code : ''); }
+  // The sync code travels in a header, not in the path: it is the only
+  // credential a record has, and a request line ends up in logs and traces. The
+  // server still reads a code out of the path, so a link pasted into a browser
+  // works.
+  var SYNC_API = '/api/progress';
+  function syncHeaders(code, extra) {
+    var h = { accept: 'application/json' };
+    if (code) h['x-sync-code'] = code;
+    for (var k in extra || {}) h[k] = extra[k];
+    return h;
+  }
 
   function apiJson(res) {
     return res.text().then(function (t) {
@@ -1227,15 +1237,15 @@
     if (pushing) return pushing;
 
     function attempt(retries) {
-      return fetch(syncUrl(sync.code), { headers: { accept: 'application/json' } })
+      return fetch(SYNC_API, { headers: syncHeaders(sync.code) })
         .then(apiJson)
         .then(function (r) {
           var remote = r.ok && r.body && typeof r.body.data === 'object' ? r.body.data : null;
           var doc = remote ? mergeProgress(store, remote) : store;
           if (remote && !sameProgress(doc, store)) adopt(doc);
-          return fetch(syncUrl(sync.code), {
+          return fetch(SYNC_API, {
             method: 'PUT',
-            headers: { 'content-type': 'application/json' },
+            headers: syncHeaders(sync.code, { 'content-type': 'application/json' }),
             body: JSON.stringify({ data: doc, baseRev: (r.body && r.body.rev) || 0 })
           })
             .then(apiJson)
@@ -1273,7 +1283,7 @@
   function pullProgress() {
     if (!sync.code) return Promise.resolve(false);
 
-    return fetch(syncUrl(sync.code), { headers: { accept: 'application/json' } })
+    return fetch(SYNC_API, { headers: syncHeaders(sync.code) })
       .then(apiJson)
       .then(function (r) {
         if (r.status === 404) return pushProgress(true);   // nothing saved yet
@@ -1443,7 +1453,7 @@
     if (create) create.addEventListener('click', function () {
       create.disabled = true;
       msg('Asking the server for a code…');
-      fetch(syncUrl(null), { headers: { accept: 'application/json' } })
+      fetch(SYNC_API, { headers: syncHeaders(null) })
         .then(apiJson)
         .then(function (r) {
           if (syncServerMissing(r)) throw new Error('this copy of the site has no sync server');
@@ -1469,7 +1479,7 @@
         return;
       }
       msg('Looking for progress under that code…');
-      fetch(syncUrl(code), { headers: { accept: 'application/json' } })
+      fetch(SYNC_API, { headers: syncHeaders(code) })
         .then(apiJson)
         .then(function (r) {
           if (r.status === 404) return null;

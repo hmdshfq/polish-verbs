@@ -109,9 +109,8 @@ imperative chapter does not teach them.
 ## Deploying
 
 The site runs as a Cloudflare Worker with static assets. `dist/` is uploaded as assets; a request
-that matches an asset is served without running any code, and only a path that matches nothing
-reaches `worker/index.js`. That is how `/api/progress` is served, and why a page view costs no
-invocation.
+that matches an asset is served without running any code, and `run_worker_first` sends only
+`/api/*` to `worker/index.js`, so a page view — and a 404 — costs no invocation.
 
 ```sh
 git clone … && npm install
@@ -149,4 +148,6 @@ refused with a 413 before it is read.
 
 A 12-character code — shown as `XXXX XXXX XXXX` — is a bearer secret, not an account: whoever sees it reads and overwrites that
 progress, there is no reset flow, and a lost code means a new code and a lost server copy — the
-device keeps working either way.
+device keeps working either way. The code travels in an `x-sync-code` header rather than the URL,
+so it stays out of request logs and traces; a path segment is still accepted, so a link pasted into
+a browser works.

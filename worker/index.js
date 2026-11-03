@@ -7,11 +7,13 @@
 //                                   or 409 if someone else saved first
 //
 // Cloudflare serves a matching asset before this script runs, so a page view
-// never costs an invocation. A path that matches no asset lands here and falls
-// through to ASSETS, which answers 404 — the site has no 404 page of its own.
+// never costs an invocation; `run_worker_first` sends /api/* here and leaves
+// everything else, a 404 included, to the asset server.
 //
 // The code is not a password, it is a private random key: whoever holds it can
-// read and write that one record, and nothing else. The revision is stamped
+// read and write that one record, and nothing else. It arrives in an x-sync-code
+// header so it stays out of request logs and traces; the path segment still
+// works for a link pasted into a browser. The revision is stamped
 // here, never by the device, so two phones with wrong clocks cannot make an old
 // save win: the caller sends the revision it read and the upsert only applies if
 // that is still the stored one. The client keeps a copy on the device, so a
@@ -27,12 +29,13 @@ const API = '/api/progress';
 const ALPHABET = '0123456789ABCDEFGHJKMNPQRSTVWXYZ';
 const CODE = /^[0-9A-HJKMNP-TV-Z]{12}$/;
 
-const json = (body, status = 200) =>
+const json = (body, status = 200, headers = {}) =>
   new Response(JSON.stringify(body), {
     status,
     headers: {
       'content-type': 'application/json; charset=utf-8',
       'cache-control': 'no-store',
+      ...headers,
     },
   });
 
@@ -47,11 +50,7 @@ export default {
     const { pathname } = new URL(request.url);
 
     if (pathname === API || pathname.startsWith(API + '/')) {
-      const code = pathname
-        .slice(API.length)
-        .replace(/^\/+|\/+$/g, '')
-        .toUpperCase();
-      return progress(request, env, code);
+      return progress(request, env, pathname);
     }
 
     if (!env.ASSETS) return new Response("assets not configured", { status: 503 });
@@ -59,15 +58,31 @@ export default {
   },
 };
 
-async function progress(request, env, code) {
+// Null when the URL names no code at all, '' when it names an empty one.
+function pathCode(pathname) {
+  if (pathname === API) return null;
+  return pathname.slice(API.length).replace(/^\/+|\/+$/g, '');
+}
+
+async function progress(request, env, pathname) {
+  // /api/progress/ is a bad request, not a request for a new code.
+  const fromPath = pathCode(pathname);
+  if (fromPath === '') return json({ error: 'a sync code is 12 letters and digits' }, 400);
+
+  const given = request.headers.get('x-sync-code') || fromPath;
+  const code = (given || '').toUpperCase();
+  // Only a request that named no code at all is asking for a new one; a junk
+  // code is a bad request, not a mint.
+  const minting = request.method === 'GET' && !given;
+
   // Without a binding the site still works; the client falls back to the device.
   const db = env.DB;
   if (!db) {
-    if (request.method === 'GET' && !code) return json({ code: null, enabled: false });
+    if (minting) return json({ code: null, enabled: false });
     return json({ enabled: false, error: 'progress sync is not configured' }, 503);
   }
 
-  if (request.method === 'GET' && !code) {
+  if (minting) {
     return json({ code: newCode(), enabled: true });
   }
 
@@ -126,7 +141,7 @@ async function progress(request, env, code) {
       return json({ rev: row.rev, updatedAt: row.updated_at });
     }
 
-    return json({ error: 'method not allowed' }, 405);
+    return json({ error: 'method not allowed' }, 405, { allow: 'GET, PUT' });
   } catch (err) {
     console.error(
       JSON.stringify({ event: 'progress_failed', method: request.method, code, error: String(err) })
