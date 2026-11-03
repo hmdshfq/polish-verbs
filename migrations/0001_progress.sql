@@ -3,7 +3,7 @@
 -- document changes there is no migration — the client owns the shape and the
 -- server never reads inside it.
 CREATE TABLE IF NOT EXISTS progress (
-  profile    TEXT PRIMARY KEY,   -- the sync code, a random 32-character id
+  profile    TEXT PRIMARY KEY,   -- the sync code: 12 letters and digits
   rev        INTEGER NOT NULL,   -- stamped by the server on every accepted save
   data       TEXT NOT NULL,      -- the JSON document the client keeps
   items      INTEGER NOT NULL DEFAULT 0,  -- how many items it covers, for a glance

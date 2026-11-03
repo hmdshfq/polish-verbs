@@ -141,6 +141,6 @@ the Worker stores and returns it and never reads inside it, so a change to the p
 no migration. `rev` is stamped by the Worker, not the device, so a phone with a wrong clock cannot
 make an old save win.
 
-A 32-character code is a bearer secret, not an account: whoever sees it reads and overwrites that
+A 12-character code — shown as `XXXX XXXX XXXX` — is a bearer secret, not an account: whoever sees it reads and overwrites that
 progress, there is no reset flow, and a lost code means a new code and a lost server copy — the
 device keeps working either way.

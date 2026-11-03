@@ -1011,11 +1011,11 @@
 
   /* ------------------------------------------- sharing progress between devices */
 
-  // Progress follows the learner through a sync code: a random 32-hex key that
-  // names one row in the site's D1 database. Nothing else is uploaded, and the
-  // copy in this browser is always kept, so a database that cannot be reached
-  // never costs an answer. A code is a private key, not a password: whoever
-  // holds it can read and write that one record, and nothing else.
+  // Progress follows the learner through a sync code: a random 12-character key
+  // that names one row in the site's D1 database. Nothing else is uploaded, and
+  // the copy in this browser is always kept, so a database that cannot be
+  // reached never costs an answer. A code is a private key, not a password:
+  // whoever holds it can read and write that one record, and nothing else.
   //
   // Two devices cannot both be right about the same drill item, and the store
   // carries no per-item clock, so a save never overwrites: every save reads the
@@ -1025,10 +1025,25 @@
   var SYNC_KEY = 'polski.verbs.sync.v1';
   var PORTABLE = 'polski.verbs.progress';
 
+  // A code is 12 characters from a 32-letter alphabet: 60 bits, far beyond
+  // guessing, and no character pair that is easy to confuse — no I, L, O or U.
+  // It is shown in three groups of four, which is how a person reads it aloud
+  // and copies it across. Crockford's forgiving spellings are accepted on the
+  // way in: O reads as 0, I and L read as 1.
+  var CODE_RE = /^[0-9A-HJKMNP-TV-Z]{12}$/;
+
+  function cleanCode(s) {
+    return String(s || '').toUpperCase()
+      .replace(/[^0-9A-Z]/g, '')
+      .replace(/O/g, '0')
+      .replace(/[IL]/g, '1');
+  }
+  function groupCode(code) { return code.replace(/(.{4})(?=.)/g, '$1 '); }
+
   function loadSync() {
     try {
       var o = JSON.parse(localStorage.getItem(SYNC_KEY) || 'null');
-      if (!o || typeof o !== 'object' || !/^[a-f0-9]{32}$/.test(o.code || '')) return { code: null };
+      if (!o || typeof o !== 'object' || !CODE_RE.test(o.code || '')) return { code: null };
       return { code: o.code, rev: o.rev || 0, at: o.at || null, error: null };
     } catch (e) {
       return { code: null };
@@ -1381,7 +1396,7 @@
         statsChips() +
         '<div class="syncbox">' +
         '<div class="small">Your sync code — enter it on your other devices</div>' +
-        '<code id="syncCode">' + sync.code + '</code>' +
+        '<code id="syncCode">' + groupCode(sync.code) + '</code>' +
         '<div class="cta">' +
         '<button class="btn primary" id="syncCopy">Copy the code</button>' +
         '<button class="btn ghost" id="syncNow">Save now</button>' +
@@ -1399,8 +1414,8 @@
         '<div class="syncjoin">' +
         '<label class="small" for="syncInput">Already have a code from this site? Paste it here.</label>' +
         '<div class="cta">' +
-        '<input id="syncInput" type="text" autocomplete="off" spellcheck="false" maxlength="40" ' +
-        'placeholder="32 letters and digits">' +
+        '<input id="syncInput" type="text" autocomplete="off" spellcheck="false" maxlength="16" ' +
+        'placeholder="XXXX XXXX XXXX">' +
         '<button class="btn ghost" id="syncJoin">Use this code</button>' +
         '</div></div>' +
         '<p class="small" id="syncMsg">' + escapeHtml(syncStatus()) + '</p>' +
@@ -1423,7 +1438,7 @@
         .then(function (r) {
           if (syncServerMissing(r)) throw new Error('this copy of the site has no sync server');
           if (!r.ok || !r.body || !r.body.code) throw new Error((r.body && r.body.error) || 'no code came back');
-          sync = { code: r.body.code, rev: 0, at: null, error: null };
+          sync = { code: cleanCode(r.body.code), rev: 0, at: null, error: null };
           saveSync();
           return pushProgress(true);
         })
@@ -1438,9 +1453,9 @@
     var join = $('#syncJoin');
     var input = $('#syncInput');
     function joinCode() {
-      var code = String((input && input.value) || '').trim().toLowerCase().replace(/\s+/g, '');
-      if (!/^[a-f0-9]{32}$/.test(code)) {
-        msg('A sync code is 32 letters and digits — copy it whole from the other device.', true);
+      var code = cleanCode(input && input.value);
+      if (!CODE_RE.test(code)) {
+        msg('A sync code is 12 letters and digits — copy all three groups from the other device.', true);
         return;
       }
       msg('Looking for progress under that code…');
@@ -1483,7 +1498,7 @@
 
     var copy = $('#syncCopy');
     if (copy) copy.addEventListener('click', function () {
-      var text = sync.code;
+      var text = groupCode(sync.code);
       var done = function (ok) {
         msg(ok ? 'Code copied. Paste it into the other device.' : 'Copy it by hand: ' + text, !ok);
       };

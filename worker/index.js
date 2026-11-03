@@ -15,8 +15,15 @@
 // an old save win. The client keeps a copy on the device, so a missing or
 // failing database never costs a learner their progress.
 const MAX_BYTES = 512 * 1024;
-const CODE = /^[a-f0-9]{32}$/;
 const API = '/api/progress';
+
+// A sync code is 12 characters from a 32-letter alphabet — Crockford's base32,
+// which drops I, L, O and U so a code read aloud or copied by hand cannot be
+// mistyped for another one. 12 × 5 bits is 60 bits of entropy, far beyond
+// guessing. The client shows it in three groups of four; the code itself has
+// no spaces.
+const ALPHABET = '0123456789ABCDEFGHJKMNPQRSTVWXYZ';
+const CODE = /^[0-9A-HJKMNP-TV-Z]{12}$/;
 
 const json = (body, status = 200) =>
   new Response(JSON.stringify(body), {
@@ -28,9 +35,10 @@ const json = (body, status = 200) =>
   });
 
 function newCode() {
-  const bytes = new Uint8Array(16);
+  const bytes = new Uint8Array(12);
   crypto.getRandomValues(bytes);
-  return [...bytes].map((b) => b.toString(16).padStart(2, '0')).join('');
+  // 256 is a multiple of 32, so the modulo introduces no bias.
+  return [...bytes].map((b) => ALPHABET[b % 32]).join('');
 }
 
 export default {
@@ -38,7 +46,10 @@ export default {
     const { pathname } = new URL(request.url);
 
     if (pathname === API || pathname.startsWith(API + '/')) {
-      const code = pathname.slice(API.length).replace(/^\/+|\/+$/g, '');
+      const code = pathname
+        .slice(API.length)
+        .replace(/^\/+|\/+$/g, '')
+        .toUpperCase();
       return progress(request, env, code);
     }
 
@@ -61,7 +72,7 @@ async function progress(request, env, code) {
   }
 
   if (!CODE.test(code)) {
-    return json({ error: 'a sync code is 32 hex characters' }, 400);
+    return json({ error: 'a sync code is 12 letters and digits' }, 400);
   }
 
   try {
