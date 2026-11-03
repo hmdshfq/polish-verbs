@@ -1,8 +1,9 @@
 /* ============================================================================
    Polski — czasowniki
    The drill engine, the progress store, the verb browser and every page
-   behaviour. Progress lives on the device in localStorage under
-   "polski.verbs.progress.v1"; the sync panel can carry it between devices.
+   behaviour. Progress lives in this browser's localStorage under
+   "polski.verbs.progress.v1"; the progress page can export it to a file and
+   load such a file back, which is how it moves between devices. No server.
    ========================================================================== */
 (function () {
   'use strict';
@@ -93,7 +94,6 @@
 
     store.attempts++;
     if (ok) store.correct++;
-    queueSync();
 
     var d = today();
     if (!store.days[d]) store.days[d] = { n: 0, ok: 0 };
@@ -1000,193 +1000,115 @@
       }
       store = blank();
       flush();
-      syncPush();
       location.reload();
     });
   }
 
-  /* ------------------------------------------------------------------ sync */
+  /* -------------------------------------------------------- moving progress */
 
-  var SYNC_KEY = 'polski.verbs.sync.v1';
+  // This site has no server. Progress lives in this browser's localStorage,
+  // and it moves between devices as a file the learner downloads here and
+  // loads on the other device. Nothing is uploaded anywhere.
+  var PORTABLE = 'polski.verbs.progress';
 
-  function syncState() {
-    try { return JSON.parse(localStorage.getItem(SYNC_KEY)) || {}; }
-    catch (e) { return {}; }
+  function portableProgress() {
+    return {
+      app: PORTABLE,
+      version: 1,
+      exportedAt: new Date().toISOString(),
+      progress: store
+    };
   }
-  function setSyncState(s) {
-    try { localStorage.setItem(SYNC_KEY, JSON.stringify(s)); } catch (e) {}
+
+  function downloadProgress() {
+    var data = JSON.stringify(portableProgress(), null, 1);
+    var blob = new Blob([data], { type: 'application/json' });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url;
+    a.download = 'polski-czasowniki-progress-' + today() + '.json';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    setTimeout(function () { URL.revokeObjectURL(url); }, 2000);
   }
 
-  var syncTimer = null;
-
-  function apiFetch(url, opts) {
-    return fetch(url, opts).then(function (r) {
-      var type = r.headers.get('content-type') || '';
-      if (type.indexOf('application/json') === -1) {
-        throw new Error('Syncing is not available on this copy of the site. Your progress is still saved in this browser.');
+  // A file is accepted only if it is this site's own export and carries the
+  // shape progress has; anything else is refused with a reason, not merged.
+  function readProgressFile(file, done) {
+    var reader = new FileReader();
+    reader.onerror = function () { done(new Error('that file could not be read')); };
+    reader.onload = function () {
+      var j;
+      try { j = JSON.parse(String(reader.result)); }
+      catch (e) { return done(new Error('that file is not JSON — pick the file this site exported')); }
+      if (!j || j.app !== PORTABLE || !j.progress || typeof j.progress !== 'object') {
+        return done(new Error('that is not a progress file from this site'));
       }
-      return r;
-    }, function () {
-      throw new Error('Syncing could not reach the server. Your progress is still saved in this browser.');
-    });
-  }
-
-  function syncPush() {
-    var s = syncState();
-    if (!s.code) return;
-    var rev = Math.max(Date.now(), (s.rev || 0) + 1);
-    apiFetch('/api/progress/' + s.code, {
-      method: 'PUT',
-      headers: { 'content-type': 'application/json' },
-      body: JSON.stringify({ rev: rev, data: store })
-    }).then(function (r) { return r.json(); })
-      .then(function (j) {
-        setSyncState({ code: s.code, rev: j.rev || rev, at: new Date().toISOString(), error: null });
-        paintSync();
-      })
-      .catch(function (e) {
-        setSyncState({ code: s.code, rev: s.rev || 0, at: s.at, error: e && e.message ? e.message : 'offline' });
-        paintSync();
-      });
-  }
-
-  function queueSync() {
-    if (!syncState().code) return;
-    clearTimeout(syncTimer);
-    syncTimer = setTimeout(syncPush, 1200);
-  }
-
-  function syncPull(code) {
-    return apiFetch('/api/progress/' + code).then(function (r) {
-      if (r.status === 404) return null;
-      if (!r.ok) throw new Error('server said ' + r.status);
-      return r.json();
-    });
-  }
-
-  function adopt(remote) {
-    var local = syncState().rev || 0;
-    if (remote && remote.rev > local && remote.data && remote.data.v === 1) {
-      store = remote.data;
       var b = blank();
-      for (var k in b) if (!(k in store)) store[k] = b[k];
-      flush();
-      setSyncState({ code: syncState().code, rev: remote.rev, at: remote.updatedAt, error: null });
-      return true;
-    }
-    return false;
-  }
-
-  function startSync() {
-    return apiFetch('/api/progress')
-      .then(function (r) { return r.json(); })
-      .then(function (j) {
-        if (!j.code) throw new Error('sync is not set up on this site');
-        setSyncState({ code: j.code, rev: 0, at: null, error: null });
-        syncPush();
-      });
-  }
-
-  function joinSync(code) {
-    code = String(code || '').trim().toLowerCase();
-    if (!/^[a-f0-9]{32}$/.test(code)) throw new Error('that is not a sync code');
-    setSyncState({ code: code, rev: 0, at: null, error: null });
-    return syncPull(code).then(function (remote) {
-      if (remote && adopt(remote)) return 'pulled';
-      return syncPush();
-    });
+      var given = j.progress;
+      for (var k in b) if (!(k in given)) given[k] = b[k];
+      given.v = 1;
+      done(null, given);
+    };
+    reader.readAsText(file);
   }
 
   function paintSync() {
     var root = $('#syncRoot');
     if (!root) return;
-    var s = syncState();
-    var out = '';
-    if (!s.code) {
-      out =
-        '<p>Progress is saved on this device now. Give it a sync code and it follows you to your phone and back.</p>' +
-        '<div class="cta"><button class="btn primary" id="syncNew">Create a sync code</button>' +
-        '<button class="btn ghost" id="syncJoin">I have a code</button></div>' +
-        '<div id="syncJoinBox" style="display:none;margin-top:12px">' +
-        '<div class="typebox"><input id="syncCodeIn" type="text" placeholder="paste your 32-character code" ' +
-        'autocomplete="off" spellcheck="false"><button class="btn primary" id="syncJoinGo">Use it</button></div>' +
-        '</div><p class="small" id="syncMsg"></p>';
-    } else {
-      out =
-        '<p>This device syncs with the code below. Type the same code on another device to carry your progress over.</p>' +
-        '<div class="chips"><span class="chip">Sync code: <b style="font-family:var(--mono);font-size:12.5px">' +
-        s.code + '</b></span>' +
-        '<span class="chip">' + (s.at ? 'last saved ' + s.at.slice(0, 16).replace('T', ' ') : 'not saved yet') + '</span>' +
-        (s.error ? '<span class="chip">⚠ ' + escapeHtml(s.error) + '</span>' : '') +
-        '</div>' +
-        '<div class="cta"><button class="btn ghost" id="syncCopy">Copy the code</button>' +
-        '<button class="btn ghost" id="syncNow">Save now</button>' +
-        '<button class="btn ghost" id="syncForget">Stop syncing on this device</button></div>' +
-        '<p class="small" id="syncMsg">Anyone with the code can read and change this progress — keep it to yourself.</p>';
+
+    var answered = 0;
+    for (var id in store.items) answered += store.items[id].seen || 0;
+
+    root.innerHTML =
+      '<p>This site has no account and no server. Your progress is saved in this browser only, so it ' +
+      'travels between devices as a file: download it here, load it on the other device.</p>' +
+      '<div class="chips">' +
+      '<span class="chip">' + answered + ' answer' + (answered === 1 ? '' : 's') + ' recorded</span>' +
+      '<span class="chip">' + Object.keys(store.items).length + ' item' + (Object.keys(store.items).length === 1 ? '' : 's') + ' seen</span>' +
+      '<span class="chip">' + Object.keys(store.plan).length + ' plan tick' + (Object.keys(store.plan).length === 1 ? '' : 's') + '</span>' +
+      '</div>' +
+      '<div class="cta">' +
+      '<button class="btn primary" id="progDownload">Download my progress</button>' +
+      '<button class="btn ghost" id="progUpload">Load a progress file</button>' +
+      '<input type="file" id="progFile" accept="application/json,.json" style="display:none">' +
+      '</div>' +
+      '<p class="small" id="progMsg">Loading a file replaces what is in this browser — download this ' +
+      'device\'s progress first if you might want it back.</p>';
+
+    function msg(t, bad) {
+      var m = $('#progMsg');
+      if (!m) return;
+      m.textContent = t;
+      m.style.color = bad ? 'var(--accent)' : '';
     }
-    root.innerHTML = out;
 
-    function msg(t) { var m = $('#syncMsg'); if (m) m.textContent = t; }
+    var d = $('#progDownload');
+    if (d) d.addEventListener('click', function () {
+      downloadProgress();
+      msg('Downloaded. Keep the file, and load it on the other device from this same panel.');
+    });
 
-    var n = $('#syncNew');
-    if (n) n.addEventListener('click', function () {
-      n.disabled = true;
-      startSync().then(paintSync).catch(function (e) { msg(String(e.message || e)); });
-    });
-    var j = $('#syncJoin');
-    if (j) j.addEventListener('click', function () {
-      var box = $('#syncJoinBox');
-      box.style.display = box.style.display === 'none' ? 'block' : 'none';
-    });
-    var go = $('#syncJoinGo');
-    if (go) go.addEventListener('click', function () {
-      var code = $('#syncCodeIn').value;
-      go.disabled = true;
-      joinSync(code).then(function (what) {
-        if (what === 'pulled') {
-          msg('Progress brought over from your other device.');
+    var up = $('#progUpload');
+    var input = $('#progFile');
+    if (up && input) {
+      up.addEventListener('click', function () { input.click(); });
+      input.addEventListener('change', function () {
+        var f = input.files && input.files[0];
+        if (!f) return;
+        readProgressFile(f, function (err, loaded) {
+          if (err) { msg(String(err.message || err), true); input.value = ''; return; }
+          store = loaded;
+          flush();
+          msg('Progress loaded — ' + Object.keys(loaded.items).length + ' items. Reloading…');
           setTimeout(function () { location.reload(); }, 700);
-        } else {
-          paintSync();
-          msg('This device is now linked; its progress was sent up.');
-        }
-      }).catch(function (e) {
-        go.disabled = false;
-        msg(String(e.message || e));
+        });
       });
-    });
-    var c = $('#syncCopy');
-    if (c) c.addEventListener('click', function () {
-      if (navigator.clipboard) navigator.clipboard.writeText(s.code).then(function () { msg('Copied.'); });
-      else msg(s.code);
-    });
-    var now = $('#syncNow');
-    if (now) now.addEventListener('click', syncPush);
-    var f = $('#syncForget');
-    if (f) f.addEventListener('click', function () {
-      if (!f.dataset.sure) {
-        f.dataset.sure = '1';
-        f.textContent = 'Press again to stop syncing here';
-        setTimeout(function () {
-          if (f.dataset.sure) {
-            delete f.dataset.sure;
-            f.textContent = 'Stop syncing on this device';
-          }
-        }, 5000);
-        return;
-      }
-      setSyncState({});
-      paintSync();
-    });
+    }
   }
 
   function initSync() {
-    var s = syncState();
-    if (s.code) {
-      syncPull(s.code).then(function (remote) {
-        if (adopt(remote)) location.reload();
-      }).catch(function () {});
-    }
     paintSync();
   }
 

@@ -103,3 +103,32 @@ imperative chapter does not teach them.
   `<b>`; `renderInline()` in `src/app.js` re-enables exactly those three.
 - Progress lives in `localStorage` under `polski.verbs.progress.v1`, with a JSON export/import on
   the progress page for carrying it between devices.
+
+## Storage: no database, and why
+
+The site is static. `dist/` is plain files, there is no `functions/` directory and no `wrangler.toml`,
+and nothing on any page talks to a server. That is a deliberate decision, not an omission.
+
+A learner's progress is a small object — per drill item how often it was seen, when it is next due,
+and which box it is in — and it belongs to one person on one device. `localStorage` holds it, and the
+progress page exports it to a file (`polski.verbs.progress`, version 1) and loads such a file back,
+which is how it moves to a phone. Nothing is uploaded, so there is nothing to secure and no personal
+data to keep.
+
+**Cloudflare D1 is therefore not needed.** It would not cost much — Workers Free includes D1 with
+5M rows read and 100K rows written a day and 5 GB of storage, which this workload would not trouble —
+so the argument against it is not price. It is that a database buys you a *shared* progress record,
+and a shared record needs a way to know whose it is:
+
+| | With D1 | What it costs you |
+| --- | --- | --- |
+| identity | sync code, or an account | a 32-character code is a bearer secret: anyone who sees it reads and overwrites that progress. An account means auth, a reset flow and a privacy note. |
+| ops | a Worker, a D1 binding, a migration | another moving part to keep working, and migrations to apply by hand on every change |
+| data | the learner's own drilling history | a stored copy now needs a deletion path and a backup story |
+
+The cases site does run D1, because it was built to sync across devices by code. That is a product
+decision, not a requirement of the content: it could have shipped the same file export. If sync ever
+is wanted here, the honest minimum is an account or a signed per-person link, not a shared code.
+
+What would change this: more than one person using the same device, real cross-device progress
+without files, or a teacher seeing a class's results. None of those is true today.
