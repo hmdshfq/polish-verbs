@@ -90,12 +90,14 @@ for (const w of WANTED) {
   const rows = rowsOf(p.text);
   const forms = {};
   const problems = [];
+  let inCondBlock = false;
 
   for (const cells of rows) {
     const texts = cells.map((c) => c.text);
-    // Everything from "pozostałe formy" on is the pluperfect, the conditional and
-    // the participles — real forms, but not the ones this site tabulates.
-    if (/^pozostałe formy/.test(texts[0])) break;
+    // "pozostałe formy" opens the pluperfect, the conditional and the
+    // participles. The conditional is wanted; the pluperfect is not tabled and
+    // the participles come from the present and past rows, so a row that keeps
+    // a gender letter in its first cells (the pluperfect) is skipped below.
     const label = texts.join(' ');
     const first = texts[0] || '';
 
@@ -129,6 +131,44 @@ for (const w of WANTED) {
         forms['impr.2.p'] = v[4];
       }
     }
+
+    // Conditional, inside the "pozostałe formy" block. The label takes a
+    // rowspan of three, so it appears only on the masculine row; the feminine
+    // and neuter rows start with their gender letter. The table also gives a
+    // second order ("byłbym nauczył"), so only the first is taken.
+    const isPluperfect = /czas zaprzeszły/.test(label);
+    if (!isPluperfect) {
+      const ci = texts.findIndex((t) => /tryb przypuszczający/.test(t));
+      const g = ci >= 0
+        ? { m: 'm', 'ż': 'f', n: 'n' }[texts[ci + 1]]
+        : { m: 'm', 'ż': 'f', n: 'n' }[texts[0]];
+      const start = ci >= 0 ? ci + 2 : 1;
+      if (g && (ci >= 0 || inCondBlock)) {
+        const vals = texts.slice(start)
+          .map((t) => t.split(',')[0].trim())
+          .filter((t) => t && t !== '—' && t !== '-');
+        // gen-tables.mjs reads conditional.<person>.<gender>, with the plural
+        // kept apart as vr (masculine persons) and nv (the rest).
+        // person is "1.s" or "1.p" — the number is the second part.
+        const key = (person) => {
+          const isPlural = person.endsWith('.p');
+          const gg = isPlural ? (g === 'm' ? 'vr' : 'nv') : g;
+          return `conditional.${person}.${gg}`;
+        };
+        if (vals.length >= 6) PERSONS.forEach((person, i) => {
+          if (!forms[key(person)]) forms[key(person)] = vals[i];
+          if (person.includes('.p.')) {
+            const alt = `conditional.${person}.${g}`;
+            if (!forms[alt]) forms[alt] = vals[i];
+          }
+        });
+        else if (vals.length >= 3 && g === 'n') {
+          ['1.s', '2.s', '3.s'].forEach((person, i) => { if (!forms[`conditional.${person}.n`]) forms[`conditional.${person}.n`] = vals[i]; });
+        }
+      }
+    }
+    if (/tryb przypuszczający/.test(label)) inCondBlock = true;
+    if (/^imiesłów|^rzeczownik/.test(label)) inCondBlock = false;
   }
 
   // Checks: what the verb will claim must be there, and in the right shape.
@@ -146,6 +186,13 @@ for (const w of WANTED) {
   if (forms['present.1.p'] && !/my$/.test(forms['present.1.p'])) problems.push(`present 1.p looks wrong: ${forms['present.1.p']}`);
   if (forms['present.2.p'] && !/(cie|ecie)$/.test(forms['present.2.p'])) problems.push(`present 2.p looks wrong: ${forms['present.2.p']}`);
   if (forms['past.1.p.m'] && !/śmy$/.test(forms['past.1.p.m'])) problems.push(`past 1.p looks wrong: ${forms['past.1.p.m']}`);
+
+  // The Polish Wiktionary table writes the reflexive tabla without się. Every
+  // real sentence carries it, and the English-scraper verbs get it added there,
+  // so it is added here once, for every form that does not already have it.
+  for (const key of Object.keys(forms)) {
+    if (forms[key] && !/się/.test(forms[key])) forms[key] = `${forms[key]} się`;
+  }
 
   if (problems.length) {
     console.log(`${w.lemma}: not taken — ${problems.slice(0, 4).join('; ')}`);

@@ -12297,78 +12297,131 @@
     {
      "person": "ja",
      "key": "1.s",
-     "form": "nauczę"
+     "form": "nauczę się"
     },
     {
      "person": "ty",
      "key": "2.s",
-     "form": "nauczysz"
+     "form": "nauczysz się"
     },
     {
      "person": "on / ona / ono",
      "key": "3.s",
-     "form": "nauczy"
+     "form": "nauczy się"
     },
     {
      "person": "my",
      "key": "1.p",
-     "form": "nauczymy"
+     "form": "nauczymy się"
     },
     {
      "person": "wy",
      "key": "2.p",
-     "form": "nauczycie"
+     "form": "nauczycie się"
     },
     {
      "person": "oni / one",
      "key": "3.p",
-     "form": "nauczą"
+     "form": "nauczą się"
     }
    ],
    "presentIsFuture": true,
    "past": [
     {
      "label": "ja (masc.)",
-     "form": "nauczyłem"
+     "form": "nauczyłem się"
     },
     {
      "label": "ja (fem.)",
-     "form": "nauczyłam"
+     "form": "nauczyłam się"
     },
     {
      "label": "ty (masc.)",
-     "form": "nauczyłeś"
+     "form": "nauczyłeś się"
     },
     {
      "label": "ty (fem.)",
-     "form": "nauczyłaś"
+     "form": "nauczyłaś się"
     },
     {
      "label": "on",
-     "form": "nauczył"
+     "form": "nauczył się"
     },
     {
      "label": "ona",
-     "form": "nauczyła"
+     "form": "nauczyła się"
     },
     {
      "label": "ono",
-     "form": "nauczyło"
+     "form": "nauczyło się"
     }
    ],
-   "conditional": [],
+   "conditional": [
+    {
+     "label": "ja (masc.)",
+     "form": "nauczyłbym się"
+    },
+    {
+     "label": "ja (fem.)",
+     "form": "nauczyłabym się"
+    },
+    {
+     "label": "ty (masc.)",
+     "form": "nauczyłbyś się"
+    },
+    {
+     "label": "ty (fem.)",
+     "form": "nauczyłabyś się"
+    },
+    {
+     "label": "on",
+     "form": "nauczyłby się"
+    },
+    {
+     "label": "ona",
+     "form": "nauczyłaby się"
+    },
+    {
+     "label": "ono",
+     "form": "nauczyłoby się"
+    },
+    {
+     "label": "my (masc. persons)",
+     "form": "nauczylibyśmy się"
+    },
+    {
+     "label": "my (other)",
+     "form": "nauczyłybyśmy się"
+    },
+    {
+     "label": "wy (masc. persons)",
+     "form": "nauczylibyście się"
+    },
+    {
+     "label": "wy (other)",
+     "form": "nauczyłybyście się"
+    },
+    {
+     "label": "oni",
+     "form": "nauczyliby się"
+    },
+    {
+     "label": "one",
+     "form": "nauczyłyby się"
+    }
+   ],
    "imperative": [
     {
      "label": "ty",
-     "form": "naucz"
+     "form": "naucz się"
     },
     {
      "label": "my",
-     "form": "nauczmy"
+     "form": "nauczmy się"
     },
     {
      "label": "wy",
-     "form": "nauczcie"
+     "form": "nauczcie się"
     }
    ],
    "impersonals": {
@@ -12381,7 +12434,7 @@
     "adv": null,
     "noun": null
    },
-   "infinitive": "nauczyć"
+   "infinitive": "nauczyć się"
   },
   "cieszyć się": {
    "lemma": "cieszyć się",
@@ -12398,78 +12451,131 @@
     {
      "person": "ja",
      "key": "1.s",
-     "form": "cieszę"
+     "form": "cieszę się"
     },
     {
      "person": "ty",
      "key": "2.s",
-     "form": "cieszysz"
+     "form": "cieszysz się"
     },
     {
      "person": "on / ona / ono",
      "key": "3.s",
-     "form": "cieszy"
+     "form": "cieszy się"
     },
     {
      "person": "my",
      "key": "1.p",
-     "form": "cieszymy"
+     "form": "cieszymy się"
     },
     {
      "person": "wy",
      "key": "2.p",
-     "form": "cieszycie"
+     "form": "cieszycie się"
     },
     {
      "person": "oni / one",
      "key": "3.p",
-     "form": "cieszą"
+     "form": "cieszą się"
     }
    ],
    "presentIsFuture": false,
    "past": [
     {
      "label": "ja (masc.)",
-     "form": "cieszyłem"
+     "form": "cieszyłem się"
     },
     {
      "label": "ja (fem.)",
-     "form": "cieszyłam"
+     "form": "cieszyłam się"
     },
     {
      "label": "ty (masc.)",
-     "form": "cieszyłeś"
+     "form": "cieszyłeś się"
     },
     {
      "label": "ty (fem.)",
-     "form": "cieszyłaś"
+     "form": "cieszyłaś się"
     },
     {
      "label": "on",
-     "form": "cieszył"
+     "form": "cieszył się"
     },
     {
      "label": "ona",
-     "form": "cieszyła"
+     "form": "cieszyła się"
     },
     {
      "label": "ono",
-     "form": "cieszyło"
+     "form": "cieszyło się"
     }
    ],
-   "conditional": [],
+   "conditional": [
+    {
+     "label": "ja (masc.)",
+     "form": "cieszyłbym się"
+    },
+    {
+     "label": "ja (fem.)",
+     "form": "cieszyłabym się"
+    },
+    {
+     "label": "ty (masc.)",
+     "form": "cieszyłbyś się"
+    },
+    {
+     "label": "ty (fem.)",
+     "form": "cieszyłabyś się"
+    },
+    {
+     "label": "on",
+     "form": "cieszyłby się"
+    },
+    {
+     "label": "ona",
+     "form": "cieszyłaby się"
+    },
+    {
+     "label": "ono",
+     "form": "cieszyłoby się"
+    },
+    {
+     "label": "my (masc. persons)",
+     "form": "cieszylibyśmy się"
+    },
+    {
+     "label": "my (other)",
+     "form": "cieszyłybyśmy się"
+    },
+    {
+     "label": "wy (masc. persons)",
+     "form": "cieszylibyście się"
+    },
+    {
+     "label": "wy (other)",
+     "form": "cieszyłybyście się"
+    },
+    {
+     "label": "oni",
+     "form": "cieszyliby się"
+    },
+    {
+     "label": "one",
+     "form": "cieszyłyby się"
+    }
+   ],
    "imperative": [
     {
      "label": "ty",
-     "form": "ciesz"
+     "form": "ciesz się"
     },
     {
      "label": "my",
-     "form": "cieszmy"
+     "form": "cieszmy się"
     },
     {
      "label": "wy",
-     "form": "cieszcie"
+     "form": "cieszcie się"
     }
    ],
    "impersonals": {
@@ -12482,7 +12588,7 @@
     "adv": null,
     "noun": null
    },
-   "infinitive": "cieszyć"
+   "infinitive": "cieszyć się"
   }
  },
  "order": [
