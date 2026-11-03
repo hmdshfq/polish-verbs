@@ -14,3 +14,6 @@ dist/
 *.log
 .env
 .env.*
+
+# local Cloudflare state: the local D1 copy and wrangler cache
+.wrangler/

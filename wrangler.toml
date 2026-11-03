@@ -1,0 +1,11 @@
+# Cloudflare Pages: the static site in dist/, one Function in functions/, and
+# D1 for the progress that follows a learner between devices.
+# `npm run deploy` builds dist/ and uploads both.
+name = "polski-verbs"
+pages_build_output_dir = "dist"
+compatibility_date = "2026-11-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "polski-verbs-progress"
+database_id = "b3524eeb-0c85-4af4-b60a-9ad973f30e46"

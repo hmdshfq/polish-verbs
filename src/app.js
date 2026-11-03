@@ -2,8 +2,12 @@
    Polski — czasowniki
    The drill engine, the progress store, the verb browser and every page
    behaviour. Progress lives in this browser's localStorage under
-   "polski.verbs.progress.v1"; the progress page can export it to a file and
-   load such a file back, which is how it moves between devices. No server.
+   "polski.verbs.progress.v1". It follows a learner between devices through a
+   sync code: a random key naming one row of a D1 database behind
+   /api/progress. Saves merge item by item, so two devices' answers add up
+   instead of overwriting, and the copy on the device is always kept. The
+   progress page can also export the store to a file and load one back, which
+   works with no code and no network.
    ========================================================================== */
 (function () {
   'use strict';
@@ -101,6 +105,7 @@
     if (ok) store.days[d].ok++;
 
     save();
+    schedulePush();
   }
 
   function bestOf(setKey) { return store.sets[setKey] || null; }
@@ -1004,13 +1009,277 @@
     });
   }
 
-  /* -------------------------------------------------------- moving progress */
+  /* ------------------------------------------- sharing progress between devices */
 
-  // This site has no server. Progress lives in this browser's localStorage,
-  // and it moves between devices as a file the learner downloads here and
-  // loads on the other device. Nothing is uploaded anywhere.
+  // Progress follows the learner through a sync code: a random 32-hex key that
+  // names one row in the site's D1 database. Nothing else is uploaded, and the
+  // copy in this browser is always kept, so a database that cannot be reached
+  // never costs an answer. A code is a private key, not a password: whoever
+  // holds it can read and write that one record, and nothing else.
+  //
+  // Two devices cannot both be right about the same drill item, and the store
+  // carries no per-item clock, so a save never overwrites: every save reads the
+  // other side first and merges, item by item, keeping the better side. A miss
+  // on one device cannot wipe out a box the other earned, and neither device
+  // loses an answer.
+  var SYNC_KEY = 'polski.verbs.sync.v1';
   var PORTABLE = 'polski.verbs.progress';
 
+  function loadSync() {
+    try {
+      var o = JSON.parse(localStorage.getItem(SYNC_KEY) || 'null');
+      if (!o || typeof o !== 'object' || !/^[a-f0-9]{32}$/.test(o.code || '')) return { code: null };
+      return { code: o.code, rev: o.rev || 0, at: o.at || null, error: null };
+    } catch (e) {
+      return { code: null };
+    }
+  }
+  function saveSync() {
+    try { localStorage.setItem(SYNC_KEY, JSON.stringify(sync)); } catch (e) {}
+  }
+
+  var sync = loadSync();
+
+  function syncUrl(code) { return '/api/progress' + (code ? '/' + code : ''); }
+
+  function apiJson(res) {
+    return res.text().then(function (t) {
+      var body = null;
+      try { body = t ? JSON.parse(t) : null; } catch (e) { body = null; }
+      return { ok: res.ok, status: res.status, body: body };
+    });
+  }
+
+  // What to tell the learner when a call fails. A browser that cannot reach
+  // the server says nothing useful on its own, and the copy on the device is
+  // always intact, so it is said plainly rather than shown as an error.
+  function syncError(err) {
+    var m = String((err && err.message) || err || '');
+    if (!m || /failed to fetch|networkerror|load failed|the internet connection/i.test(m)) {
+      return 'the server could not be reached — your progress is still saved on this device';
+    }
+    return m;
+  }
+
+  function syncServerMissing(r) {
+    return !r.body || (r.body && r.body.enabled === false);
+  }
+
+  /* ------------------------------------------------------------ merging */
+
+  function laterDate(a, b) {
+    if (!a) return b || null;
+    if (!b) return a;
+    return a > b ? a : b;
+  }
+  function olderDate(a, b) {
+    if (!a) return b || null;
+    if (!b) return a;
+    return a < b ? a : b;
+  }
+
+  function mergeItem(x, y) {
+    // "More seen" stands in for "later", since nothing stamps a time per item.
+    var newer = (y.seen || 0) > (x.seen || 0) ? y : x;
+    return {
+      box: Math.max(x.box || 0, y.box || 0),
+      ok: Math.max(x.ok || 0, y.ok || 0),
+      seen: Math.max(x.seen || 0, y.seen || 0),
+      streak: Math.max(x.streak || 0, y.streak || 0),
+      lastOk: newer.lastOk || 0,
+      due: laterDate(x.due, y.due),
+      ms: newer.ms === undefined ? null : newer.ms
+    };
+  }
+
+  function mergeProgress(a, b) {
+    var out = blank();
+    var k, i;
+
+    var ids = {};
+    for (k in a.items) ids[k] = 1;
+    for (k in b.items) ids[k] = 1;
+    for (k in ids) {
+      var x = a.items[k], y = b.items[k];
+      if (!x) out.items[k] = y;
+      else if (!y) out.items[k] = x;
+      else out.items[k] = mergeItem(x, y);
+    }
+
+    // Every answer lands in exactly one item's `seen`, so these are the real
+    // totals and they add up across devices. The stored counters are kept as a
+    // floor in case a store ever carries counts from an older shape.
+    var seenSum = 0, okSum = 0;
+    for (k in out.items) {
+      seenSum += out.items[k].seen || 0;
+      okSum += out.items[k].ok || 0;
+    }
+    out.attempts = Math.max(seenSum, a.attempts || 0, b.attempts || 0);
+    out.correct = Math.max(okSum, a.correct || 0, b.correct || 0);
+
+    var days = {};
+    for (k in a.days) days[k] = 1;
+    for (k in b.days) days[k] = 1;
+    for (k in days) {
+      var d1 = a.days[k] || { n: 0, ok: 0 }, d2 = b.days[k] || { n: 0, ok: 0 };
+      out.days[k] = { n: Math.max(d1.n || 0, d2.n || 0), ok: Math.max(d1.ok || 0, d2.ok || 0) };
+    }
+
+    // Flashcards: "I know it" is a marker on this device, so knowing on either
+    // side counts. Plan ticks likewise — a tick is work done, and work done is
+    // never undone by a device that had not seen it.
+    var chapters = {};
+    for (k in a.cards) chapters[k] = 1;
+    for (k in b.cards) chapters[k] = 1;
+    for (k in chapters) {
+      var set = (a.cards[k] || []).slice();
+      (b.cards[k] || []).forEach(function (p) { if (set.indexOf(p) === -1) set.push(p); });
+      if (set.length) out.cards[k] = set;
+    }
+
+    var plans = {};
+    for (k in a.plan) plans[k] = 1;
+    for (k in b.plan) plans[k] = 1;
+    for (k in plans) {
+      var pa = a.plan[k] || {}, pb = b.plan[k] || {}, merged = {};
+      for (i in pa) merged[i] = pa[i];
+      for (i in pb) merged[i] = merged[i] || pb[i];
+      out.plan[k] = merged;
+    }
+
+    // A best run is a score: the better of the two, with the total number of
+    // runs added up and the later date kept.
+    var sets = {};
+    for (k in a.sets) sets[k] = 1;
+    for (k in b.sets) sets[k] = 1;
+    for (k in sets) {
+      var s1 = a.sets[k], s2 = b.sets[k];
+      if (!s1) { out.sets[k] = s2; continue; }
+      if (!s2) { out.sets[k] = s1; continue; }
+      var better = (s2.best / s2.total) > (s1.best / s1.total) ? s2 : s1;
+      out.sets[k] = {
+        best: better.best,
+        total: better.total,
+        runs: Math.max(s1.runs || 0, s2.runs || 0),
+        last: laterDate(s1.last, s2.last)
+      };
+    }
+
+    var verbs = {};
+    for (k in a.verbs) verbs[k] = 1;
+    for (k in b.verbs) verbs[k] = 1;
+    for (k in verbs) out.verbs[k] = Math.max(a.verbs[k] || 0, b.verbs[k] || 0);
+
+    return out;
+  }
+
+  // Two documents are the same when they hold the same thing, whatever order
+  // the keys were built in — otherwise every load would look like a change.
+  function stable(doc) {
+    if (doc === null || typeof doc !== 'object') return JSON.stringify(doc);
+    if (Array.isArray(doc)) return '[' + doc.map(stable).join(',') + ']';
+    var keys = Object.keys(doc).sort();
+    return '{' + keys.map(function (k) {
+      return JSON.stringify(k) + ':' + stable(doc[k]);
+    }).join(',') + '}';
+  }
+  function sameProgress(a, b) { return stable(a) === stable(b); }
+
+  // Take a merged document as this device's own, without asking for a push.
+  function adopt(merged) {
+    store = merged;
+    try { localStorage.setItem(KEY, JSON.stringify(store)); } catch (e) {}
+  }
+
+  /* ------------------------------------------------------- talking to D1 */
+
+  var pushTimer = null;
+  var pushing = null;
+
+  function schedulePush() {
+    if (!sync.code) return;
+    clearTimeout(pushTimer);
+    pushTimer = setTimeout(function () { pushProgress(true); }, 1200);
+  }
+
+  // Read, merge, then write: the server stamps the revision, so a device with
+  // a wrong clock cannot make an old save win, and neither device's answers
+  // are thrown away when both answered while apart.
+  function pushProgress(quiet) {
+    if (!sync.code) return Promise.resolve(false);
+    if (pushing) return pushing;
+
+    pushing = fetch(syncUrl(sync.code), { headers: { accept: 'application/json' } })
+      .then(apiJson)
+      .then(function (r) {
+        var remote = r.ok && r.body && typeof r.body.data === 'object' ? r.body.data : null;
+        var doc = remote ? mergeProgress(store, remote) : store;
+        if (remote && !sameProgress(doc, store)) adopt(doc);
+        return fetch(syncUrl(sync.code), {
+          method: 'PUT',
+          headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({ data: doc, rev: (r.body && r.body.rev) || sync.rev || 0 })
+        });
+      })
+      .then(apiJson)
+      .then(function (r) {
+        if (!r.ok || !r.body) throw new Error((r.body && r.body.error) || 'the server did not save it');
+        sync.rev = r.body.rev;
+        sync.at = r.body.updatedAt;
+        sync.error = null;
+        saveSync();
+        if (!quiet) paintSync();
+        updateMeters();
+        return true;
+      })
+      .catch(function (err) {
+        sync.error = syncError(err);
+        saveSync();
+        if (!quiet) paintSync();
+        return false;
+      })
+      .then(function (v) { pushing = null; return v; });
+
+    return pushing;
+  }
+
+  // What the other device has, merged in. Called on every page load when a
+  // code exists, so a page always starts from the newest combined state.
+  function pullProgress() {
+    if (!sync.code) return Promise.resolve(false);
+
+    return fetch(syncUrl(sync.code), { headers: { accept: 'application/json' } })
+      .then(apiJson)
+      .then(function (r) {
+        if (r.status === 404) return pushProgress(true);   // nothing saved yet
+        if (!r.ok || !r.body || typeof r.body.data !== 'object') {
+          throw new Error((r.body && r.body.error) || 'the server gave no progress');
+        }
+        var merged = mergeProgress(store, r.body.data);
+        var changed = !sameProgress(merged, store);
+        adopt(merged);
+        sync.rev = r.body.rev || sync.rev;
+        sync.at = laterDate(sync.at, r.body.updatedAt);
+        sync.error = null;
+        saveSync();
+        if (changed) {
+          updateMeters();
+          paintSync();
+        }
+        return changed;
+      })
+      .catch(function (err) {
+        sync.error = syncError(err);
+        saveSync();
+        paintSync();
+        return false;
+      });
+  }
+
+  /* -------------------------------------------------------------- the file */
+
+  // A file still moves progress with no code and no network: download here,
+  // load there. It replaces what the other device holds rather than merging.
   function portableProgress() {
     return {
       app: PORTABLE,
@@ -1054,54 +1323,223 @@
     reader.readAsText(file);
   }
 
+  /* -------------------------------------------------------------- the panel */
+
+  function whenWas(iso) {
+    if (!iso) return '';
+    var ms = Date.now() - new Date(iso).getTime();
+    if (!isFinite(ms) || ms < 0) return 'just now';
+    var min = Math.round(ms / 60000);
+    if (min < 1) return 'just now';
+    if (min === 1) return 'a minute ago';
+    if (min < 60) return min + ' minutes ago';
+    var h = Math.round(min / 60);
+    if (h === 1) return 'an hour ago';
+    if (h < 24) return h + ' hours ago';
+    var d = Math.round(h / 24);
+    return d === 1 ? 'yesterday' : d + ' days ago';
+  }
+
+  function syncStatus() {
+    if (sync.error) return sync.error + '.';
+    if (sync.at) return 'Last saved to the cloud ' + whenWas(sync.at) + '.';
+    return 'Not saved to the cloud yet.';
+  }
+
+  function fileBlock() {
+    return '<details class="syncfile"><summary>Or move progress with a file</summary>' +
+      '<p class="small">Download everything as a JSON file, or load one back. This needs no code and ' +
+      'no network, but a loaded file replaces what the browser holds.</p>' +
+      '<div class="cta">' +
+      '<button class="btn ghost" id="progDownload">Download my progress</button>' +
+      '<button class="btn ghost" id="progUpload">Load a progress file</button>' +
+      '<input type="file" id="progFile" accept="application/json,.json" style="display:none">' +
+      '</div>' +
+      '<p class="small" id="progMsg"></p></details>';
+  }
+
+  function statsChips() {
+    var answered = 0;
+    for (var id in store.items) answered += store.items[id].seen || 0;
+    var n = Object.keys(store.items).length;
+    var plan = Object.keys(store.plan).length;
+    return '<div class="chips">' +
+      '<span class="chip">' + answered + ' answer' + (answered === 1 ? '' : 's') + ' recorded</span>' +
+      '<span class="chip">' + n + ' item' + (n === 1 ? '' : 's') + ' seen</span>' +
+      '<span class="chip">' + plan + ' chapter' + (plan === 1 ? '' : 's') + ' with plan ticks</span>' +
+      '</div>';
+  }
+
   function paintSync() {
     var root = $('#syncRoot');
     if (!root) return;
 
-    var answered = 0;
-    for (var id in store.items) answered += store.items[id].seen || 0;
-
-    root.innerHTML =
-      '<p>This site has no account and no server. Your progress is saved in this browser only, so it ' +
-      'travels between devices as a file: download it here, load it on the other device.</p>' +
-      '<div class="chips">' +
-      '<span class="chip">' + answered + ' answer' + (answered === 1 ? '' : 's') + ' recorded</span>' +
-      '<span class="chip">' + Object.keys(store.items).length + ' item' + (Object.keys(store.items).length === 1 ? '' : 's') + ' seen</span>' +
-      '<span class="chip">' + Object.keys(store.plan).length + ' plan tick' + (Object.keys(store.plan).length === 1 ? '' : 's') + '</span>' +
-      '</div>' +
-      '<div class="cta">' +
-      '<button class="btn primary" id="progDownload">Download my progress</button>' +
-      '<button class="btn ghost" id="progUpload">Load a progress file</button>' +
-      '<input type="file" id="progFile" accept="application/json,.json" style="display:none">' +
-      '</div>' +
-      '<p class="small" id="progMsg">Loading a file replaces what is in this browser — download this ' +
-      'device\'s progress first if you might want it back.</p>';
+    if (sync.code) {
+      root.innerHTML =
+        '<p>This device is connected. Every answer is saved here and to your sync code, and the two ' +
+        'copies merge, so nothing recorded on another device is lost.</p>' +
+        statsChips() +
+        '<div class="syncbox">' +
+        '<div class="small">Your sync code — enter it on your other devices</div>' +
+        '<code id="syncCode">' + sync.code + '</code>' +
+        '<div class="cta">' +
+        '<button class="btn primary" id="syncCopy">Copy the code</button>' +
+        '<button class="btn ghost" id="syncNow">Save now</button>' +
+        '<button class="btn ghost" id="syncStop">Stop syncing on this device</button>' +
+        '</div></div>' +
+        '<p class="small" id="syncMsg">' + escapeHtml(syncStatus()) + '</p>' +
+        fileBlock();
+    } else {
+      root.innerHTML =
+        '<p>Progress can follow you between devices. Create a sync code here, then enter it on your ' +
+        'phone or another computer: both devices save to the same place, and what each one learned ' +
+        'is merged rather than overwritten.</p>' +
+        statsChips() +
+        '<div class="cta"><button class="btn primary" id="syncCreate">Create a sync code</button></div>' +
+        '<div class="syncjoin">' +
+        '<label class="small" for="syncInput">Already have a code from this site? Paste it here.</label>' +
+        '<div class="cta">' +
+        '<input id="syncInput" type="text" autocomplete="off" spellcheck="false" maxlength="40" ' +
+        'placeholder="32 letters and digits">' +
+        '<button class="btn ghost" id="syncJoin">Use this code</button>' +
+        '</div></div>' +
+        '<p class="small" id="syncMsg">' + escapeHtml(syncStatus()) + '</p>' +
+        fileBlock();
+    }
 
     function msg(t, bad) {
-      var m = $('#progMsg');
+      var m = $('#syncMsg');
       if (!m) return;
       m.textContent = t;
       m.style.color = bad ? 'var(--accent)' : '';
     }
 
+    var create = $('#syncCreate');
+    if (create) create.addEventListener('click', function () {
+      create.disabled = true;
+      msg('Asking the server for a code…');
+      fetch(syncUrl(null), { headers: { accept: 'application/json' } })
+        .then(apiJson)
+        .then(function (r) {
+          if (syncServerMissing(r)) throw new Error('this copy of the site has no sync server');
+          if (!r.ok || !r.body || !r.body.code) throw new Error((r.body && r.body.error) || 'no code came back');
+          sync = { code: r.body.code, rev: 0, at: null, error: null };
+          saveSync();
+          return pushProgress(true);
+        })
+        .then(function () { paintSync(); })
+        .catch(function (err) {
+          sync = { code: null, error: syncError(err) };
+          saveSync();
+          paintSync();
+        });
+    });
+
+    var join = $('#syncJoin');
+    var input = $('#syncInput');
+    function joinCode() {
+      var code = String((input && input.value) || '').trim().toLowerCase().replace(/\s+/g, '');
+      if (!/^[a-f0-9]{32}$/.test(code)) {
+        msg('A sync code is 32 letters and digits — copy it whole from the other device.', true);
+        return;
+      }
+      msg('Looking for progress under that code…');
+      fetch(syncUrl(code), { headers: { accept: 'application/json' } })
+        .then(apiJson)
+        .then(function (r) {
+          if (r.status === 404) return null;
+          if (!r.ok || !r.body || typeof r.body.data !== 'object') {
+            throw new Error((r.body && r.body.error) || 'that code could not be read');
+          }
+          return r.body;
+        })
+        .then(function (remote) {
+          sync = { code: code, rev: remote ? remote.rev : 0, at: remote ? remote.updatedAt : null, error: null };
+          saveSync();
+          if (remote) adopt(mergeProgress(store, remote.data));
+          sync.empty = !remote;
+          return pushProgress(true);
+        })
+        .then(function () {
+          var empty = sync.empty;
+          delete sync.empty;
+          saveSync();
+          paintSync();
+          msg(empty
+            ? 'That code had nothing saved yet, so this device’s progress became its first save.'
+            : 'Connected. What this device had is merged with what the code held.');
+          updateMeters();
+        })
+        .catch(function (err) {
+          sync = { code: null, error: syncError(err) };
+          saveSync();
+          paintSync();
+        });
+    }
+    if (join) join.addEventListener('click', joinCode);
+    if (input) input.addEventListener('keydown', function (ev) {
+      if (ev.key === 'Enter') { ev.preventDefault(); joinCode(); }
+    });
+
+    var copy = $('#syncCopy');
+    if (copy) copy.addEventListener('click', function () {
+      var text = sync.code;
+      var done = function (ok) {
+        msg(ok ? 'Code copied. Paste it into the other device.' : 'Copy it by hand: ' + text, !ok);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(function () { done(true); }, function () { done(false); });
+      } else {
+        done(false);
+      }
+    });
+
+    var now = $('#syncNow');
+    if (now) now.addEventListener('click', function () {
+      now.disabled = true;
+      msg('Saving…');
+      pushProgress(true).then(function (ok) {
+        paintSync();
+        if (ok) msg('Saved to the cloud ' + whenWas(sync.at) + '.');
+      });
+    });
+
+    var stop = $('#syncStop');
+    if (stop) stop.addEventListener('click', function () {
+      if (!stop.dataset.sure) {
+        stop.dataset.sure = '1';
+        stop.textContent = 'Press again to disconnect';
+        setTimeout(function () {
+          if (stop.dataset.sure) { delete stop.dataset.sure; stop.textContent = 'Stop syncing on this device'; }
+        }, 5000);
+        return;
+      }
+      sync = { code: null };
+      saveSync();
+      paintSync();
+      msg('Disconnected. Your progress stays on this device and on the code — enter the code again to reconnect.');
+    });
+
     var d = $('#progDownload');
     if (d) d.addEventListener('click', function () {
       downloadProgress();
-      msg('Downloaded. Keep the file, and load it on the other device from this same panel.');
+      var m = $('#progMsg');
+      if (m) m.textContent = 'Downloaded. Load it on the other device from this same panel.';
     });
 
     var up = $('#progUpload');
-    var input = $('#progFile');
-    if (up && input) {
-      up.addEventListener('click', function () { input.click(); });
-      input.addEventListener('change', function () {
-        var f = input.files && input.files[0];
+    var file = $('#progFile');
+    if (up && file) {
+      up.addEventListener('click', function () { file.click(); });
+      file.addEventListener('change', function () {
+        var f = file.files && file.files[0];
         if (!f) return;
         readProgressFile(f, function (err, loaded) {
-          if (err) { msg(String(err.message || err), true); input.value = ''; return; }
+          var m = $('#progMsg');
+          if (err) { if (m) m.textContent = String(err.message || err); file.value = ''; return; }
           store = loaded;
           flush();
-          msg('Progress loaded — ' + Object.keys(loaded.items).length + ' items. Reloading…');
+          if (m) m.textContent = 'Progress loaded — ' + Object.keys(loaded.items).length + ' items. Reloading…';
           setTimeout(function () { location.reload(); }, 700);
         });
       });
@@ -1110,6 +1548,7 @@
 
   function initSync() {
     paintSync();
+    if (sync.code) pullProgress();
   }
 
   /* --------------------------------------------------------------- meters */
